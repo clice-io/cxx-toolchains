@@ -1,0 +1,19 @@
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node/package managers
+node_modules/
+dist/
+coverage/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
