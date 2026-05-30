@@ -60,6 +60,8 @@ The project is intended to cover:
 
 ## Status
 
-This repository is being initialized. Schemas, generators, validation tests, and
-the first toolchain metadata sets will be added incrementally.
-
+The first metadata sets are Clang, GCC, and LLD options. See
+[`option`](option) for generated TOML files, provenance, and reproducible
+pixi-managed regeneration and verification commands. See
+[`docs/option-sources.md`](docs/option-sources.md) for extraction strategies for
+additional tools such as GNU ld, NVCC, and MSVC.

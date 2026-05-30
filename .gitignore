@@ -6,14 +6,15 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.pixi/
 
 # Node/package managers
 node_modules/
 dist/
 coverage/
+.cache/
 
 # Editors
 .idea/
 .vscode/
 *.swp
-

@@ -1,0 +1,24 @@
+[workspace]
+name = "cxx-toolchains"
+version = "0.1.0"
+description = "Machine-readable C and C++ toolchain metadata"
+authors = ["clice-io"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+git = ">=2.49,<3"
+llvmdev = "22.1.6.*"
+python = ">=3.12,<3.15"
+
+[tasks]
+refresh-clang-options = "python scripts/update_clang_options.py --refresh-manifest"
+generate-clang-options = "python scripts/update_clang_options.py --generate --clean --tblgen llvm-tblgen"
+verify-clang-options = "python scripts/update_clang_options.py --verify --tblgen llvm-tblgen"
+refresh-gcc-options = "python scripts/update_gcc_options.py --refresh-manifest"
+generate-gcc-options = "python scripts/update_gcc_options.py --generate --clean"
+verify-gcc-options = "python scripts/update_gcc_options.py --verify"
+refresh-lld-options = "python scripts/update_lld_options.py --refresh-manifest"
+generate-lld-options = "python scripts/update_lld_options.py --generate --clean --tblgen llvm-tblgen"
+verify-lld-options = "python scripts/update_lld_options.py --verify --tblgen llvm-tblgen"
+check = "python -m py_compile scripts/update_clang_options.py scripts/update_gcc_options.py scripts/update_lld_options.py && python scripts/update_clang_options.py --verify --tblgen llvm-tblgen && python scripts/update_gcc_options.py --verify && python scripts/update_lld_options.py --verify --tblgen llvm-tblgen"
