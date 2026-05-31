@@ -19,6 +19,9 @@ option/
   msvc/
     manifest.toml
     17/17.0.0.toml
+  mold/
+    manifest.toml
+    2/2.41.0.toml
   nvcc/
     manifest.toml
     12/12.5.0.toml
@@ -34,6 +37,7 @@ pixi run verify-gcc-options
 pixi run verify-ld-options
 pixi run verify-lld-options
 pixi run verify-msvc-options
+pixi run verify-mold-options
 pixi run verify-nvcc-options
 pixi run validate-options
 ```

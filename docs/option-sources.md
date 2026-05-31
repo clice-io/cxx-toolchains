@@ -57,6 +57,16 @@ This document records the extraction strategy for option metadata by tool.
   `msvc-180`, normalized to `14.0.0` through `18.0.0`.
 - Verification: regenerate TOML and byte-compare.
 
+### mold
+
+- Source: `rui314/mold` release tags.
+- Metadata input: versioned manpage sources, using `docs/mold.md` for newer
+  releases and `docs/mold.1` for older releases.
+- Extraction: parse markdown, man, and mdoc option lists for option groups,
+  spellings, syntax forms, argument shape, descriptions, source locations, and
+  source SHA-256.
+- Verification: regenerate TOML and byte-compare.
+
 ## Planned
 
 ### MSVC Installed Probes
