@@ -45,17 +45,28 @@ This document records the extraction strategy for option metadata by tool.
   URL, and source SHA-256.
 - Verification: regenerate TOML and byte-compare.
 
-## Planned
-
 ### MSVC
 
-- Source: Microsoft versioned documentation and installed Visual Studio Build
-  Tools probes.
-- Primary metadata input: MSVC `cl.exe` and `link.exe` option reference pages.
-- Secondary validation: `cl /?` and `link /?` from installed toolchains when
-  available.
-- Extraction target: spelling, argument form, category, default behavior,
-  compiler/linker phase, environment requirements, and version provenance.
+- Source: `MicrosoftDocs/cpp-docs` plus Microsoft Learn moniker metadata.
+- Metadata input: public markdown pages for compiler options listed
+  alphabetically and linker options.
+- Extraction: parse markdown option tables for `cl` and `link` spellings,
+  syntax, argument shape, purpose text, detail-page links, source locations, and
+  source SHA-256.
+- Version granularity: Visual Studio major monikers such as `msvc-140` through
+  `msvc-180`, normalized to `14.0.0` through `18.0.0`.
+- Verification: regenerate TOML and byte-compare.
+
+## Planned
+
+### MSVC Installed Probes
+
+- Source: installed Visual Studio Build Tools and Windows SDK toolchains.
+- Metadata input: `cl /?`, `link /?`, and environment setup scripts from each
+  installed toolset.
+- Extraction target: minor toolset version deltas, target-specific options,
+  localized help differences, default values, and options absent from public
+  docs.
 
 ## Rule
 

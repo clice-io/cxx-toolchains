@@ -1,0 +1,477 @@
+#!/usr/bin/env python3
+"""Fetch and generate MSVC option metadata from Microsoft C++ documentation."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import html
+import json
+import re
+import subprocess
+import sys
+import tempfile
+import time
+import tomllib
+from pathlib import Path
+from urllib.parse import quote
+from urllib.request import Request, urlopen
+
+ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_MANIFEST = ROOT / "option" / "msvc" / "manifest.toml"
+DEFAULT_OUTPUT_DIR = ROOT / "option" / "msvc"
+DEFAULT_CACHE_DIR = ROOT / ".cache" / "msvc-options"
+
+DOCS_REPO_URL = "https://github.com/MicrosoftDocs/cpp-docs"
+DOCS_GIT_URL = "https://github.com/MicrosoftDocs/cpp-docs.git"
+DOCS_RAW_URL = "https://raw.githubusercontent.com/MicrosoftDocs/cpp-docs"
+LEARN_REFERENCE_URL = "https://learn.microsoft.com/en-us/cpp/build/reference"
+
+SOURCE_PAGES = [
+    ("cl", "docs/build/reference/compiler-options-listed-alphabetically.md"),
+    ("link", "docs/build/reference/linker-options.md"),
+]
+LEARN_LIST_PAGES = [
+    f"{LEARN_REFERENCE_URL}/compiler-options-listed-alphabetically",
+    f"{LEARN_REFERENCE_URL}/linker-options",
+]
+
+
+def run(
+    args: list[str],
+    *,
+    timeout: int = 300,
+) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        args,
+        check=True,
+        text=True,
+        timeout=timeout,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+
+
+def version_key(version: str) -> tuple[int, ...]:
+    return tuple(int(part) for part in version.split("."))
+
+
+def major_version(version: str) -> str:
+    return version.split(".", 1)[0]
+
+
+def version_output_path(output_dir: Path, version: str) -> Path:
+    return output_dir / major_version(version) / f"{version}.toml"
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def fetch_bytes(url: str, timeout: int = 120, attempts: int = 5) -> bytes:
+    last_error: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            request = Request(url, headers={"User-Agent": "cxx-toolchains-option-generator"})
+            with urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except Exception as error:
+            last_error = error
+            if attempt + 1 == attempts:
+                break
+            time.sleep(0.5 * (attempt + 1))
+    assert last_error is not None
+    raise last_error
+
+
+def source_url(ref: str, path: str) -> str:
+    return f"{DOCS_RAW_URL}/{quote(ref)}/{quote(path)}"
+
+
+def fetch_source(ref: str, path: str, cache_dir: Path) -> tuple[bytes, str]:
+    cache_path = cache_dir / "sources" / ref / path
+    if cache_path.exists():
+        data = cache_path.read_bytes()
+        return data, sha256_bytes(data)
+    data = fetch_bytes(source_url(ref, path))
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_bytes(data)
+    return data, sha256_bytes(data)
+
+
+def toml_string(value: str) -> str:
+    return json.dumps(value, ensure_ascii=False)
+
+
+def toml_value(value: object) -> str:
+    if value is None:
+        raise ValueError("TOML does not support null values")
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, int):
+        return str(value)
+    if isinstance(value, str):
+        return toml_string(value)
+    if isinstance(value, list):
+        return "[" + ", ".join(toml_value(item) for item in value) + "]"
+    raise TypeError(f"unsupported TOML value: {type(value)!r}")
+
+
+def write_table(lines: list[str], table: dict[str, object]) -> None:
+    for key, value in table.items():
+        if value is None:
+            continue
+        if isinstance(value, list) and len(value) == 0:
+            lines.append(f"{key} = []")
+            continue
+        lines.append(f"{key} = {toml_value(value)}")
+
+
+def moniker_to_version(moniker: str) -> str | None:
+    match = re.fullmatch(r"msvc-(\d+)0", moniker)
+    if match is None:
+        return None
+    return f"{int(match.group(1))}.0.0"
+
+
+def learn_url(page: str, moniker: str) -> str:
+    return f"{page}?view={moniker}&preserve-view=true"
+
+
+def fetch_monikers() -> list[str]:
+    monikers: set[str] = set()
+    for page in LEARN_LIST_PAGES:
+        data = fetch_bytes(learn_url(page, "msvc-170")).decode("utf-8", errors="replace")
+        monikers.update(re.findall(r'<meta\s+name="monikers"\s+content="(msvc-\d+)"', data))
+    valid = [moniker for moniker in monikers if moniker_to_version(moniker) is not None]
+    return sorted(valid, key=lambda item: version_key(moniker_to_version(item) or "0.0.0"))
+
+
+def docs_main_commit() -> str:
+    output = run(["git", "ls-remote", DOCS_GIT_URL, "refs/heads/main"], timeout=120).stdout
+    line = output.strip().splitlines()[0]
+    return line.split("\t", 1)[0]
+
+
+def write_manifest(path: Path, releases: list[dict[str, object]]) -> None:
+    lines = [
+        "# Generated by scripts/update_msvc_options.py --refresh-manifest.",
+        "# Edit only when intentionally changing the pinned source set.",
+        "",
+        "[metadata]",
+    ]
+    write_table(
+        lines,
+        {
+            "tool": "msvc",
+            "source_repo": DOCS_REPO_URL,
+            "source_branch": "main",
+            "source_kind": "microsoft-docs",
+            "version_granularity": "visual_studio_major",
+            "source_paths": [path for _, path in SOURCE_PAGES],
+        },
+    )
+    lines.append("")
+    for release in releases:
+        lines.append("[[releases]]")
+        write_table(lines, release)
+        lines.append("")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
+def refresh_manifest(path: Path) -> None:
+    commit = docs_main_commit()
+    releases = []
+    for moniker in fetch_monikers():
+        version = moniker_to_version(moniker)
+        if version is None:
+            continue
+        releases.append(
+            {
+                "version": version,
+                "moniker": moniker,
+                "source_commit": commit,
+                "source_paths": [path for _, path in SOURCE_PAGES],
+                "learn_urls": [learn_url(page, moniker) for page in LEARN_LIST_PAGES],
+            }
+        )
+    write_manifest(path, releases)
+
+
+def load_manifest(path: Path) -> tuple[dict[str, object], list[dict[str, object]]]:
+    with path.open("rb") as file:
+        data = tomllib.load(file)
+    metadata = data.get("metadata", {})
+    releases = data.get("releases", [])
+    if not isinstance(metadata, dict) or not isinstance(releases, list):
+        raise ValueError(f"invalid manifest shape: {path}")
+    return metadata, releases
+
+
+def split_markdown_table_row(line: str) -> tuple[str, str] | None:
+    line = line.strip()
+    if not line.startswith("|") or line.count("|") < 3:
+        return None
+    body = line.strip("|")
+    cells = [cell.strip() for cell in body.split(" | ")]
+    if len(cells) < 2:
+        return None
+    first, rest = cells[0], " | ".join(cells[1:]).strip()
+    if first.lower() == "option" or set(first.replace("-", "").strip()) == set():
+        return None
+    return first, rest
+
+
+def clean_markdown_inline(value: str) -> str:
+    value = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", value)
+    value = re.sub(r"`([^`]*)`", r"\1", value)
+    value = re.sub(r"<br\s*/?>", " ", value, flags=re.I)
+    value = value.replace("**", "").replace("*", "")
+    value = html.unescape(value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def extract_option_cell(cell: str, source_path: str) -> tuple[str, str | None]:
+    link = re.search(r"\[([^\]]+)\]\(([^)]+)\)", cell)
+    if link is None:
+        return clean_markdown_inline(cell), None
+    syntax = clean_markdown_inline(link.group(1))
+    href = link.group(2).split("#", 1)[0]
+    if re.match(r"https?://", href):
+        return syntax, href
+    detail = (Path(source_path).parent / href).as_posix()
+    parts: list[str] = []
+    for part in detail.split("/"):
+        if part == "..":
+            if parts:
+                parts.pop()
+        elif part != ".":
+            parts.append(part)
+    return syntax, "/".join(parts)
+
+
+def option_spelling(syntax: str) -> str:
+    if syntax == "@":
+        return "@"
+    token = syntax.split()[0].strip().rstrip(".,")
+    token = token.replace("[-]", "")
+    for marker in ["<", "[", "{"]:
+        index = token.find(marker)
+        if index != -1:
+            token = token[:index]
+    return token
+
+
+def argument_kind(syntax: str) -> str:
+    if "<" in syntax or "{" in syntax:
+        return "joined"
+    if "[" in syntax:
+        return "optional"
+    return "none"
+
+
+def details_url(details_path: str | None, moniker: str) -> str | None:
+    if details_path is None or re.match(r"https?://", details_path):
+        return details_path
+    if not details_path.startswith("docs/build/reference/") or not details_path.endswith(".md"):
+        return None
+    slug = Path(details_path).stem
+    return f"{LEARN_REFERENCE_URL}/{slug}?view={moniker}&preserve-view=true"
+
+
+def parse_options_from_markdown(
+    *,
+    driver: str,
+    path: str,
+    text: str,
+    moniker: str,
+    start_id: int,
+) -> list[dict[str, object]]:
+    options: list[dict[str, object]] = []
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        row = split_markdown_table_row(line)
+        if row is None:
+            continue
+        option_cell, purpose_cell = row
+        syntax, details_path = extract_option_cell(option_cell, path)
+        spelling = option_spelling(syntax)
+        if not spelling:
+            continue
+        option: dict[str, object] = {
+            "driver": driver,
+            "id": start_id + len(options),
+            "spellings": [spelling],
+            "syntax": syntax,
+            "argument_kind": argument_kind(syntax),
+            "purpose": clean_markdown_inline(purpose_cell),
+            "source_location": f"{path}:{line_no}",
+        }
+        if details_path is not None:
+            option["details_path"] = details_path
+            url = details_url(details_path, moniker)
+            if url is not None:
+                option["details_url"] = url
+        options.append(option)
+    return options
+
+
+def generate_release(
+    release: dict[str, object],
+    metadata: dict[str, object],
+    *,
+    output_dir: Path,
+    cache_dir: Path,
+) -> Path:
+    version = str(release["version"])
+    moniker = str(release["moniker"])
+    source_commit = str(release["source_commit"])
+    source_files: list[dict[str, str]] = []
+    options: list[dict[str, object]] = []
+    for driver, path in SOURCE_PAGES:
+        data, source_sha = fetch_source(source_commit, path, cache_dir)
+        source_files.append(
+            {
+                "path": path,
+                "ref": source_commit,
+                "sha256": source_sha,
+                "url": source_url(source_commit, path),
+            }
+        )
+        options.extend(
+            parse_options_from_markdown(
+                driver=driver,
+                path=path,
+                text=data.decode("utf-8", errors="replace"),
+                moniker=moniker,
+                start_id=len(options) + 1,
+            )
+        )
+
+    output = version_output_path(output_dir, version)
+    lines = [
+        "# Generated by scripts/update_msvc_options.py --generate.",
+        "# Do not edit by hand.",
+        "",
+        "[metadata]",
+    ]
+    write_table(
+        lines,
+        {
+            "schema_version": 1,
+            "tool": "msvc",
+            "version": version,
+            "moniker": moniker,
+            "source_repo": DOCS_REPO_URL,
+            "source_commit": source_commit,
+            "source_kind": metadata.get("source_kind", "microsoft-docs"),
+            "version_granularity": metadata.get("version_granularity", "visual_studio_major"),
+            "source_paths": [path for _, path in SOURCE_PAGES],
+            "generator": "scripts/update_msvc_options.py",
+            "option_count": len(options),
+        },
+    )
+    lines.append("")
+    for source_file in source_files:
+        lines.append("[[source_files]]")
+        write_table(lines, source_file)
+        lines.append("")
+    for option in options:
+        lines.append("[[options]]")
+        write_table(lines, option)
+        lines.append("")
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    return output
+
+
+def select_releases(
+    releases: list[dict[str, object]],
+    versions: list[str] | None,
+) -> list[dict[str, object]]:
+    if not versions:
+        return releases
+    wanted = set(versions)
+    selected = [release for release in releases if str(release["version"]) in wanted]
+    found = {str(release["version"]) for release in selected}
+    missing = sorted(wanted - found, key=version_key)
+    if missing:
+        raise SystemExit(f"versions not in manifest: {', '.join(missing)}")
+    return selected
+
+
+def verify_outputs(
+    releases: list[dict[str, object]],
+    metadata: dict[str, object],
+    *,
+    output_dir: Path,
+    cache_dir: Path,
+) -> None:
+    with tempfile.TemporaryDirectory(prefix="msvc-options-verify-") as tmp:
+        temp_output = Path(tmp) / "option" / "msvc"
+        for release in releases:
+            generate_release(release, metadata, output_dir=temp_output, cache_dir=cache_dir)
+        failures: list[str] = []
+        for release in releases:
+            version = str(release["version"])
+            rel = Path(major_version(version)) / f"{version}.toml"
+            expected = output_dir / rel
+            actual = temp_output / rel
+            if not expected.exists():
+                failures.append(f"missing generated file: {expected}")
+                continue
+            if expected.read_bytes() != actual.read_bytes():
+                failures.append(f"not reproducible: {expected}")
+    if failures:
+        raise SystemExit("\n".join(failures))
+
+
+def remove_stale_outputs(output_dir: Path, releases: list[dict[str, object]]) -> None:
+    keep = {
+        str(Path(major_version(str(release["version"]))) / f"{release['version']}.toml")
+        for release in releases
+    }
+    for path in output_dir.rglob("*.toml"):
+        if path.name == "manifest.toml":
+            continue
+        rel = path.relative_to(output_dir).as_posix()
+        if rel not in keep:
+            path.unlink()
+    for path in sorted(output_dir.iterdir(), reverse=True):
+        if path.is_dir() and not any(path.iterdir()):
+            path.rmdir()
+
+
+def main(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR)
+    parser.add_argument("--refresh-manifest", action="store_true")
+    parser.add_argument("--generate", action="store_true")
+    parser.add_argument("--verify", action="store_true")
+    parser.add_argument("--clean", action="store_true")
+    parser.add_argument("--versions", nargs="*", help="versions to process")
+    args = parser.parse_args(argv)
+
+    if args.refresh_manifest:
+        refresh_manifest(args.manifest)
+    if not args.generate and not args.verify and not args.clean:
+        return 0
+
+    metadata, releases = load_manifest(args.manifest)
+    selected = select_releases(releases, args.versions)
+    if args.generate:
+        for release in selected:
+            output = generate_release(release, metadata, output_dir=args.output_dir, cache_dir=args.cache_dir)
+            print(output.relative_to(ROOT))
+    if args.clean:
+        remove_stale_outputs(args.output_dir, releases)
+    if args.verify:
+        verify_outputs(selected, metadata, output_dir=args.output_dir, cache_dir=args.cache_dir)
+        print("msvc option metadata is reproducible")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv[1:]))

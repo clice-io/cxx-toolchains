@@ -16,6 +16,9 @@ option/
   lld/
     manifest.toml
     22/22.1.6.toml
+  msvc/
+    manifest.toml
+    17/17.0.0.toml
   nvcc/
     manifest.toml
     12/12.5.0.toml
@@ -30,6 +33,7 @@ pixi run verify-clang-options
 pixi run verify-gcc-options
 pixi run verify-ld-options
 pixi run verify-lld-options
+pixi run verify-msvc-options
 pixi run verify-nvcc-options
 pixi run validate-options
 ```
