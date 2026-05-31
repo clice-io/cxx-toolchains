@@ -60,8 +60,8 @@ The project is intended to cover:
 
 ## Status
 
-The first metadata sets are Clang, GCC, and LLD options. See
+The first metadata sets are Clang, GCC, GNU ld, LLD, and NVCC options. See
 [`option`](option) for generated TOML files, provenance, and reproducible
 pixi-managed regeneration and verification commands. See
 [`docs/option-sources.md`](docs/option-sources.md) for extraction strategies for
-additional tools such as GNU ld, NVCC, and MSVC.
+additional tools such as MSVC.

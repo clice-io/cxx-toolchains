@@ -27,27 +27,25 @@ This document records the extraction strategy for option metadata by tool.
 - Extraction: `llvm-tblgen -dump-json` and `-gen-opt-parser-defs`.
 - Verification: regenerate TOML and byte-compare.
 
-## Planned
-
 ### GNU ld
 
 - Source: `binutils-gdb` release tags.
-- Primary metadata input: `ld/lexsup.c`, where GNU ld defines its long option
-  table and option handling cases.
-- Secondary inputs: emulation params and target-specific files under `ld/`.
-- Extraction target: long option spelling, short option, argument kind, help
-  text, option code, source location, and target/emulation guards where
-  recoverable.
+- Metadata input: `ld/lexsup.c`, where GNU ld defines its option table.
+- Extraction: parse the option table for long spellings, short spellings,
+  argument kind, help text, option code, metavar, dash kind, and source
+  locations.
+- Verification: regenerate TOML and byte-compare.
 
 ### NVCC
 
-- Source: NVIDIA CUDA Toolkit documentation and installed toolkit probes.
-- Primary metadata input: versioned CUDA documentation for `nvcc` options.
-- Secondary validation: `nvcc --help` from installed CUDA Toolkit packages when
-  available.
-- Extraction target: option spelling, aliases, argument form, default value,
-  phase forwarding, host compiler forwarding, target architecture constraints,
-  and version provenance.
+- Source: NVIDIA CUDA Toolkit documentation archive.
+- Metadata input: versioned `cuda-compiler-driver-nvcc/index.html` pages.
+- Extraction: parse older table-based pages and newer section/TOC pages for
+  option spellings, aliases, argument text, section anchors, help text, source
+  URL, and source SHA-256.
+- Verification: regenerate TOML and byte-compare.
+
+## Planned
 
 ### MSVC
 
