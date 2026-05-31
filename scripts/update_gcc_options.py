@@ -39,6 +39,7 @@ SKIPPED_RECORD_TYPES = {
     "TargetVariable",
     "Variable",
 }
+OPTION_NAME_RE = re.compile(r"-?[A-Za-z0-9][A-Za-z0-9+_.:/=,-]*")
 
 
 def run(
@@ -270,22 +271,80 @@ def list_opt_paths(repo: Path, commit: str) -> list[str]:
             continue
         if "/testsuite/" in line:
             continue
+        if Path(line).name.startswith("vms_symvec_"):
+            continue
         paths.append(line)
     return sorted(paths)
+
+
+def strip_c_block_comment(line: str, in_comment: bool) -> tuple[str, bool]:
+    result: list[str] = []
+    index = 0
+    while index < len(line):
+        if in_comment:
+            end = line.find("*/", index)
+            if end < 0:
+                return "".join(result), True
+            index = end + 2
+            in_comment = False
+            continue
+        start = line.find("/*", index)
+        if start < 0:
+            result.append(line[index:])
+            break
+        result.append(line[index:start])
+        index = start + 2
+        in_comment = True
+    return "".join(result), in_comment
+
+
+def is_ignored_opt_line(line: str) -> bool:
+    return (
+        line.startswith(";")
+        or line.startswith("!")
+        or (line.startswith("#") and line != "###")
+    )
+
+
+def is_valid_option_name(name: str) -> bool:
+    if name == "###":
+        return True
+    return OPTION_NAME_RE.fullmatch(name) is not None
+
+
+def is_inline_property_token(value: str) -> bool:
+    if value in {"C", "C++", "ObjC", "ObjC++", "D", "F77", "LTO"}:
+        return True
+    return re.fullmatch(r"[A-Z][A-Za-z0-9_]*(?:\(.*\))?", value) is not None
+
+
+def normalize_option_block(block: list[str]) -> list[str] | None:
+    head = block[0]
+    if is_valid_option_name(head):
+        return block
+    parts = head.split(maxsplit=1)
+    if len(parts) != 2 or not is_valid_option_name(parts[0]):
+        return None
+    inline_properties = split_properties(parts[1])
+    if not inline_properties or not all(is_inline_property_token(prop) for prop in inline_properties):
+        return None
+    return [parts[0], f"{parts[1]} {block[1]}", *block[2:]]
 
 
 def parse_blocks(text: str) -> list[tuple[int, list[str]]]:
     blocks: list[tuple[int, list[str]]] = []
     current: list[str] = []
     start_line = 0
+    in_comment = False
     for line_no, raw_line in enumerate(text.splitlines(), start=1):
+        raw_line, in_comment = strip_c_block_comment(raw_line, in_comment)
         line = raw_line.strip()
         if not line:
             if current:
                 blocks.append((start_line, current))
                 current = []
             continue
-        if line.startswith(";"):
+        if is_ignored_opt_line(line):
             continue
         if not current:
             start_line = line_no
@@ -411,6 +470,11 @@ def parse_release_files(
                 continue
             if len(block) < 2:
                 continue
+            normalized_block = normalize_option_block(block)
+            if normalized_block is None:
+                continue
+            block = normalized_block
+            head = block[0]
 
             properties = split_properties(block[1])
             option_languages = [prop for prop in properties if prop in languages]

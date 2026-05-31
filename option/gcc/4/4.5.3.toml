@@ -10,8 +10,8 @@ source_tag = "releases/gcc-4.5.3"
 source_commit = "ffd3d5cd62c1808a3705e05b697220f273e49d0b"
 source_glob = "gcc/**/*.opt"
 generator = "scripts/update_gcc_options.py"
-source_file_count = 73
-option_count = 1824
+source_file_count = 72
+option_count = 1822
 enum_count = 0
 enum_value_count = 0
 
@@ -139,11 +139,6 @@ sha256 = "f97a7d25a286f4c435bfdf37da4978ccedcf883a332d56e8adc9c7a0b384c445"
 path = "gcc/config/ia64/ilp32.opt"
 ref = "ffd3d5cd62c1808a3705e05b697220f273e49d0b"
 sha256 = "ee278a423df7822cc4b49bbc7e61d9183aa873f88c2b0ce08b7b3711dce755a0"
-
-[[source_files]]
-path = "gcc/config/ia64/vms_symvec_libgcc_s.opt"
-ref = "ffd3d5cd62c1808a3705e05b697220f273e49d0b"
-sha256 = "a85482c38211315774a797bc97721519c44b6ae5da56e62e80591a7c33ff5b4a"
 
 [[source_files]]
 path = "gcc/config/iq2000/iq2000.opt"
@@ -11596,28 +11591,6 @@ help = "Generate LP64 code"
 
 [[options]]
 id = 985
-name = "! Symbol vector listing all the universal symbols to be exported when"
-spelling = "-! Symbol vector listing all the universal symbols to be exported when"
-kind = "flag"
-properties = ["!", "building", "libgcc_s.exe", "shareable", "image", "on", "IVMS", "for", "Gcc", "3.4.5."]
-flags = ["!", "building", "libgcc_s.exe", "shareable", "image", "on", "IVMS", "for", "Gcc", "3.4.5."]
-languages = []
-source_location = "gcc/config/ia64/vms_symvec_libgcc_s.opt:1"
-help = "! It would be better to auto-generate this file."
-
-[[options]]
-id = 986
-name = "case_sensitive=yes"
-spelling = "-case_sensitive=yes"
-kind = "flag"
-properties = ["SYMBOL_VECTOR=(__divdf3=PROCEDURE)"]
-flags = []
-languages = []
-source_location = "gcc/config/ia64/vms_symvec_libgcc_s.opt:5"
-help = "SYMBOL_VECTOR=(__divdi3=PROCEDURE)\nSYMBOL_VECTOR=(__divsf3=PROCEDURE)\nSYMBOL_VECTOR=(__divsi3=PROCEDURE)\nSYMBOL_VECTOR=(__divxf3=PROCEDURE)\nSYMBOL_VECTOR=(__moddi3=PROCEDURE)\nSYMBOL_VECTOR=(__modsi3=PROCEDURE)\nSYMBOL_VECTOR=(__ia64_nonlocal_goto=PROCEDURE)\nSYMBOL_VECTOR=(__ia64_restore_stack_nonlocal=PROCEDURE)\nSYMBOL_VECTOR=(__ia64_save_stack_nonlocal=PROCEDURE)\nSYMBOL_VECTOR=(__ia64_trampoline=PROCEDURE)\nSYMBOL_VECTOR=(__udivdi3=PROCEDURE)\nSYMBOL_VECTOR=(__udivsi3=PROCEDURE)\nSYMBOL_VECTOR=(__umoddi3=PROCEDURE)\nSYMBOL_VECTOR=(__umodsi3=PROCEDURE)\nSYMBOL_VECTOR=(__absvti2=PROCEDURE)\nSYMBOL_VECTOR=(__absvdi2=PROCEDURE)\nSYMBOL_VECTOR=(__absvsi2=PROCEDURE)\nSYMBOL_VECTOR=(__addvti3=PROCEDURE)\nSYMBOL_VECTOR=(__addvdi3=PROCEDURE)\nSYMBOL_VECTOR=(__addvsi3=PROCEDURE)\nSYMBOL_VECTOR=(__ashlti3=PROCEDURE)\nSYMBOL_VECTOR=(__ashrti3=PROCEDURE)\nSYMBOL_VECTOR=(__clear_cache=PROCEDURE)\nSYMBOL_VECTOR=(__clzti2=PROCEDURE)\nSYMBOL_VECTOR=(__clzdi2=PROCEDURE)\nSYMBOL_VECTOR=(__cmpti2=PROCEDURE)\nSYMBOL_VECTOR=(__ctzti2=PROCEDURE)\nSYMBOL_VECTOR=(__ctzdi2=PROCEDURE)\nSYMBOL_VECTOR=(__divti3=PROCEDURE)\nSYMBOL_VECTOR=(__enable_execute_stack=PROCEDURE)\nSYMBOL_VECTOR=(__ffsti2=PROCEDURE)\nSYMBOL_VECTOR=(__ffsdi2=PROCEDURE)\nSYMBOL_VECTOR=(__fixdfti=PROCEDURE)\nSYMBOL_VECTOR=(__fixsfti=PROCEDURE)\nSYMBOL_VECTOR=(__fixunsdfti=PROCEDURE)\nSYMBOL_VECTOR=(__fixunsdfdi=PROCEDURE)\nSYMBOL_VECTOR=(__fixunssfti=PROCEDURE)\nSYMBOL_VECTOR=(__fixunssfdi=PROCEDURE)\nSYMBOL_VECTOR=(__floattidf=PROCEDURE)\nSYMBOL_VECTOR=(__floattisf=PROCEDURE)\nSYMBOL_VECTOR=(__lshrti3=PROCEDURE)\nSYMBOL_VECTOR=(__modti3=PROCEDURE)\nSYMBOL_VECTOR=(__multi3=PROCEDURE)\nSYMBOL_VECTOR=(__mulvti3=PROCEDURE)\nSYMBOL_VECTOR=(__mulvdi3=PROCEDURE)\nSYMBOL_VECTOR=(__mulvsi3=PROCEDURE)\nSYMBOL_VECTOR=(__negti2=PROCEDURE)\nSYMBOL_VECTOR=(__negvti2=PROCEDURE)\nSYMBOL_VECTOR=(__negvdi2=PROCEDURE)\nSYMBOL_VECTOR=(__negvsi2=PROCEDURE)\nSYMBOL_VECTOR=(__parityti2=PROCEDURE)\nSYMBOL_VECTOR=(__paritydi2=PROCEDURE)\nSYMBOL_VECTOR=(__popcountti2=PROCEDURE)\nSYMBOL_VECTOR=(__popcountdi2=PROCEDURE)\nSYMBOL_VECTOR=(__subvti3=PROCEDURE)\nSYMBOL_VECTOR=(__subvdi3=PROCEDURE)\nSYMBOL_VECTOR=(__subvsi3=PROCEDURE)\nSYMBOL_VECTOR=(__ucmpti2=PROCEDURE)\nSYMBOL_VECTOR=(__udiv_w_sdiv=PROCEDURE)\nSYMBOL_VECTOR=(__udivti3=PROCEDURE)\nSYMBOL_VECTOR=(__udivmodti4=PROCEDURE)\nSYMBOL_VECTOR=(__umodti3=PROCEDURE)\nSYMBOL_VECTOR=(__gthread_active_p=PROCEDURE)\nSYMBOL_VECTOR=(__gthread_mutex_lock=PROCEDURE)\nSYMBOL_VECTOR=(__gthread_mutex_unlock=PROCEDURE)\nSYMBOL_VECTOR=(__gcc_personality_v0=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetGR=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_SetGR=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetIP=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetIPInfo=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_SetIP=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetLanguageSpecificData=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetRegionStart=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_FindEnclosingFunction=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetCFA=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_GetBSP=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_RaiseException=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_ForcedUnwind=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_Resume=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_Resume_or_Rethrow=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_DeleteException=PROCEDURE)\nSYMBOL_VECTOR=(_Unwind_Backtrace=PROCEDURE)\ncase_sensitive=NO"
-
-[[options]]
-id = 987
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -11628,7 +11601,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:21"
 help = "Specify CPU for code generation purposes"
 
 [[options]]
-id = 988
+id = 986
 name = "mcpu="
 spelling = "-mcpu="
 kind = "joined"
@@ -11639,7 +11612,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:25"
 help = "Specify CPU for scheduling purposes"
 
 [[options]]
-id = 989
+id = 987
 name = "membedded-data"
 spelling = "-membedded-data"
 kind = "flag"
@@ -11650,7 +11623,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:29"
 help = "Use ROM instead of RAM"
 
 [[options]]
-id = 990
+id = 988
 name = "mgpopt"
 spelling = "-mgpopt"
 kind = "flag"
@@ -11661,7 +11634,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:33"
 help = "Use GP relative sdata/sbss sections"
 
 [[options]]
-id = 991
+id = 989
 name = "mno-crt0"
 spelling = "-mno-crt0"
 kind = "flag"
@@ -11672,7 +11645,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:38"
 help = "No default crt0.o"
 
 [[options]]
-id = 992
+id = 990
 name = "muninit-const-in-rodata"
 spelling = "-muninit-const-in-rodata"
 kind = "flag"
@@ -11683,7 +11656,7 @@ source_location = "gcc/config/iq2000/iq2000.opt:42"
 help = "Put uninitialized constants in ROM (needs -membedded-data)"
 
 [[options]]
-id = 993
+id = 991
 name = "mglibc"
 spelling = "-mglibc"
 kind = "flag"
@@ -11695,7 +11668,7 @@ var = "linux_uclibc"
 help = "Use GNU libc instead of uClibc"
 
 [[options]]
-id = 994
+id = 992
 name = "muclibc"
 spelling = "-muclibc"
 kind = "flag"
@@ -11707,7 +11680,7 @@ var = "linux_uclibc"
 help = "Use uClibc instead of GNU libc"
 
 [[options]]
-id = 995
+id = 993
 name = "mmultiply-enabled"
 spelling = "-mmultiply-enabled"
 kind = "flag"
@@ -11718,7 +11691,7 @@ source_location = "gcc/config/lm32/lm32.opt:22"
 help = "Enable multiply instructions"
 
 [[options]]
-id = 996
+id = 994
 name = "mdivide-enabled"
 spelling = "-mdivide-enabled"
 kind = "flag"
@@ -11729,7 +11702,7 @@ source_location = "gcc/config/lm32/lm32.opt:26"
 help = "Enable divide and modulus instructions"
 
 [[options]]
-id = 997
+id = 995
 name = "mbarrel-shift-enabled"
 spelling = "-mbarrel-shift-enabled"
 kind = "flag"
@@ -11740,7 +11713,7 @@ source_location = "gcc/config/lm32/lm32.opt:30"
 help = "Enable barrel shift instructions"
 
 [[options]]
-id = 998
+id = 996
 name = "msign-extend-enabled"
 spelling = "-msign-extend-enabled"
 kind = "flag"
@@ -11751,7 +11724,7 @@ source_location = "gcc/config/lm32/lm32.opt:34"
 help = "Enable sign extend instructions"
 
 [[options]]
-id = 999
+id = 997
 name = "muser-enabled"
 spelling = "-muser-enabled"
 kind = "flag"
@@ -11762,7 +11735,7 @@ source_location = "gcc/config/lm32/lm32.opt:38"
 help = "Enable user-defined instructions"
 
 [[options]]
-id = 1000
+id = 998
 name = "mlegacy-threads"
 spelling = "-mlegacy-threads"
 kind = "flag"
@@ -11773,7 +11746,7 @@ source_location = "gcc/config/lynx.opt:21"
 help = "Support legacy multi-threading"
 
 [[options]]
-id = 1001
+id = 999
 name = "mshared"
 spelling = "-mshared"
 kind = "flag"
@@ -11784,7 +11757,7 @@ source_location = "gcc/config/lynx.opt:25"
 help = "Use shared libraries"
 
 [[options]]
-id = 1002
+id = 1000
 name = "mthreads"
 spelling = "-mthreads"
 kind = "flag"
@@ -11795,7 +11768,7 @@ source_location = "gcc/config/lynx.opt:29"
 help = "Support multi-threading"
 
 [[options]]
-id = 1003
+id = 1001
 name = "msim"
 spelling = "-msim"
 kind = "flag"
@@ -11806,7 +11779,7 @@ source_location = "gcc/config/m32c/m32c.opt:22"
 help = "-msim\tUse simulator runtime"
 
 [[options]]
-id = 1004
+id = 1002
 name = "mcpu=r8c"
 spelling = "-mcpu=r8c"
 kind = "flag"
@@ -11818,7 +11791,7 @@ var = "target_cpu,'r'"
 help = "-mcpu=r8c\tCompile code for R8C variants"
 
 [[options]]
-id = 1005
+id = 1003
 name = "mcpu=m16c"
 spelling = "-mcpu=m16c"
 kind = "flag"
@@ -11830,7 +11803,7 @@ var = "target_cpu,'6'"
 help = "-mcpu=m16c\tCompile code for M16C variants"
 
 [[options]]
-id = 1006
+id = 1004
 name = "mcpu=m32cm"
 spelling = "-mcpu=m32cm"
 kind = "flag"
@@ -11842,7 +11815,7 @@ var = "target_cpu,'m'"
 help = "-mcpu=m32cm\tCompile code for M32CM variants"
 
 [[options]]
-id = 1007
+id = 1005
 name = "mcpu=m32c"
 spelling = "-mcpu=m32c"
 kind = "flag"
@@ -11854,7 +11827,7 @@ var = "target_cpu,'3'"
 help = "-mcpu=m32c\tCompile code for M32C variants"
 
 [[options]]
-id = 1008
+id = 1006
 name = "memregs="
 spelling = "-memregs="
 kind = "joined"
@@ -11866,7 +11839,7 @@ var = "target_memregs_string"
 help = "-memregs=\tNumber of memreg bytes (default: 16, range: 0..16)"
 
 [[options]]
-id = 1009
+id = 1007
 name = "m32rx"
 spelling = "-m32rx"
 kind = "flag"
@@ -11877,7 +11850,7 @@ source_location = "gcc/config/m32r/m32r.opt:21"
 help = "Compile for the m32rx"
 
 [[options]]
-id = 1010
+id = 1008
 name = "m32r2"
 spelling = "-m32r2"
 kind = "flag"
@@ -11888,7 +11861,7 @@ source_location = "gcc/config/m32r/m32r.opt:25"
 help = "Compile for the m32r2"
 
 [[options]]
-id = 1011
+id = 1009
 name = "m32r"
 spelling = "-m32r"
 kind = "flag"
@@ -11899,7 +11872,7 @@ source_location = "gcc/config/m32r/m32r.opt:29"
 help = "Compile for the m32r"
 
 [[options]]
-id = 1012
+id = 1010
 name = "malign-loops"
 spelling = "-malign-loops"
 kind = "flag"
@@ -11910,7 +11883,7 @@ source_location = "gcc/config/m32r/m32r.opt:33"
 help = "Align all loops to 32 byte boundary"
 
 [[options]]
-id = 1013
+id = 1011
 name = "mbranch-cost=1"
 spelling = "-mbranch-cost=1"
 kind = "flag"
@@ -11921,7 +11894,7 @@ source_location = "gcc/config/m32r/m32r.opt:37"
 help = "Prefer branches over conditional execution"
 
 [[options]]
-id = 1014
+id = 1012
 name = "mbranch-cost=2"
 spelling = "-mbranch-cost=2"
 kind = "flag"
@@ -11932,7 +11905,7 @@ source_location = "gcc/config/m32r/m32r.opt:41"
 help = "Give branches their default cost"
 
 [[options]]
-id = 1015
+id = 1013
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -11943,7 +11916,7 @@ source_location = "gcc/config/m32r/m32r.opt:45"
 help = "Display compile time statistics"
 
 [[options]]
-id = 1016
+id = 1014
 name = "mflush-func="
 spelling = "-mflush-func="
 kind = "joined"
@@ -11955,7 +11928,7 @@ var = "m32r_cache_flush_func"
 help = "Specify cache flush function"
 
 [[options]]
-id = 1017
+id = 1015
 name = "mflush-trap="
 spelling = "-mflush-trap="
 kind = "joined"
@@ -11967,7 +11940,7 @@ var = "m32r_cache_flush_trap"
 help = "Specify cache flush trap number"
 
 [[options]]
-id = 1018
+id = 1016
 name = "missue-rate=1"
 spelling = "-missue-rate=1"
 kind = "flag"
@@ -11978,7 +11951,7 @@ source_location = "gcc/config/m32r/m32r.opt:57"
 help = "Only issue one instruction per cycle"
 
 [[options]]
-id = 1019
+id = 1017
 name = "missue-rate=2"
 spelling = "-missue-rate=2"
 kind = "flag"
@@ -11989,7 +11962,7 @@ source_location = "gcc/config/m32r/m32r.opt:61"
 help = "Allow two instructions to be issued per cycle"
 
 [[options]]
-id = 1020
+id = 1018
 name = "mmodel="
 spelling = "-mmodel="
 kind = "joined"
@@ -12000,7 +11973,7 @@ source_location = "gcc/config/m32r/m32r.opt:65"
 help = "Code size: small, medium or large"
 
 [[options]]
-id = 1021
+id = 1019
 name = "mno-flush-func"
 spelling = "-mno-flush-func"
 kind = "flag"
@@ -12011,7 +11984,7 @@ source_location = "gcc/config/m32r/m32r.opt:69"
 help = "Don't call any cache flush functions"
 
 [[options]]
-id = 1022
+id = 1020
 name = "mno-flush-trap"
 spelling = "-mno-flush-trap"
 kind = "flag"
@@ -12022,7 +11995,7 @@ source_location = "gcc/config/m32r/m32r.opt:73"
 help = "Don't call any cache flush trap"
 
 [[options]]
-id = 1023
+id = 1021
 name = "msdata="
 spelling = "-msdata="
 kind = "joined"
@@ -12033,7 +12006,7 @@ source_location = "gcc/config/m32r/m32r.opt:80"
 help = "Small data area: none, sdata, use"
 
 [[options]]
-id = 1024
+id = 1022
 name = "m6811"
 spelling = "-m6811"
 kind = "flag"
@@ -12044,7 +12017,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:21"
 help = "Compile for a 68HC11"
 
 [[options]]
-id = 1025
+id = 1023
 name = "m6812"
 spelling = "-m6812"
 kind = "flag"
@@ -12055,7 +12028,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:25"
 help = "Compile for a 68HC12"
 
 [[options]]
-id = 1026
+id = 1024
 name = "m68hc11"
 spelling = "-m68hc11"
 kind = "flag"
@@ -12066,7 +12039,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:29"
 help = "Compile for a 68HC11"
 
 [[options]]
-id = 1027
+id = 1025
 name = "m68hc12"
 spelling = "-m68hc12"
 kind = "flag"
@@ -12077,7 +12050,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:33"
 help = "Compile for a 68HC12"
 
 [[options]]
-id = 1028
+id = 1026
 name = "m68hcs12"
 spelling = "-m68hcs12"
 kind = "flag"
@@ -12088,7 +12061,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:39"
 help = "Compile for a 68HCS12"
 
 [[options]]
-id = 1029
+id = 1027
 name = "m68s12"
 spelling = "-m68s12"
 kind = "flag"
@@ -12099,7 +12072,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:43"
 help = "Compile for a 68HCS12"
 
 [[options]]
-id = 1030
+id = 1028
 name = "mauto-incdec"
 spelling = "-mauto-incdec"
 kind = "flag"
@@ -12110,7 +12083,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:47"
 help = "Auto pre/post decrement increment allowed"
 
 [[options]]
-id = 1031
+id = 1029
 name = "minmax"
 spelling = "-minmax"
 kind = "flag"
@@ -12121,7 +12094,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:51"
 help = "Min/max instructions allowed"
 
 [[options]]
-id = 1032
+id = 1030
 name = "mlong-calls"
 spelling = "-mlong-calls"
 kind = "flag"
@@ -12132,7 +12105,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:55"
 help = "Use call and rtc for function calls and returns"
 
 [[options]]
-id = 1033
+id = 1031
 name = "mnoauto-incdec"
 spelling = "-mnoauto-incdec"
 kind = "flag"
@@ -12143,7 +12116,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:59"
 help = "Auto pre/post decrement increment not allowed"
 
 [[options]]
-id = 1034
+id = 1032
 name = "mnolong-calls"
 spelling = "-mnolong-calls"
 kind = "flag"
@@ -12154,7 +12127,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:63"
 help = "Use jsr and rts for function calls and returns"
 
 [[options]]
-id = 1035
+id = 1033
 name = "mnominmax"
 spelling = "-mnominmax"
 kind = "flag"
@@ -12165,7 +12138,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:67"
 help = "Min/max instructions not allowed"
 
 [[options]]
-id = 1036
+id = 1034
 name = "mnorelax"
 spelling = "-mnorelax"
 kind = "flag"
@@ -12176,7 +12149,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:71"
 help = "Use direct addressing mode for soft registers"
 
 [[options]]
-id = 1037
+id = 1035
 name = "mnoshort"
 spelling = "-mnoshort"
 kind = "flag"
@@ -12187,7 +12160,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:75"
 help = "Compile with 32-bit integer mode"
 
 [[options]]
-id = 1038
+id = 1036
 name = "mreg-alloc="
 spelling = "-mreg-alloc="
 kind = "joined"
@@ -12198,7 +12171,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:80"
 help = "Specify the register allocation order"
 
 [[options]]
-id = 1039
+id = 1037
 name = "mrelax"
 spelling = "-mrelax"
 kind = "flag"
@@ -12209,7 +12182,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:84"
 help = "Do not use direct addressing mode for soft registers"
 
 [[options]]
-id = 1040
+id = 1038
 name = "mshort"
 spelling = "-mshort"
 kind = "flag"
@@ -12220,7 +12193,7 @@ source_location = "gcc/config/m68hc11/m68hc11.opt:88"
 help = "Compile with 16-bit integer mode"
 
 [[options]]
-id = 1041
+id = 1039
 name = "msoft-reg-count="
 spelling = "-msoft-reg-count="
 kind = "joined"
@@ -12232,7 +12205,7 @@ var = "m68hc11_soft_reg_count"
 help = "Indicate the number of soft registers available"
 
 [[options]]
-id = 1042
+id = 1040
 name = "mieee-fp"
 spelling = "-mieee-fp"
 kind = "flag"
@@ -12243,7 +12216,7 @@ source_location = "gcc/config/m68k/ieee.opt:22"
 help = "Use IEEE math for fp comparisons"
 
 [[options]]
-id = 1043
+id = 1041
 name = "m5200"
 spelling = "-m5200"
 kind = "flag"
@@ -12254,7 +12227,7 @@ source_location = "gcc/config/m68k/m68k.opt:21"
 help = "Generate code for a 520X"
 
 [[options]]
-id = 1044
+id = 1042
 name = "m5206e"
 spelling = "-m5206e"
 kind = "flag"
@@ -12265,7 +12238,7 @@ source_location = "gcc/config/m68k/m68k.opt:25"
 help = "Generate code for a 5206e"
 
 [[options]]
-id = 1045
+id = 1043
 name = "m528x"
 spelling = "-m528x"
 kind = "flag"
@@ -12276,7 +12249,7 @@ source_location = "gcc/config/m68k/m68k.opt:29"
 help = "Generate code for a 528x"
 
 [[options]]
-id = 1046
+id = 1044
 name = "m5307"
 spelling = "-m5307"
 kind = "flag"
@@ -12287,7 +12260,7 @@ source_location = "gcc/config/m68k/m68k.opt:33"
 help = "Generate code for a 5307"
 
 [[options]]
-id = 1047
+id = 1045
 name = "m5407"
 spelling = "-m5407"
 kind = "flag"
@@ -12298,7 +12271,7 @@ source_location = "gcc/config/m68k/m68k.opt:37"
 help = "Generate code for a 5407"
 
 [[options]]
-id = 1048
+id = 1046
 name = "m68000"
 spelling = "-m68000"
 kind = "flag"
@@ -12309,7 +12282,7 @@ source_location = "gcc/config/m68k/m68k.opt:41"
 help = "Generate code for a 68000"
 
 [[options]]
-id = 1049
+id = 1047
 name = "m68010"
 spelling = "-m68010"
 kind = "flag"
@@ -12320,7 +12293,7 @@ source_location = "gcc/config/m68k/m68k.opt:45"
 help = "Generate code for a 68010"
 
 [[options]]
-id = 1050
+id = 1048
 name = "m68020"
 spelling = "-m68020"
 kind = "flag"
@@ -12331,7 +12304,7 @@ source_location = "gcc/config/m68k/m68k.opt:49"
 help = "Generate code for a 68020"
 
 [[options]]
-id = 1051
+id = 1049
 name = "m68020-40"
 spelling = "-m68020-40"
 kind = "flag"
@@ -12342,7 +12315,7 @@ source_location = "gcc/config/m68k/m68k.opt:53"
 help = "Generate code for a 68040, without any new instructions"
 
 [[options]]
-id = 1052
+id = 1050
 name = "m68020-60"
 spelling = "-m68020-60"
 kind = "flag"
@@ -12353,7 +12326,7 @@ source_location = "gcc/config/m68k/m68k.opt:57"
 help = "Generate code for a 68060, without any new instructions"
 
 [[options]]
-id = 1053
+id = 1051
 name = "m68030"
 spelling = "-m68030"
 kind = "flag"
@@ -12364,7 +12337,7 @@ source_location = "gcc/config/m68k/m68k.opt:61"
 help = "Generate code for a 68030"
 
 [[options]]
-id = 1054
+id = 1052
 name = "m68040"
 spelling = "-m68040"
 kind = "flag"
@@ -12375,7 +12348,7 @@ source_location = "gcc/config/m68k/m68k.opt:65"
 help = "Generate code for a 68040"
 
 [[options]]
-id = 1055
+id = 1053
 name = "m68060"
 spelling = "-m68060"
 kind = "flag"
@@ -12386,7 +12359,7 @@ source_location = "gcc/config/m68k/m68k.opt:69"
 help = "Generate code for a 68060"
 
 [[options]]
-id = 1056
+id = 1054
 name = "m68302"
 spelling = "-m68302"
 kind = "flag"
@@ -12397,7 +12370,7 @@ source_location = "gcc/config/m68k/m68k.opt:73"
 help = "Generate code for a 68302"
 
 [[options]]
-id = 1057
+id = 1055
 name = "m68332"
 spelling = "-m68332"
 kind = "flag"
@@ -12408,7 +12381,7 @@ source_location = "gcc/config/m68k/m68k.opt:77"
 help = "Generate code for a 68332"
 
 [[options]]
-id = 1058
+id = 1056
 name = "m68851"
 spelling = "-m68851"
 kind = "flag"
@@ -12419,7 +12392,7 @@ source_location = "gcc/config/m68k/m68k.opt:82"
 help = "Generate code for a 68851"
 
 [[options]]
-id = 1059
+id = 1057
 name = "m68881"
 spelling = "-m68881"
 kind = "flag"
@@ -12430,7 +12403,7 @@ source_location = "gcc/config/m68k/m68k.opt:86"
 help = "Generate code that uses 68881 floating-point instructions"
 
 [[options]]
-id = 1060
+id = 1058
 name = "malign-int"
 spelling = "-malign-int"
 kind = "flag"
@@ -12441,7 +12414,7 @@ source_location = "gcc/config/m68k/m68k.opt:90"
 help = "Align variables on a 32-bit boundary"
 
 [[options]]
-id = 1061
+id = 1059
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -12452,7 +12425,7 @@ source_location = "gcc/config/m68k/m68k.opt:94"
 help = "Specify the name of the target architecture"
 
 [[options]]
-id = 1062
+id = 1060
 name = "mbitfield"
 spelling = "-mbitfield"
 kind = "flag"
@@ -12463,7 +12436,7 @@ source_location = "gcc/config/m68k/m68k.opt:98"
 help = "Use the bit-field instructions"
 
 [[options]]
-id = 1063
+id = 1061
 name = "mc68000"
 spelling = "-mc68000"
 kind = "flag"
@@ -12474,7 +12447,7 @@ source_location = "gcc/config/m68k/m68k.opt:102"
 help = "Generate code for a 68000"
 
 [[options]]
-id = 1064
+id = 1062
 name = "mc68020"
 spelling = "-mc68020"
 kind = "flag"
@@ -12485,7 +12458,7 @@ source_location = "gcc/config/m68k/m68k.opt:106"
 help = "Generate code for a 68020"
 
 [[options]]
-id = 1065
+id = 1063
 name = "mcfv4e"
 spelling = "-mcfv4e"
 kind = "flag"
@@ -12496,7 +12469,7 @@ source_location = "gcc/config/m68k/m68k.opt:110"
 help = "Generate code for a ColdFire v4e"
 
 [[options]]
-id = 1066
+id = 1064
 name = "mcpu="
 spelling = "-mcpu="
 kind = "joined"
@@ -12507,7 +12480,7 @@ source_location = "gcc/config/m68k/m68k.opt:114"
 help = "Specify the target CPU"
 
 [[options]]
-id = 1067
+id = 1065
 name = "mcpu32"
 spelling = "-mcpu32"
 kind = "flag"
@@ -12518,7 +12491,7 @@ source_location = "gcc/config/m68k/m68k.opt:118"
 help = "Generate code for a cpu32"
 
 [[options]]
-id = 1068
+id = 1066
 name = "mdiv"
 spelling = "-mdiv"
 kind = "flag"
@@ -12529,7 +12502,7 @@ source_location = "gcc/config/m68k/m68k.opt:122"
 help = "Use hardware division instructions on ColdFire"
 
 [[options]]
-id = 1069
+id = 1067
 name = "mfidoa"
 spelling = "-mfidoa"
 kind = "flag"
@@ -12540,7 +12513,7 @@ source_location = "gcc/config/m68k/m68k.opt:126"
 help = "Generate code for a Fido A"
 
 [[options]]
-id = 1070
+id = 1068
 name = "mhard-float"
 spelling = "-mhard-float"
 kind = "flag"
@@ -12551,7 +12524,7 @@ source_location = "gcc/config/m68k/m68k.opt:130"
 help = "Generate code which uses hardware floating point instructions"
 
 [[options]]
-id = 1071
+id = 1069
 name = "mid-shared-library"
 spelling = "-mid-shared-library"
 kind = "flag"
@@ -12562,7 +12535,7 @@ source_location = "gcc/config/m68k/m68k.opt:134"
 help = "Enable ID based shared library"
 
 [[options]]
-id = 1072
+id = 1070
 name = "mnobitfield"
 spelling = "-mnobitfield"
 kind = "flag"
@@ -12573,7 +12546,7 @@ source_location = "gcc/config/m68k/m68k.opt:138"
 help = "Do not use the bit-field instructions"
 
 [[options]]
-id = 1073
+id = 1071
 name = "mnortd"
 spelling = "-mnortd"
 kind = "flag"
@@ -12584,7 +12557,7 @@ source_location = "gcc/config/m68k/m68k.opt:142"
 help = "Use normal calling convention"
 
 [[options]]
-id = 1074
+id = 1072
 name = "mnoshort"
 spelling = "-mnoshort"
 kind = "flag"
@@ -12595,7 +12568,7 @@ source_location = "gcc/config/m68k/m68k.opt:146"
 help = "Consider type 'int' to be 32 bits wide"
 
 [[options]]
-id = 1075
+id = 1073
 name = "mpcrel"
 spelling = "-mpcrel"
 kind = "flag"
@@ -12606,7 +12579,7 @@ source_location = "gcc/config/m68k/m68k.opt:150"
 help = "Generate pc-relative code"
 
 [[options]]
-id = 1076
+id = 1074
 name = "mrtd"
 spelling = "-mrtd"
 kind = "flag"
@@ -12617,7 +12590,7 @@ source_location = "gcc/config/m68k/m68k.opt:154"
 help = "Use different calling convention using 'rtd'"
 
 [[options]]
-id = 1077
+id = 1075
 name = "msep-data"
 spelling = "-msep-data"
 kind = "flag"
@@ -12628,7 +12601,7 @@ source_location = "gcc/config/m68k/m68k.opt:158"
 help = "Enable separate data segment"
 
 [[options]]
-id = 1078
+id = 1076
 name = "mshared-library-id="
 spelling = "-mshared-library-id="
 kind = "joined"
@@ -12639,7 +12612,7 @@ source_location = "gcc/config/m68k/m68k.opt:162"
 help = "ID of shared library to build"
 
 [[options]]
-id = 1079
+id = 1077
 name = "mshort"
 spelling = "-mshort"
 kind = "flag"
@@ -12650,7 +12623,7 @@ source_location = "gcc/config/m68k/m68k.opt:166"
 help = "Consider type 'int' to be 16 bits wide"
 
 [[options]]
-id = 1080
+id = 1078
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -12661,7 +12634,7 @@ source_location = "gcc/config/m68k/m68k.opt:170"
 help = "Generate code with library calls for floating point"
 
 [[options]]
-id = 1081
+id = 1079
 name = "mstrict-align"
 spelling = "-mstrict-align"
 kind = "flag"
@@ -12672,7 +12645,7 @@ source_location = "gcc/config/m68k/m68k.opt:174"
 help = "Do not use unaligned memory references"
 
 [[options]]
-id = 1082
+id = 1080
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -12683,7 +12656,7 @@ source_location = "gcc/config/m68k/m68k.opt:178"
 help = "Tune for the specified target CPU or architecture"
 
 [[options]]
-id = 1083
+id = 1081
 name = "mxgot"
 spelling = "-mxgot"
 kind = "flag"
@@ -12694,7 +12667,7 @@ source_location = "gcc/config/m68k/m68k.opt:182"
 help = "Support more than 8192 GOT entries on ColdFire"
 
 [[options]]
-id = 1084
+id = 1082
 name = "mxtls"
 spelling = "-mxtls"
 kind = "flag"
@@ -12705,7 +12678,7 @@ source_location = "gcc/config/m68k/m68k.opt:186"
 help = "Support TLS segment larger than 64K"
 
 [[options]]
-id = 1085
+id = 1083
 name = "m210"
 spelling = "-m210"
 kind = "flag"
@@ -12716,7 +12689,7 @@ source_location = "gcc/config/mcore/mcore.opt:21"
 help = "Generate code for the M*Core M210"
 
 [[options]]
-id = 1086
+id = 1084
 name = "m340"
 spelling = "-m340"
 kind = "flag"
@@ -12727,7 +12700,7 @@ source_location = "gcc/config/mcore/mcore.opt:25"
 help = "Generate code for the M*Core M340"
 
 [[options]]
-id = 1087
+id = 1085
 name = "m4byte-functions"
 spelling = "-m4byte-functions"
 kind = "flag"
@@ -12738,7 +12711,7 @@ source_location = "gcc/config/mcore/mcore.opt:29"
 help = "Force functions to be aligned to a 4 byte boundary"
 
 [[options]]
-id = 1088
+id = 1086
 name = "mbig-endian"
 spelling = "-mbig-endian"
 kind = "flag"
@@ -12749,7 +12722,7 @@ source_location = "gcc/config/mcore/mcore.opt:33"
 help = "Generate big-endian code"
 
 [[options]]
-id = 1089
+id = 1087
 name = "mcallgraph-data"
 spelling = "-mcallgraph-data"
 kind = "flag"
@@ -12760,7 +12733,7 @@ source_location = "gcc/config/mcore/mcore.opt:37"
 help = "Emit call graph information"
 
 [[options]]
-id = 1090
+id = 1088
 name = "mdiv"
 spelling = "-mdiv"
 kind = "flag"
@@ -12771,7 +12744,7 @@ source_location = "gcc/config/mcore/mcore.opt:41"
 help = "Use the divide instruction"
 
 [[options]]
-id = 1091
+id = 1089
 name = "mhardlit"
 spelling = "-mhardlit"
 kind = "flag"
@@ -12782,7 +12755,7 @@ source_location = "gcc/config/mcore/mcore.opt:45"
 help = "Inline constants if it can be done in 2 insns or less"
 
 [[options]]
-id = 1092
+id = 1090
 name = "mlittle-endian"
 spelling = "-mlittle-endian"
 kind = "flag"
@@ -12793,7 +12766,7 @@ source_location = "gcc/config/mcore/mcore.opt:49"
 help = "Generate little-endian code"
 
 [[options]]
-id = 1093
+id = 1091
 name = "mno-lsim"
 spelling = "-mno-lsim"
 kind = "flag"
@@ -12804,7 +12777,7 @@ source_location = "gcc/config/mcore/mcore.opt:54"
 help = "Assume that run-time support has been provided, so omit -lsim from the linker command line"
 
 [[options]]
-id = 1094
+id = 1092
 name = "mrelax-immediates"
 spelling = "-mrelax-immediates"
 kind = "flag"
@@ -12815,7 +12788,7 @@ source_location = "gcc/config/mcore/mcore.opt:58"
 help = "Use arbitrary sized immediates in bit operations"
 
 [[options]]
-id = 1095
+id = 1093
 name = "mslow-bytes"
 spelling = "-mslow-bytes"
 kind = "flag"
@@ -12826,7 +12799,7 @@ source_location = "gcc/config/mcore/mcore.opt:62"
 help = "Prefer word accesses over byte accesses"
 
 [[options]]
-id = 1096
+id = 1094
 name = "mstack-increment="
 spelling = "-mstack-increment="
 kind = "joined"
@@ -12838,7 +12811,7 @@ var = "mcore_stack_increment"
 help = "Set the maximum amount for a single stack increment operation"
 
 [[options]]
-id = 1097
+id = 1095
 name = "mwide-bitfields"
 spelling = "-mwide-bitfields"
 kind = "flag"
@@ -12849,7 +12822,7 @@ source_location = "gcc/config/mcore/mcore.opt:70"
 help = "Always treat bitfields as int-sized"
 
 [[options]]
-id = 1098
+id = 1096
 name = "mabsdiff"
 spelling = "-mabsdiff"
 kind = "flag"
@@ -12860,7 +12833,7 @@ source_location = "gcc/config/mep/mep.opt:19"
 help = "Enable absolute difference instructions"
 
 [[options]]
-id = 1099
+id = 1097
 name = "mall-opts"
 spelling = "-mall-opts"
 kind = "flag"
@@ -12871,7 +12844,7 @@ source_location = "gcc/config/mep/mep.opt:23"
 help = "Enable all optional instructions"
 
 [[options]]
-id = 1100
+id = 1098
 name = "maverage"
 spelling = "-maverage"
 kind = "flag"
@@ -12882,7 +12855,7 @@ source_location = "gcc/config/mep/mep.opt:27"
 help = "Enable average instructions"
 
 [[options]]
-id = 1101
+id = 1099
 name = "mbased="
 spelling = "-mbased="
 kind = "joined"
@@ -12894,7 +12867,7 @@ var = "mep_based_cutoff"
 help = "Variables this size and smaller go in the based section. (default 0)"
 
 [[options]]
-id = 1102
+id = 1100
 name = "mbitops"
 spelling = "-mbitops"
 kind = "flag"
@@ -12905,7 +12878,7 @@ source_location = "gcc/config/mep/mep.opt:35"
 help = "Enable bit manipulation instructions"
 
 [[options]]
-id = 1103
+id = 1101
 name = "mc="
 spelling = "-mc="
 kind = "joined"
@@ -12917,7 +12890,7 @@ var = "mep_const_section"
 help = "Section to put all const variables in (tiny, near, far) (no default)"
 
 [[options]]
-id = 1104
+id = 1102
 name = "mclip"
 spelling = "-mclip"
 kind = "flag"
@@ -12928,7 +12901,7 @@ source_location = "gcc/config/mep/mep.opt:43"
 help = "Enable clip instructions"
 
 [[options]]
-id = 1105
+id = 1103
 name = "mconfig="
 spelling = "-mconfig="
 kind = "joined"
@@ -12940,7 +12913,7 @@ var = "mep_config_string"
 help = "Configuration name"
 
 [[options]]
-id = 1106
+id = 1104
 name = "mcop"
 spelling = "-mcop"
 kind = "flag"
@@ -12951,7 +12924,7 @@ source_location = "gcc/config/mep/mep.opt:51"
 help = "Enable MeP Coprocessor"
 
 [[options]]
-id = 1107
+id = 1105
 name = "mcop32"
 spelling = "-mcop32"
 kind = "flag"
@@ -12962,7 +12935,7 @@ source_location = "gcc/config/mep/mep.opt:55"
 help = "Enable MeP Coprocessor with 32-bit registers"
 
 [[options]]
-id = 1108
+id = 1106
 name = "mcop64"
 spelling = "-mcop64"
 kind = "flag"
@@ -12973,7 +12946,7 @@ source_location = "gcc/config/mep/mep.opt:59"
 help = "Enable MeP Coprocessor with 64-bit registers"
 
 [[options]]
-id = 1109
+id = 1107
 name = "mivc2"
 spelling = "-mivc2"
 kind = "flag"
@@ -12984,7 +12957,7 @@ source_location = "gcc/config/mep/mep.opt:63"
 help = "Enable IVC2 scheduling"
 
 [[options]]
-id = 1110
+id = 1108
 name = "mdc"
 spelling = "-mdc"
 kind = "flag"
@@ -12995,7 +12968,7 @@ source_location = "gcc/config/mep/mep.opt:67"
 help = "Const variables default to the near section"
 
 [[options]]
-id = 1111
+id = 1109
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -13005,7 +12978,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:71"
 
 [[options]]
-id = 1112
+id = 1110
 name = "mdiv"
 spelling = "-mdiv"
 kind = "flag"
@@ -13016,7 +12989,7 @@ source_location = "gcc/config/mep/mep.opt:74"
 help = "Enable 32-bit divide instructions"
 
 [[options]]
-id = 1113
+id = 1111
 name = "meb"
 spelling = "-meb"
 kind = "flag"
@@ -13027,7 +13000,7 @@ source_location = "gcc/config/mep/mep.opt:78"
 help = "Use big-endian byte order"
 
 [[options]]
-id = 1114
+id = 1112
 name = "mel"
 spelling = "-mel"
 kind = "flag"
@@ -13038,7 +13011,7 @@ source_location = "gcc/config/mep/mep.opt:82"
 help = "Use little-endian byte order"
 
 [[options]]
-id = 1115
+id = 1113
 name = "mio-volatile"
 spelling = "-mio-volatile"
 kind = "flag"
@@ -13049,7 +13022,7 @@ source_location = "gcc/config/mep/mep.opt:86"
 help = "__io vars are volatile by default"
 
 [[options]]
-id = 1116
+id = 1114
 name = "ml"
 spelling = "-ml"
 kind = "flag"
@@ -13060,7 +13033,7 @@ source_location = "gcc/config/mep/mep.opt:90"
 help = "All variables default to the far section"
 
 [[options]]
-id = 1117
+id = 1115
 name = "mleadz"
 spelling = "-mleadz"
 kind = "flag"
@@ -13071,7 +13044,7 @@ source_location = "gcc/config/mep/mep.opt:94"
 help = "Enable leading zero instructions"
 
 [[options]]
-id = 1118
+id = 1116
 name = "mlibrary"
 spelling = "-mlibrary"
 kind = "flag"
@@ -13081,7 +13054,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:98"
 
 [[options]]
-id = 1119
+id = 1117
 name = "mm"
 spelling = "-mm"
 kind = "flag"
@@ -13092,7 +13065,7 @@ source_location = "gcc/config/mep/mep.opt:101"
 help = "All variables default to the near section"
 
 [[options]]
-id = 1120
+id = 1118
 name = "mminmax"
 spelling = "-mminmax"
 kind = "flag"
@@ -13103,7 +13076,7 @@ source_location = "gcc/config/mep/mep.opt:105"
 help = "Enable min/max instructions"
 
 [[options]]
-id = 1121
+id = 1119
 name = "mmult"
 spelling = "-mmult"
 kind = "flag"
@@ -13114,7 +13087,7 @@ source_location = "gcc/config/mep/mep.opt:109"
 help = "Enable 32-bit multiply instructions"
 
 [[options]]
-id = 1122
+id = 1120
 name = "mno-opts"
 spelling = "-mno-opts"
 kind = "flag"
@@ -13125,7 +13098,7 @@ source_location = "gcc/config/mep/mep.opt:113"
 help = "Disable all optional instructions"
 
 [[options]]
-id = 1123
+id = 1121
 name = "mrand-tpgp"
 spelling = "-mrand-tpgp"
 kind = "flag"
@@ -13135,7 +13108,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:117"
 
 [[options]]
-id = 1124
+id = 1122
 name = "mrepeat"
 spelling = "-mrepeat"
 kind = "flag"
@@ -13146,7 +13119,7 @@ source_location = "gcc/config/mep/mep.opt:120"
 help = "Allow gcc to use the repeat/erepeat instructions"
 
 [[options]]
-id = 1125
+id = 1123
 name = "ms"
 spelling = "-ms"
 kind = "flag"
@@ -13157,7 +13130,7 @@ source_location = "gcc/config/mep/mep.opt:124"
 help = "All variables default to the tiny section"
 
 [[options]]
-id = 1126
+id = 1124
 name = "msatur"
 spelling = "-msatur"
 kind = "flag"
@@ -13168,7 +13141,7 @@ source_location = "gcc/config/mep/mep.opt:128"
 help = "Enable saturation instructions"
 
 [[options]]
-id = 1127
+id = 1125
 name = "msdram"
 spelling = "-msdram"
 kind = "flag"
@@ -13179,7 +13152,7 @@ source_location = "gcc/config/mep/mep.opt:132"
 help = "Use sdram version of runtime"
 
 [[options]]
-id = 1128
+id = 1126
 name = "msim"
 spelling = "-msim"
 kind = "flag"
@@ -13190,7 +13163,7 @@ source_location = "gcc/config/mep/mep.opt:136"
 help = "Use simulator runtime"
 
 [[options]]
-id = 1129
+id = 1127
 name = "msimnovec"
 spelling = "-msimnovec"
 kind = "flag"
@@ -13201,7 +13174,7 @@ source_location = "gcc/config/mep/mep.opt:140"
 help = "Use simulator runtime without vectors"
 
 [[options]]
-id = 1130
+id = 1128
 name = "mtf"
 spelling = "-mtf"
 kind = "flag"
@@ -13212,7 +13185,7 @@ source_location = "gcc/config/mep/mep.opt:144"
 help = "All functions default to the far section"
 
 [[options]]
-id = 1131
+id = 1129
 name = "mtiny="
 spelling = "-mtiny="
 kind = "joined"
@@ -13224,7 +13197,7 @@ var = "mep_tiny_cutoff"
 help = "Variables this size and smaller go in the tiny section. (default 4)"
 
 [[options]]
-id = 1132
+id = 1130
 name = "mvl32"
 spelling = "-mvl32"
 kind = "flag"
@@ -13234,7 +13207,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:152"
 
 [[options]]
-id = 1133
+id = 1131
 name = "mvl64"
 spelling = "-mvl64"
 kind = "flag"
@@ -13244,7 +13217,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:155"
 
 [[options]]
-id = 1134
+id = 1132
 name = "mvliw"
 spelling = "-mvliw"
 kind = "flag"
@@ -13254,7 +13227,7 @@ languages = []
 source_location = "gcc/config/mep/mep.opt:158"
 
 [[options]]
-id = 1135
+id = 1133
 name = "mabi="
 spelling = "-mabi="
 kind = "joined"
@@ -13265,7 +13238,7 @@ source_location = "gcc/config/mips/mips.opt:21"
 help = "-mabi=ABI\tGenerate code that conforms to the given ABI"
 
 [[options]]
-id = 1136
+id = 1134
 name = "mabicalls"
 spelling = "-mabicalls"
 kind = "flag"
@@ -13276,7 +13249,7 @@ source_location = "gcc/config/mips/mips.opt:25"
 help = "Generate code that can be used in SVR4-style dynamic objects"
 
 [[options]]
-id = 1137
+id = 1135
 name = "mad"
 spelling = "-mad"
 kind = "flag"
@@ -13288,7 +13261,7 @@ var = "TARGET_MAD"
 help = "Use PMC-style 'mad' instructions"
 
 [[options]]
-id = 1138
+id = 1136
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -13300,7 +13273,7 @@ var = "mips_arch_string"
 help = "-march=ISA\tGenerate code for the given ISA"
 
 [[options]]
-id = 1139
+id = 1137
 name = "mbranch-cost="
 spelling = "-mbranch-cost="
 kind = "joined"
@@ -13312,7 +13285,7 @@ var = "mips_branch_cost"
 help = "-mbranch-cost=COST\tSet the cost of branches to roughly COST instructions"
 
 [[options]]
-id = 1140
+id = 1138
 name = "mbranch-likely"
 spelling = "-mbranch-likely"
 kind = "flag"
@@ -13323,7 +13296,7 @@ source_location = "gcc/config/mips/mips.opt:41"
 help = "Use Branch Likely instructions, overriding the architecture default"
 
 [[options]]
-id = 1141
+id = 1139
 name = "mflip-mips16"
 spelling = "-mflip-mips16"
 kind = "flag"
@@ -13335,7 +13308,7 @@ var = "TARGET_FLIP_MIPS16"
 help = "Switch on/off MIPS16 ASE on alternating functions for compiler testing"
 
 [[options]]
-id = 1142
+id = 1140
 name = "mcheck-zero-division"
 spelling = "-mcheck-zero-division"
 kind = "flag"
@@ -13346,7 +13319,7 @@ source_location = "gcc/config/mips/mips.opt:49"
 help = "Trap on integer divide by zero"
 
 [[options]]
-id = 1143
+id = 1141
 name = "mcode-readable="
 spelling = "-mcode-readable="
 kind = "joined"
@@ -13357,7 +13330,7 @@ source_location = "gcc/config/mips/mips.opt:53"
 help = "-mcode-readable=SETTING\tSpecify when instructions are allowed to access code"
 
 [[options]]
-id = 1144
+id = 1142
 name = "mdivide-breaks"
 spelling = "-mdivide-breaks"
 kind = "flag"
@@ -13368,7 +13341,7 @@ source_location = "gcc/config/mips/mips.opt:57"
 help = "Use branch-and-break sequences to check for integer divide by zero"
 
 [[options]]
-id = 1145
+id = 1143
 name = "mdivide-traps"
 spelling = "-mdivide-traps"
 kind = "flag"
@@ -13379,7 +13352,7 @@ source_location = "gcc/config/mips/mips.opt:61"
 help = "Use trap instructions to check for integer divide by zero"
 
 [[options]]
-id = 1146
+id = 1144
 name = "mdmx"
 spelling = "-mdmx"
 kind = "flag"
@@ -13391,7 +13364,7 @@ var = "TARGET_MDMX"
 help = "Allow the use of MDMX instructions"
 
 [[options]]
-id = 1147
+id = 1145
 name = "mdouble-float"
 spelling = "-mdouble-float"
 kind = "flag"
@@ -13402,7 +13375,7 @@ source_location = "gcc/config/mips/mips.opt:69"
 help = "Allow hardware floating-point instructions to cover both 32-bit and 64-bit operations"
 
 [[options]]
-id = 1148
+id = 1146
 name = "mdsp"
 spelling = "-mdsp"
 kind = "flag"
@@ -13413,7 +13386,7 @@ source_location = "gcc/config/mips/mips.opt:73"
 help = "Use MIPS-DSP instructions"
 
 [[options]]
-id = 1149
+id = 1147
 name = "mdspr2"
 spelling = "-mdspr2"
 kind = "flag"
@@ -13424,7 +13397,7 @@ source_location = "gcc/config/mips/mips.opt:77"
 help = "Use MIPS-DSP REV 2 instructions"
 
 [[options]]
-id = 1150
+id = 1148
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -13435,7 +13408,7 @@ source_location = "gcc/config/mips/mips.opt:81"
 var = "TARGET_DEBUG_MODE"
 
 [[options]]
-id = 1151
+id = 1149
 name = "mdebugd"
 spelling = "-mdebugd"
 kind = "flag"
@@ -13446,7 +13419,7 @@ source_location = "gcc/config/mips/mips.opt:84"
 var = "TARGET_DEBUG_D_MODE"
 
 [[options]]
-id = 1152
+id = 1150
 name = "meb"
 spelling = "-meb"
 kind = "flag"
@@ -13457,7 +13430,7 @@ source_location = "gcc/config/mips/mips.opt:87"
 help = "Use big-endian byte order"
 
 [[options]]
-id = 1153
+id = 1151
 name = "mel"
 spelling = "-mel"
 kind = "flag"
@@ -13468,7 +13441,7 @@ source_location = "gcc/config/mips/mips.opt:91"
 help = "Use little-endian byte order"
 
 [[options]]
-id = 1154
+id = 1152
 name = "membedded-data"
 spelling = "-membedded-data"
 kind = "flag"
@@ -13480,7 +13453,7 @@ var = "TARGET_EMBEDDED_DATA"
 help = "Use ROM instead of RAM"
 
 [[options]]
-id = 1155
+id = 1153
 name = "mexplicit-relocs"
 spelling = "-mexplicit-relocs"
 kind = "flag"
@@ -13491,7 +13464,7 @@ source_location = "gcc/config/mips/mips.opt:99"
 help = "Use NewABI-style %reloc() assembly operators"
 
 [[options]]
-id = 1156
+id = 1154
 name = "mextern-sdata"
 spelling = "-mextern-sdata"
 kind = "flag"
@@ -13503,7 +13476,7 @@ var = "TARGET_EXTERN_SDATA"
 help = "Use -G for data that is not defined by the current object"
 
 [[options]]
-id = 1157
+id = 1155
 name = "mfix-r4000"
 spelling = "-mfix-r4000"
 kind = "flag"
@@ -13514,7 +13487,7 @@ source_location = "gcc/config/mips/mips.opt:107"
 help = "Work around certain R4000 errata"
 
 [[options]]
-id = 1158
+id = 1156
 name = "mfix-r4400"
 spelling = "-mfix-r4400"
 kind = "flag"
@@ -13525,7 +13498,7 @@ source_location = "gcc/config/mips/mips.opt:111"
 help = "Work around certain R4400 errata"
 
 [[options]]
-id = 1159
+id = 1157
 name = "mfix-r10000"
 spelling = "-mfix-r10000"
 kind = "flag"
@@ -13536,7 +13509,7 @@ source_location = "gcc/config/mips/mips.opt:115"
 help = "Work around certain R10000 errata"
 
 [[options]]
-id = 1160
+id = 1158
 name = "mfix-sb1"
 spelling = "-mfix-sb1"
 kind = "flag"
@@ -13548,7 +13521,7 @@ var = "TARGET_FIX_SB1"
 help = "Work around errata for early SB-1 revision 2 cores"
 
 [[options]]
-id = 1161
+id = 1159
 name = "mfix-vr4120"
 spelling = "-mfix-vr4120"
 kind = "flag"
@@ -13560,7 +13533,7 @@ var = "TARGET_FIX_VR4120"
 help = "Work around certain VR4120 errata"
 
 [[options]]
-id = 1162
+id = 1160
 name = "mfix-vr4130"
 spelling = "-mfix-vr4130"
 kind = "flag"
@@ -13572,7 +13545,7 @@ var = "TARGET_FIX_VR4130"
 help = "Work around VR4130 mflo/mfhi errata"
 
 [[options]]
-id = 1163
+id = 1161
 name = "mfix4300"
 spelling = "-mfix4300"
 kind = "flag"
@@ -13584,7 +13557,7 @@ var = "TARGET_4300_MUL_FIX"
 help = "Work around an early 4300 hardware bug"
 
 [[options]]
-id = 1164
+id = 1162
 name = "mfp-exceptions"
 spelling = "-mfp-exceptions"
 kind = "flag"
@@ -13595,7 +13568,7 @@ source_location = "gcc/config/mips/mips.opt:135"
 help = "FP exceptions are enabled"
 
 [[options]]
-id = 1165
+id = 1163
 name = "mfp32"
 spelling = "-mfp32"
 kind = "flag"
@@ -13606,7 +13579,7 @@ source_location = "gcc/config/mips/mips.opt:139"
 help = "Use 32-bit floating-point registers"
 
 [[options]]
-id = 1166
+id = 1164
 name = "mfp64"
 spelling = "-mfp64"
 kind = "flag"
@@ -13617,7 +13590,7 @@ source_location = "gcc/config/mips/mips.opt:143"
 help = "Use 64-bit floating-point registers"
 
 [[options]]
-id = 1167
+id = 1165
 name = "mflush-func="
 spelling = "-mflush-func="
 kind = "joined"
@@ -13629,7 +13602,7 @@ var = "mips_cache_flush_func"
 help = "-mflush-func=FUNC\tUse FUNC to flush the cache before calling stack trampolines"
 
 [[options]]
-id = 1168
+id = 1166
 name = "mfused-madd"
 spelling = "-mfused-madd"
 kind = "flag"
@@ -13640,7 +13613,7 @@ source_location = "gcc/config/mips/mips.opt:151"
 help = "Generate floating-point multiply-add instructions"
 
 [[options]]
-id = 1169
+id = 1167
 name = "mgp32"
 spelling = "-mgp32"
 kind = "flag"
@@ -13651,7 +13624,7 @@ source_location = "gcc/config/mips/mips.opt:155"
 help = "Use 32-bit general registers"
 
 [[options]]
-id = 1170
+id = 1168
 name = "mgp64"
 spelling = "-mgp64"
 kind = "flag"
@@ -13662,7 +13635,7 @@ source_location = "gcc/config/mips/mips.opt:159"
 help = "Use 64-bit general registers"
 
 [[options]]
-id = 1171
+id = 1169
 name = "mgpopt"
 spelling = "-mgpopt"
 kind = "flag"
@@ -13674,7 +13647,7 @@ var = "TARGET_GPOPT"
 help = "Use GP-relative addressing to access small data"
 
 [[options]]
-id = 1172
+id = 1170
 name = "mplt"
 spelling = "-mplt"
 kind = "flag"
@@ -13686,7 +13659,7 @@ var = "TARGET_PLT"
 help = "When generating -mabicalls code, allow executables to use PLTs and copy relocations"
 
 [[options]]
-id = 1173
+id = 1171
 name = "mhard-float"
 spelling = "-mhard-float"
 kind = "flag"
@@ -13697,7 +13670,7 @@ source_location = "gcc/config/mips/mips.opt:171"
 help = "Allow the use of hardware floating-point ABI and instructions"
 
 [[options]]
-id = 1174
+id = 1172
 name = "minterlink-mips16"
 spelling = "-minterlink-mips16"
 kind = "flag"
@@ -13709,7 +13682,7 @@ var = "TARGET_INTERLINK_MIPS16"
 help = "Generate code that can be safely linked with MIPS16 code."
 
 [[options]]
-id = 1175
+id = 1173
 name = "mips"
 spelling = "-mips"
 kind = "joined"
@@ -13720,7 +13693,7 @@ source_location = "gcc/config/mips/mips.opt:179"
 help = "-mipsN\tGenerate code for ISA level N"
 
 [[options]]
-id = 1176
+id = 1174
 name = "mips16"
 spelling = "-mips16"
 kind = "flag"
@@ -13731,7 +13704,7 @@ source_location = "gcc/config/mips/mips.opt:183"
 help = "Generate MIPS16 code"
 
 [[options]]
-id = 1177
+id = 1175
 name = "mips3d"
 spelling = "-mips3d"
 kind = "flag"
@@ -13742,7 +13715,7 @@ source_location = "gcc/config/mips/mips.opt:187"
 help = "Use MIPS-3D instructions"
 
 [[options]]
-id = 1178
+id = 1176
 name = "mllsc"
 spelling = "-mllsc"
 kind = "flag"
@@ -13753,7 +13726,7 @@ source_location = "gcc/config/mips/mips.opt:191"
 help = "Use ll, sc and sync instructions"
 
 [[options]]
-id = 1179
+id = 1177
 name = "mlocal-sdata"
 spelling = "-mlocal-sdata"
 kind = "flag"
@@ -13765,7 +13738,7 @@ var = "TARGET_LOCAL_SDATA"
 help = "Use -G for object-local data"
 
 [[options]]
-id = 1180
+id = 1178
 name = "mlong-calls"
 spelling = "-mlong-calls"
 kind = "flag"
@@ -13777,7 +13750,7 @@ var = "TARGET_LONG_CALLS"
 help = "Use indirect calls"
 
 [[options]]
-id = 1181
+id = 1179
 name = "mlong32"
 spelling = "-mlong32"
 kind = "flag"
@@ -13788,7 +13761,7 @@ source_location = "gcc/config/mips/mips.opt:203"
 help = "Use a 32-bit long type"
 
 [[options]]
-id = 1182
+id = 1180
 name = "mlong64"
 spelling = "-mlong64"
 kind = "flag"
@@ -13799,7 +13772,7 @@ source_location = "gcc/config/mips/mips.opt:207"
 help = "Use a 64-bit long type"
 
 [[options]]
-id = 1183
+id = 1181
 name = "mmcount-ra-address"
 spelling = "-mmcount-ra-address"
 kind = "flag"
@@ -13811,7 +13784,7 @@ var = "TARGET_MCOUNT_RA_ADDRESS"
 help = "Pass the address of the ra save location to _mcount in $12"
 
 [[options]]
-id = 1184
+id = 1182
 name = "mmemcpy"
 spelling = "-mmemcpy"
 kind = "flag"
@@ -13822,7 +13795,7 @@ source_location = "gcc/config/mips/mips.opt:215"
 help = "Don't optimize block moves"
 
 [[options]]
-id = 1185
+id = 1183
 name = "mmips-tfile"
 spelling = "-mmips-tfile"
 kind = "flag"
@@ -13833,7 +13806,7 @@ source_location = "gcc/config/mips/mips.opt:219"
 help = "Use the mips-tfile postpass"
 
 [[options]]
-id = 1186
+id = 1184
 name = "mmt"
 spelling = "-mmt"
 kind = "flag"
@@ -13845,7 +13818,7 @@ var = "TARGET_MT"
 help = "Allow the use of MT instructions"
 
 [[options]]
-id = 1187
+id = 1185
 name = "mno-flush-func"
 spelling = "-mno-flush-func"
 kind = "flag"
@@ -13856,7 +13829,7 @@ source_location = "gcc/config/mips/mips.opt:227"
 help = "Do not use a cache-flushing function before calling stack trampolines"
 
 [[options]]
-id = 1188
+id = 1186
 name = "mno-mdmx"
 spelling = "-mno-mdmx"
 kind = "flag"
@@ -13867,7 +13840,7 @@ source_location = "gcc/config/mips/mips.opt:231"
 help = "Do not use MDMX instructions"
 
 [[options]]
-id = 1189
+id = 1187
 name = "mno-mips16"
 spelling = "-mno-mips16"
 kind = "flag"
@@ -13878,7 +13851,7 @@ source_location = "gcc/config/mips/mips.opt:235"
 help = "Generate normal-mode code"
 
 [[options]]
-id = 1190
+id = 1188
 name = "mno-mips3d"
 spelling = "-mno-mips3d"
 kind = "flag"
@@ -13889,7 +13862,7 @@ source_location = "gcc/config/mips/mips.opt:239"
 help = "Do not use MIPS-3D instructions"
 
 [[options]]
-id = 1191
+id = 1189
 name = "mpaired-single"
 spelling = "-mpaired-single"
 kind = "flag"
@@ -13900,7 +13873,7 @@ source_location = "gcc/config/mips/mips.opt:243"
 help = "Use paired-single floating-point instructions"
 
 [[options]]
-id = 1192
+id = 1190
 name = "mr10k-cache-barrier="
 spelling = "-mr10k-cache-barrier="
 kind = "joined"
@@ -13911,7 +13884,7 @@ source_location = "gcc/config/mips/mips.opt:247"
 help = "-mr10k-cache-barrier=SETTING\tSpecify when r10k cache barriers should be inserted"
 
 [[options]]
-id = 1193
+id = 1191
 name = "mrelax-pic-calls"
 spelling = "-mrelax-pic-calls"
 kind = "flag"
@@ -13922,7 +13895,7 @@ source_location = "gcc/config/mips/mips.opt:251"
 help = "Try to allow the linker to turn PIC calls into direct calls"
 
 [[options]]
-id = 1194
+id = 1192
 name = "mshared"
 spelling = "-mshared"
 kind = "flag"
@@ -13934,7 +13907,7 @@ var = "TARGET_SHARED"
 help = "When generating -mabicalls code, make the code suitable for use in shared libraries"
 
 [[options]]
-id = 1195
+id = 1193
 name = "msingle-float"
 spelling = "-msingle-float"
 kind = "flag"
@@ -13945,7 +13918,7 @@ source_location = "gcc/config/mips/mips.opt:259"
 help = "Restrict the use of hardware floating-point instructions to 32-bit operations"
 
 [[options]]
-id = 1196
+id = 1194
 name = "msmartmips"
 spelling = "-msmartmips"
 kind = "flag"
@@ -13956,7 +13929,7 @@ source_location = "gcc/config/mips/mips.opt:263"
 help = "Use SmartMIPS instructions"
 
 [[options]]
-id = 1197
+id = 1195
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -13967,7 +13940,7 @@ source_location = "gcc/config/mips/mips.opt:267"
 help = "Prevent the use of all hardware floating-point instructions"
 
 [[options]]
-id = 1198
+id = 1196
 name = "msplit-addresses"
 spelling = "-msplit-addresses"
 kind = "flag"
@@ -13978,7 +13951,7 @@ source_location = "gcc/config/mips/mips.opt:271"
 help = "Optimize lui/addiu address loads"
 
 [[options]]
-id = 1199
+id = 1197
 name = "msym32"
 spelling = "-msym32"
 kind = "flag"
@@ -13990,7 +13963,7 @@ var = "TARGET_SYM32"
 help = "Assume all symbols have 32-bit values"
 
 [[options]]
-id = 1200
+id = 1198
 name = "msynci"
 spelling = "-msynci"
 kind = "flag"
@@ -14001,7 +13974,7 @@ source_location = "gcc/config/mips/mips.opt:279"
 help = "Use synci instruction to invalidate i-cache"
 
 [[options]]
-id = 1201
+id = 1199
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -14013,7 +13986,7 @@ var = "mips_tune_string"
 help = "-mtune=PROCESSOR\tOptimize the output for PROCESSOR"
 
 [[options]]
-id = 1202
+id = 1200
 name = "muninit-const-in-rodata"
 spelling = "-muninit-const-in-rodata"
 kind = "flag"
@@ -14025,7 +13998,7 @@ var = "TARGET_UNINIT_CONST_IN_RODATA"
 help = "Put uninitialized constants in ROM (needs -membedded-data)"
 
 [[options]]
-id = 1203
+id = 1201
 name = "mvr4130-align"
 spelling = "-mvr4130-align"
 kind = "flag"
@@ -14036,7 +14009,7 @@ source_location = "gcc/config/mips/mips.opt:291"
 help = "Perform VR4130-specific alignment optimizations"
 
 [[options]]
-id = 1204
+id = 1202
 name = "mxgot"
 spelling = "-mxgot"
 kind = "flag"
@@ -14048,7 +14021,7 @@ var = "TARGET_XGOT"
 help = "Lift restrictions on GOT size"
 
 [[options]]
-id = 1205
+id = 1203
 name = "mno-float"
 spelling = "-mno-float"
 kind = "flag"
@@ -14060,7 +14033,7 @@ var = "TARGET_NO_FLOAT"
 help = "Prevent the use of all floating-point operations"
 
 [[options]]
-id = 1206
+id = 1204
 name = "mlibfuncs"
 spelling = "-mlibfuncs"
 kind = "flag"
@@ -14071,7 +14044,7 @@ source_location = "gcc/config/mmix/mmix.opt:22"
 help = "For intrinsics library: pass all parameters in registers"
 
 [[options]]
-id = 1207
+id = 1205
 name = "mabi=mmixware"
 spelling = "-mabi=mmixware"
 kind = "flag"
@@ -14082,7 +14055,7 @@ source_location = "gcc/config/mmix/mmix.opt:26"
 help = "Use register stack for parameters and return value"
 
 [[options]]
-id = 1208
+id = 1206
 name = "mabi=gnu"
 spelling = "-mabi=gnu"
 kind = "flag"
@@ -14093,7 +14066,7 @@ source_location = "gcc/config/mmix/mmix.opt:30"
 help = "Use call-clobbered registers for parameters and return value"
 
 [[options]]
-id = 1209
+id = 1207
 name = "mepsilon"
 spelling = "-mepsilon"
 kind = "flag"
@@ -14104,7 +14077,7 @@ source_location = "gcc/config/mmix/mmix.opt:35"
 help = "Use epsilon-respecting floating point compare instructions"
 
 [[options]]
-id = 1210
+id = 1208
 name = "mzero-extend"
 spelling = "-mzero-extend"
 kind = "flag"
@@ -14115,7 +14088,7 @@ source_location = "gcc/config/mmix/mmix.opt:39"
 help = "Use zero-extending memory loads, not sign-extending ones"
 
 [[options]]
-id = 1211
+id = 1209
 name = "mknuthdiv"
 spelling = "-mknuthdiv"
 kind = "flag"
@@ -14126,7 +14099,7 @@ source_location = "gcc/config/mmix/mmix.opt:43"
 help = "Generate divide results with reminder having the same sign as the divisor (not the dividend)"
 
 [[options]]
-id = 1212
+id = 1210
 name = "mtoplevel-symbols"
 spelling = "-mtoplevel-symbols"
 kind = "flag"
@@ -14137,7 +14110,7 @@ source_location = "gcc/config/mmix/mmix.opt:47"
 help = "Prepend global symbols with \\\":\\\" (for use with PREFIX)"
 
 [[options]]
-id = 1213
+id = 1211
 name = "mno-set-program-start"
 spelling = "-mno-set-program-start"
 kind = "flag"
@@ -14148,7 +14121,7 @@ source_location = "gcc/config/mmix/mmix.opt:51"
 help = "Do not provide a default start-address 0x100 of the program"
 
 [[options]]
-id = 1214
+id = 1212
 name = "melf"
 spelling = "-melf"
 kind = "flag"
@@ -14159,7 +14132,7 @@ source_location = "gcc/config/mmix/mmix.opt:55"
 help = "Link to emit program in ELF format (rather than mmo)"
 
 [[options]]
-id = 1215
+id = 1213
 name = "mbranch-predict"
 spelling = "-mbranch-predict"
 kind = "flag"
@@ -14170,7 +14143,7 @@ source_location = "gcc/config/mmix/mmix.opt:59"
 help = "Use P-mnemonics for branches statically predicted as taken"
 
 [[options]]
-id = 1216
+id = 1214
 name = "mno-branch-predict"
 spelling = "-mno-branch-predict"
 kind = "flag"
@@ -14181,7 +14154,7 @@ source_location = "gcc/config/mmix/mmix.opt:63"
 help = "Don't use P-mnemonics for branches"
 
 [[options]]
-id = 1217
+id = 1215
 name = "mbase-addresses"
 spelling = "-mbase-addresses"
 kind = "flag"
@@ -14192,7 +14165,7 @@ source_location = "gcc/config/mmix/mmix.opt:77"
 help = "Use addresses that allocate global registers"
 
 [[options]]
-id = 1218
+id = 1216
 name = "mno-base-addresses"
 spelling = "-mno-base-addresses"
 kind = "flag"
@@ -14203,7 +14176,7 @@ source_location = "gcc/config/mmix/mmix.opt:81"
 help = "Do not use addresses that allocate global registers"
 
 [[options]]
-id = 1219
+id = 1217
 name = "msingle-exit"
 spelling = "-msingle-exit"
 kind = "flag"
@@ -14214,7 +14187,7 @@ source_location = "gcc/config/mmix/mmix.opt:85"
 help = "Generate a single exit point for each function"
 
 [[options]]
-id = 1220
+id = 1218
 name = "mno-single-exit"
 spelling = "-mno-single-exit"
 kind = "flag"
@@ -14225,7 +14198,7 @@ source_location = "gcc/config/mmix/mmix.opt:89"
 help = "Do not generate a single exit point for each function"
 
 [[options]]
-id = 1221
+id = 1219
 name = "mset-program-start="
 spelling = "-mset-program-start="
 kind = "joined"
@@ -14236,7 +14209,7 @@ source_location = "gcc/config/mmix/mmix.opt:93"
 help = "Set start-address of the program"
 
 [[options]]
-id = 1222
+id = 1220
 name = "mset-data-start="
 spelling = "-mset-data-start="
 kind = "joined"
@@ -14247,7 +14220,7 @@ source_location = "gcc/config/mmix/mmix.opt:97"
 help = "Set start-address of data"
 
 [[options]]
-id = 1223
+id = 1221
 name = "mam33"
 spelling = "-mam33"
 kind = "flag"
@@ -14258,7 +14231,7 @@ source_location = "gcc/config/mn10300/mn10300.opt:21"
 help = "Target the AM33 processor"
 
 [[options]]
-id = 1224
+id = 1222
 name = "mam33-2"
 spelling = "-mam33-2"
 kind = "flag"
@@ -14269,7 +14242,7 @@ source_location = "gcc/config/mn10300/mn10300.opt:25"
 help = "Target the AM33/2.0 processor"
 
 [[options]]
-id = 1225
+id = 1223
 name = "mmult-bug"
 spelling = "-mmult-bug"
 kind = "flag"
@@ -14280,7 +14253,7 @@ source_location = "gcc/config/mn10300/mn10300.opt:29"
 help = "Work around hardware multiply bug"
 
 [[options]]
-id = 1226
+id = 1224
 name = "mrelax"
 spelling = "-mrelax"
 kind = "flag"
@@ -14291,7 +14264,7 @@ source_location = "gcc/config/mn10300/mn10300.opt:34"
 help = "Enable linker relaxations"
 
 [[options]]
-id = 1227
+id = 1225
 name = "mreturn-pointer-on-d0"
 spelling = "-mreturn-pointer-on-d0"
 kind = "flag"
@@ -14302,7 +14275,7 @@ source_location = "gcc/config/mn10300/mn10300.opt:38"
 help = "Return pointers in both a0 and d0"
 
 [[options]]
-id = 1228
+id = 1226
 name = "msio"
 spelling = "-msio"
 kind = "flag"
@@ -14313,7 +14286,7 @@ source_location = "gcc/config/pa/pa-hpux.opt:21"
 help = "Generate cpp defines for server IO"
 
 [[options]]
-id = 1229
+id = 1227
 name = "munix=93"
 spelling = "-munix=93"
 kind = "flag"
@@ -14324,7 +14297,7 @@ source_location = "gcc/config/pa/pa-hpux.opt:25"
 help = "Specify UNIX standard for predefines and linking"
 
 [[options]]
-id = 1230
+id = 1228
 name = "mwsio"
 spelling = "-mwsio"
 kind = "flag"
@@ -14335,7 +14308,7 @@ source_location = "gcc/config/pa/pa-hpux.opt:29"
 help = "Generate cpp defines for workstation IO"
 
 [[options]]
-id = 1231
+id = 1229
 name = "munix=95"
 spelling = "-munix=95"
 kind = "flag"
@@ -14346,7 +14319,7 @@ source_location = "gcc/config/pa/pa-hpux1010.opt:21"
 help = "Specify UNIX standard for predefines and linking"
 
 [[options]]
-id = 1232
+id = 1230
 name = "munix=98"
 spelling = "-munix=98"
 kind = "flag"
@@ -14357,7 +14330,7 @@ source_location = "gcc/config/pa/pa-hpux1111.opt:21"
 help = "Specify UNIX standard for predefines and linking"
 
 [[options]]
-id = 1233
+id = 1231
 name = "march=1.0"
 spelling = "-march=1.0"
 kind = "flag"
@@ -14368,7 +14341,7 @@ source_location = "gcc/config/pa/pa.opt:21"
 help = "Generate PA1.0 code"
 
 [[options]]
-id = 1234
+id = 1232
 name = "march=1.1"
 spelling = "-march=1.1"
 kind = "flag"
@@ -14379,7 +14352,7 @@ source_location = "gcc/config/pa/pa.opt:25"
 help = "Generate PA1.1 code"
 
 [[options]]
-id = 1235
+id = 1233
 name = "march=2.0"
 spelling = "-march=2.0"
 kind = "flag"
@@ -14390,7 +14363,7 @@ source_location = "gcc/config/pa/pa.opt:29"
 help = "Generate PA2.0 code (requires binutils 2.10 or later)"
 
 [[options]]
-id = 1236
+id = 1234
 name = "mbig-switch"
 spelling = "-mbig-switch"
 kind = "flag"
@@ -14401,7 +14374,7 @@ source_location = "gcc/config/pa/pa.opt:33"
 help = "Generate code for huge switch statements"
 
 [[options]]
-id = 1237
+id = 1235
 name = "mdisable-fpregs"
 spelling = "-mdisable-fpregs"
 kind = "flag"
@@ -14412,7 +14385,7 @@ source_location = "gcc/config/pa/pa.opt:37"
 help = "Disable FP regs"
 
 [[options]]
-id = 1238
+id = 1236
 name = "mdisable-indexing"
 spelling = "-mdisable-indexing"
 kind = "flag"
@@ -14423,7 +14396,7 @@ source_location = "gcc/config/pa/pa.opt:41"
 help = "Disable indexed addressing"
 
 [[options]]
-id = 1239
+id = 1237
 name = "mfast-indirect-calls"
 spelling = "-mfast-indirect-calls"
 kind = "flag"
@@ -14434,7 +14407,7 @@ source_location = "gcc/config/pa/pa.opt:45"
 help = "Generate fast indirect calls"
 
 [[options]]
-id = 1240
+id = 1238
 name = "mfixed-range="
 spelling = "-mfixed-range="
 kind = "joined"
@@ -14445,7 +14418,7 @@ source_location = "gcc/config/pa/pa.opt:49"
 help = "Specify range of registers to make fixed"
 
 [[options]]
-id = 1241
+id = 1239
 name = "mgas"
 spelling = "-mgas"
 kind = "flag"
@@ -14456,7 +14429,7 @@ source_location = "gcc/config/pa/pa.opt:53"
 help = "Assume code will be assembled by GAS"
 
 [[options]]
-id = 1242
+id = 1240
 name = "mjump-in-delay"
 spelling = "-mjump-in-delay"
 kind = "flag"
@@ -14467,7 +14440,7 @@ source_location = "gcc/config/pa/pa.opt:57"
 help = "Put jumps in call delay slots"
 
 [[options]]
-id = 1243
+id = 1241
 name = "mlinker-opt"
 spelling = "-mlinker-opt"
 kind = "flag"
@@ -14478,7 +14451,7 @@ source_location = "gcc/config/pa/pa.opt:62"
 help = "Enable linker optimizations"
 
 [[options]]
-id = 1244
+id = 1242
 name = "mlong-calls"
 spelling = "-mlong-calls"
 kind = "flag"
@@ -14489,7 +14462,7 @@ source_location = "gcc/config/pa/pa.opt:66"
 help = "Always generate long calls"
 
 [[options]]
-id = 1245
+id = 1243
 name = "mlong-load-store"
 spelling = "-mlong-load-store"
 kind = "flag"
@@ -14500,7 +14473,7 @@ source_location = "gcc/config/pa/pa.opt:70"
 help = "Emit long load/store sequences"
 
 [[options]]
-id = 1246
+id = 1244
 name = "mnosnake"
 spelling = "-mnosnake"
 kind = "flag"
@@ -14511,7 +14484,7 @@ source_location = "gcc/config/pa/pa.opt:74"
 help = "Generate PA1.0 code"
 
 [[options]]
-id = 1247
+id = 1245
 name = "mno-space-regs"
 spelling = "-mno-space-regs"
 kind = "flag"
@@ -14522,7 +14495,7 @@ source_location = "gcc/config/pa/pa.opt:78"
 help = "Disable space regs"
 
 [[options]]
-id = 1248
+id = 1246
 name = "mpa-risc-1-0"
 spelling = "-mpa-risc-1-0"
 kind = "flag"
@@ -14533,7 +14506,7 @@ source_location = "gcc/config/pa/pa.opt:82"
 help = "Generate PA1.0 code"
 
 [[options]]
-id = 1249
+id = 1247
 name = "mpa-risc-1-1"
 spelling = "-mpa-risc-1-1"
 kind = "flag"
@@ -14544,7 +14517,7 @@ source_location = "gcc/config/pa/pa.opt:86"
 help = "Generate PA1.1 code"
 
 [[options]]
-id = 1250
+id = 1248
 name = "mpa-risc-2-0"
 spelling = "-mpa-risc-2-0"
 kind = "flag"
@@ -14555,7 +14528,7 @@ source_location = "gcc/config/pa/pa.opt:90"
 help = "Generate PA2.0 code (requires binutils 2.10 or later)"
 
 [[options]]
-id = 1251
+id = 1249
 name = "mportable-runtime"
 spelling = "-mportable-runtime"
 kind = "flag"
@@ -14566,7 +14539,7 @@ source_location = "gcc/config/pa/pa.opt:94"
 help = "Use portable calling conventions"
 
 [[options]]
-id = 1252
+id = 1250
 name = "mschedule="
 spelling = "-mschedule="
 kind = "joined"
@@ -14577,7 +14550,7 @@ source_location = "gcc/config/pa/pa.opt:98"
 help = "Specify CPU for scheduling purposes.  Valid arguments are 700, 7100, 7100LC, 7200, 7300, and 8000"
 
 [[options]]
-id = 1253
+id = 1251
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -14588,7 +14561,7 @@ source_location = "gcc/config/pa/pa.opt:102"
 help = "Use software floating point"
 
 [[options]]
-id = 1254
+id = 1252
 name = "msnake"
 spelling = "-msnake"
 kind = "flag"
@@ -14599,7 +14572,7 @@ source_location = "gcc/config/pa/pa.opt:106"
 help = "Generate PA1.1 code"
 
 [[options]]
-id = 1255
+id = 1253
 name = "mspace-regs"
 spelling = "-mspace-regs"
 kind = "flag"
@@ -14610,7 +14583,7 @@ source_location = "gcc/config/pa/pa.opt:110"
 help = "Do not disable space regs"
 
 [[options]]
-id = 1256
+id = 1254
 name = "mgnu-ld"
 spelling = "-mgnu-ld"
 kind = "flag"
@@ -14621,7 +14594,7 @@ source_location = "gcc/config/pa/pa64-hpux.opt:21"
 help = "Assume code will be linked by GNU ld"
 
 [[options]]
-id = 1257
+id = 1255
 name = "mhp-ld"
 spelling = "-mhp-ld"
 kind = "flag"
@@ -14632,7 +14605,7 @@ source_location = "gcc/config/pa/pa64-hpux.opt:25"
 help = "Assume code will be linked by HP ld"
 
 [[options]]
-id = 1258
+id = 1256
 name = "m10"
 spelling = "-m10"
 kind = "flag"
@@ -14643,7 +14616,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:21"
 help = "Generate code for an 11/10"
 
 [[options]]
-id = 1259
+id = 1257
 name = "m40"
 spelling = "-m40"
 kind = "flag"
@@ -14654,7 +14627,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:25"
 help = "Generate code for an 11/40"
 
 [[options]]
-id = 1260
+id = 1258
 name = "m45"
 spelling = "-m45"
 kind = "flag"
@@ -14665,7 +14638,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:29"
 help = "Generate code for an 11/45"
 
 [[options]]
-id = 1261
+id = 1259
 name = "mabshi"
 spelling = "-mabshi"
 kind = "flag"
@@ -14676,7 +14649,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:33"
 help = "Use 16-bit abs patterns"
 
 [[options]]
-id = 1262
+id = 1260
 name = "mac0"
 spelling = "-mac0"
 kind = "flag"
@@ -14687,7 +14660,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:37"
 help = "Return floating-point results in ac0 (fr0 in Unix assembler syntax)"
 
 [[options]]
-id = 1263
+id = 1261
 name = "mbcopy"
 spelling = "-mbcopy"
 kind = "flag"
@@ -14698,7 +14671,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:41"
 help = "Do not use inline patterns for copying memory"
 
 [[options]]
-id = 1264
+id = 1262
 name = "mbcopy-builtin"
 spelling = "-mbcopy-builtin"
 kind = "flag"
@@ -14709,7 +14682,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:45"
 help = "Use inline patterns for copying memory"
 
 [[options]]
-id = 1265
+id = 1263
 name = "mbranch-cheap"
 spelling = "-mbranch-cheap"
 kind = "flag"
@@ -14720,7 +14693,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:49"
 help = "Do not pretend that branches are expensive"
 
 [[options]]
-id = 1266
+id = 1264
 name = "mbranch-expensive"
 spelling = "-mbranch-expensive"
 kind = "flag"
@@ -14731,7 +14704,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:53"
 help = "Pretend that branches are expensive"
 
 [[options]]
-id = 1267
+id = 1265
 name = "mdec-asm"
 spelling = "-mdec-asm"
 kind = "flag"
@@ -14742,7 +14715,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:57"
 help = "Use the DEC assembler syntax"
 
 [[options]]
-id = 1268
+id = 1266
 name = "mfloat32"
 spelling = "-mfloat32"
 kind = "flag"
@@ -14753,7 +14726,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:61"
 help = "Use 32 bit float"
 
 [[options]]
-id = 1269
+id = 1267
 name = "mfloat64"
 spelling = "-mfloat64"
 kind = "flag"
@@ -14764,7 +14737,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:65"
 help = "Use 64 bit float"
 
 [[options]]
-id = 1270
+id = 1268
 name = "mfpu"
 spelling = "-mfpu"
 kind = "flag"
@@ -14775,7 +14748,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:69"
 help = "Use hardware floating point"
 
 [[options]]
-id = 1271
+id = 1269
 name = "mint16"
 spelling = "-mint16"
 kind = "flag"
@@ -14786,7 +14759,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:73"
 help = "Use 16 bit int"
 
 [[options]]
-id = 1272
+id = 1270
 name = "mint32"
 spelling = "-mint32"
 kind = "flag"
@@ -14797,7 +14770,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:77"
 help = "Use 32 bit int"
 
 [[options]]
-id = 1273
+id = 1271
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -14808,7 +14781,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:81"
 help = "Do not use hardware floating point"
 
 [[options]]
-id = 1274
+id = 1272
 name = "msplit"
 spelling = "-msplit"
 kind = "flag"
@@ -14819,7 +14792,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:85"
 help = "Target has split I&D"
 
 [[options]]
-id = 1275
+id = 1273
 name = "munix-asm"
 spelling = "-munix-asm"
 kind = "flag"
@@ -14830,7 +14803,7 @@ source_location = "gcc/config/pdp11/pdp11.opt:89"
 help = "Use UNIX assembler syntax"
 
 [[options]]
-id = 1276
+id = 1274
 name = "mae="
 spelling = "-mae="
 kind = "joined"
@@ -14842,7 +14815,7 @@ var = "picochip_ae_type_string"
 help = "Specify which type of AE to target. This option sets the mul-type and byte-access."
 
 [[options]]
-id = 1277
+id = 1275
 name = "mmul-type="
 spelling = "-mmul-type="
 kind = "joined"
@@ -14854,7 +14827,7 @@ var = "picochip_mul_type_string"
 help = "Specify which type of multiplication to use. Can be mem, mac or none."
 
 [[options]]
-id = 1278
+id = 1276
 name = "mbyte-access"
 spelling = "-mbyte-access"
 kind = "flag"
@@ -14866,7 +14839,7 @@ var = "picochip_has_byte_access,1"
 help = "Specify whether the byte access instructions should be used. Enabled by default."
 
 [[options]]
-id = 1279
+id = 1277
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -14877,7 +14850,7 @@ source_location = "gcc/config/picochip/picochip.opt:33"
 help = "Enable debug output to be generated."
 
 [[options]]
-id = 1280
+id = 1278
 name = "msymbol-as-address"
 spelling = "-msymbol-as-address"
 kind = "flag"
@@ -14888,7 +14861,7 @@ source_location = "gcc/config/picochip/picochip.opt:37"
 help = "Allow a symbol value to be used as an immediate value in an instruction."
 
 [[options]]
-id = 1281
+id = 1279
 name = "minefficient-warnings"
 spelling = "-minefficient-warnings"
 kind = "flag"
@@ -14899,7 +14872,7 @@ source_location = "gcc/config/picochip/picochip.opt:41"
 help = "Generate warnings when inefficient code is known to be generated."
 
 [[options]]
-id = 1282
+id = 1280
 name = "minefficient"
 spelling = "-minefficient"
 kind = "flag"
@@ -14909,7 +14882,7 @@ languages = []
 source_location = "gcc/config/picochip/picochip.opt:45"
 
 [[options]]
-id = 1283
+id = 1281
 name = "mxl-compat"
 spelling = "-mxl-compat"
 kind = "flag"
@@ -14921,7 +14894,7 @@ var = "has_xl_compat_option"
 help = "Conform more closely to IBM XLC semantics"
 
 [[options]]
-id = 1284
+id = 1282
 name = "maix64"
 spelling = "-maix64"
 kind = "flag"
@@ -14933,7 +14906,7 @@ negative = "maix32"
 help = "Compile for 64-bit pointers"
 
 [[options]]
-id = 1285
+id = 1283
 name = "maix32"
 spelling = "-maix32"
 kind = "flag"
@@ -14945,7 +14918,7 @@ negative = "maix64"
 help = "Compile for 32-bit pointers"
 
 [[options]]
-id = 1286
+id = 1284
 name = "mpe"
 spelling = "-mpe"
 kind = "flag"
@@ -14957,7 +14930,7 @@ var = "internal_nothing_1"
 help = "Support message passing with the Parallel Environment"
 
 [[options]]
-id = 1287
+id = 1285
 name = "m64"
 spelling = "-m64"
 kind = "flag"
@@ -14969,7 +14942,7 @@ negative = "m32"
 help = "Generate 64-bit code"
 
 [[options]]
-id = 1288
+id = 1286
 name = "m32"
 spelling = "-m32"
 kind = "flag"
@@ -14981,7 +14954,7 @@ negative = "m64"
 help = "Generate 32-bit code"
 
 [[options]]
-id = 1289
+id = 1287
 name = "mdynamic-no-pic"
 spelling = "-mdynamic-no-pic"
 kind = "flag"
@@ -14992,7 +14965,7 @@ source_location = "gcc/config/rs6000/darwin.opt:30"
 help = "Generate code suitable for executables (NOT shared libs)"
 
 [[options]]
-id = 1290
+id = 1288
 name = "mprofile-kernel"
 spelling = "-mprofile-kernel"
 kind = "flag"
@@ -15004,7 +14977,7 @@ var = "profile_kernel"
 help = "Call mcount for profiling before a function prologue"
 
 [[options]]
-id = 1291
+id = 1289
 name = "mpower"
 spelling = "-mpower"
 kind = "flag"
@@ -15015,7 +14988,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:22"
 help = "Use POWER instruction set"
 
 [[options]]
-id = 1292
+id = 1290
 name = "mno-power"
 spelling = "-mno-power"
 kind = "flag"
@@ -15026,7 +14999,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:26"
 help = "Do not use POWER instruction set"
 
 [[options]]
-id = 1293
+id = 1291
 name = "mpower2"
 spelling = "-mpower2"
 kind = "flag"
@@ -15037,7 +15010,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:30"
 help = "Use POWER2 instruction set"
 
 [[options]]
-id = 1294
+id = 1292
 name = "mpowerpc"
 spelling = "-mpowerpc"
 kind = "flag"
@@ -15048,7 +15021,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:34"
 help = "Use PowerPC instruction set"
 
 [[options]]
-id = 1295
+id = 1293
 name = "mno-powerpc"
 spelling = "-mno-powerpc"
 kind = "flag"
@@ -15059,7 +15032,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:38"
 help = "Do not use PowerPC instruction set"
 
 [[options]]
-id = 1296
+id = 1294
 name = "mpowerpc64"
 spelling = "-mpowerpc64"
 kind = "flag"
@@ -15070,7 +15043,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:42"
 help = "Use PowerPC-64 instruction set"
 
 [[options]]
-id = 1297
+id = 1295
 name = "mpowerpc-gpopt"
 spelling = "-mpowerpc-gpopt"
 kind = "flag"
@@ -15081,7 +15054,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:46"
 help = "Use PowerPC General Purpose group optional instructions"
 
 [[options]]
-id = 1298
+id = 1296
 name = "mpowerpc-gfxopt"
 spelling = "-mpowerpc-gfxopt"
 kind = "flag"
@@ -15092,7 +15065,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:50"
 help = "Use PowerPC Graphics group optional instructions"
 
 [[options]]
-id = 1299
+id = 1297
 name = "mmfcrf"
 spelling = "-mmfcrf"
 kind = "flag"
@@ -15103,7 +15076,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:54"
 help = "Use PowerPC V2.01 single field mfcr instruction"
 
 [[options]]
-id = 1300
+id = 1298
 name = "mpopcntb"
 spelling = "-mpopcntb"
 kind = "flag"
@@ -15114,7 +15087,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:58"
 help = "Use PowerPC V2.02 popcntb instruction"
 
 [[options]]
-id = 1301
+id = 1299
 name = "mfprnd"
 spelling = "-mfprnd"
 kind = "flag"
@@ -15125,7 +15098,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:62"
 help = "Use PowerPC V2.02 floating point rounding instructions"
 
 [[options]]
-id = 1302
+id = 1300
 name = "mcmpb"
 spelling = "-mcmpb"
 kind = "flag"
@@ -15136,7 +15109,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:66"
 help = "Use PowerPC V2.05 compare bytes instruction"
 
 [[options]]
-id = 1303
+id = 1301
 name = "mmfpgpr"
 spelling = "-mmfpgpr"
 kind = "flag"
@@ -15147,7 +15120,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:70"
 help = "Use extended PowerPC V2.05 move floating point to/from GPR instructions"
 
 [[options]]
-id = 1304
+id = 1302
 name = "maltivec"
 spelling = "-maltivec"
 kind = "flag"
@@ -15158,7 +15131,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:74"
 help = "Use AltiVec instructions"
 
 [[options]]
-id = 1305
+id = 1303
 name = "mhard-dfp"
 spelling = "-mhard-dfp"
 kind = "flag"
@@ -15169,7 +15142,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:78"
 help = "Use decimal floating point instructions"
 
 [[options]]
-id = 1306
+id = 1304
 name = "mmulhw"
 spelling = "-mmulhw"
 kind = "flag"
@@ -15180,7 +15153,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:82"
 help = "Use 4xx half-word multiply instructions"
 
 [[options]]
-id = 1307
+id = 1305
 name = "mdlmzb"
 spelling = "-mdlmzb"
 kind = "flag"
@@ -15191,7 +15164,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:86"
 help = "Use 4xx string-search dlmzb instruction"
 
 [[options]]
-id = 1308
+id = 1306
 name = "mmultiple"
 spelling = "-mmultiple"
 kind = "flag"
@@ -15202,7 +15175,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:90"
 help = "Generate load/store multiple instructions"
 
 [[options]]
-id = 1309
+id = 1307
 name = "mstring"
 spelling = "-mstring"
 kind = "flag"
@@ -15213,7 +15186,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:94"
 help = "Generate string instructions for block moves"
 
 [[options]]
-id = 1310
+id = 1308
 name = "mnew-mnemonics"
 spelling = "-mnew-mnemonics"
 kind = "flag"
@@ -15224,7 +15197,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:98"
 help = "Use new mnemonics for PowerPC architecture"
 
 [[options]]
-id = 1311
+id = 1309
 name = "mold-mnemonics"
 spelling = "-mold-mnemonics"
 kind = "flag"
@@ -15235,7 +15208,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:102"
 help = "Use old mnemonics for PowerPC architecture"
 
 [[options]]
-id = 1312
+id = 1310
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -15246,7 +15219,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:106"
 help = "Do not use hardware floating point"
 
 [[options]]
-id = 1313
+id = 1311
 name = "mhard-float"
 spelling = "-mhard-float"
 kind = "flag"
@@ -15257,7 +15230,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:110"
 help = "Use hardware floating point"
 
 [[options]]
-id = 1314
+id = 1312
 name = "mpopcntd"
 spelling = "-mpopcntd"
 kind = "flag"
@@ -15268,7 +15241,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:114"
 help = "Use PowerPC V2.06 popcntd instruction"
 
 [[options]]
-id = 1315
+id = 1313
 name = "mvsx"
 spelling = "-mvsx"
 kind = "flag"
@@ -15279,7 +15252,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:118"
 help = "Use vector/scalar (VSX) instructions"
 
 [[options]]
-id = 1316
+id = 1314
 name = "mvsx-scalar-double"
 spelling = "-mvsx-scalar-double"
 kind = "flag"
@@ -15290,7 +15263,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:122"
 var = "TARGET_VSX_SCALAR_DOUBLE"
 
 [[options]]
-id = 1317
+id = 1315
 name = "mvsx-scalar-memory"
 spelling = "-mvsx-scalar-memory"
 kind = "flag"
@@ -15301,7 +15274,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:126"
 var = "TARGET_VSX_SCALAR_MEMORY"
 
 [[options]]
-id = 1318
+id = 1316
 name = "mvsx-align-128"
 spelling = "-mvsx-align-128"
 kind = "flag"
@@ -15312,7 +15285,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:130"
 var = "TARGET_VSX_ALIGN_128"
 
 [[options]]
-id = 1319
+id = 1317
 name = "mallow-movmisalign"
 spelling = "-mallow-movmisalign"
 kind = "flag"
@@ -15323,7 +15296,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:134"
 var = "TARGET_ALLOW_MOVMISALIGN"
 
 [[options]]
-id = 1320
+id = 1318
 name = "mallow-df-permute"
 spelling = "-mallow-df-permute"
 kind = "flag"
@@ -15334,7 +15307,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:138"
 var = "TARGET_ALLOW_DF_PERMUTE"
 
 [[options]]
-id = 1321
+id = 1319
 name = "msched-groups"
 spelling = "-msched-groups"
 kind = "flag"
@@ -15345,7 +15318,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:142"
 var = "TARGET_SCHED_GROUPS"
 
 [[options]]
-id = 1322
+id = 1320
 name = "malways-hint"
 spelling = "-malways-hint"
 kind = "flag"
@@ -15356,7 +15329,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:146"
 var = "TARGET_ALWAYS_HINT"
 
 [[options]]
-id = 1323
+id = 1321
 name = "malign-branch-targets"
 spelling = "-malign-branch-targets"
 kind = "flag"
@@ -15367,7 +15340,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:150"
 var = "TARGET_ALIGN_BRANCH_TARGETS"
 
 [[options]]
-id = 1324
+id = 1322
 name = "mvectorize-builtins"
 spelling = "-mvectorize-builtins"
 kind = "flag"
@@ -15378,7 +15351,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:154"
 var = "TARGET_VECTORIZE_BUILTINS"
 
 [[options]]
-id = 1325
+id = 1323
 name = "mno-update"
 spelling = "-mno-update"
 kind = "flag"
@@ -15389,7 +15362,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:158"
 help = "Do not generate load/store with update instructions"
 
 [[options]]
-id = 1326
+id = 1324
 name = "mupdate"
 spelling = "-mupdate"
 kind = "flag"
@@ -15400,7 +15373,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:162"
 help = "Generate load/store with update instructions"
 
 [[options]]
-id = 1327
+id = 1325
 name = "mavoid-indexed-addresses"
 spelling = "-mavoid-indexed-addresses"
 kind = "flag"
@@ -15412,7 +15385,7 @@ var = "TARGET_AVOID_XFORM"
 help = "Avoid generation of indexed load/store instructions when possible"
 
 [[options]]
-id = 1328
+id = 1326
 name = "mfused-madd"
 spelling = "-mfused-madd"
 kind = "flag"
@@ -15424,7 +15397,7 @@ var = "TARGET_FUSED_MADD"
 help = "Generate fused multiply/add instructions"
 
 [[options]]
-id = 1329
+id = 1327
 name = "mtls-markers"
 spelling = "-mtls-markers"
 kind = "flag"
@@ -15436,7 +15409,7 @@ var = "tls_markers"
 help = "Mark __tls_get_addr calls with argument info"
 
 [[options]]
-id = 1330
+id = 1328
 name = "msched-epilog"
 spelling = "-msched-epilog"
 kind = "flag"
@@ -15447,7 +15420,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:178"
 var = "TARGET_SCHED_PROLOG"
 
 [[options]]
-id = 1331
+id = 1329
 name = "msched-prolog"
 spelling = "-msched-prolog"
 kind = "flag"
@@ -15459,7 +15432,7 @@ var = "TARGET_SCHED_PROLOG"
 help = "Schedule the start and end of the procedure"
 
 [[options]]
-id = 1332
+id = 1330
 name = "maix-struct-return"
 spelling = "-maix-struct-return"
 kind = "flag"
@@ -15471,7 +15444,7 @@ var = "aix_struct_return"
 help = "Return all structures in memory (AIX default)"
 
 [[options]]
-id = 1333
+id = 1331
 name = "msvr4-struct-return"
 spelling = "-msvr4-struct-return"
 kind = "flag"
@@ -15483,7 +15456,7 @@ var = "aix_struct_return,0"
 help = "Return small structures in registers (SVR4 default)"
 
 [[options]]
-id = 1334
+id = 1332
 name = "mxl-compat"
 spelling = "-mxl-compat"
 kind = "flag"
@@ -15495,7 +15468,7 @@ var = "TARGET_XL_COMPAT"
 help = "Conform more closely to IBM XLC semantics"
 
 [[options]]
-id = 1335
+id = 1333
 name = "mrecip"
 spelling = "-mrecip"
 kind = "flag"
@@ -15507,7 +15480,7 @@ var = "TARGET_RECIP"
 help = "Generate software reciprocal sqrt for better throughput"
 
 [[options]]
-id = 1336
+id = 1334
 name = "mno-fp-in-toc"
 spelling = "-mno-fp-in-toc"
 kind = "flag"
@@ -15519,7 +15492,7 @@ var = "TARGET_NO_FP_IN_TOC"
 help = "Do not place floating point constants in TOC"
 
 [[options]]
-id = 1337
+id = 1335
 name = "mfp-in-toc"
 spelling = "-mfp-in-toc"
 kind = "flag"
@@ -15531,7 +15504,7 @@ var = "TARGET_NO_FP_IN_TOC,0"
 help = "Place floating point constants in TOC"
 
 [[options]]
-id = 1338
+id = 1336
 name = "mno-sum-in-toc"
 spelling = "-mno-sum-in-toc"
 kind = "flag"
@@ -15543,7 +15516,7 @@ var = "TARGET_NO_SUM_IN_TOC"
 help = "Do not place symbol+offset constants in TOC"
 
 [[options]]
-id = 1339
+id = 1337
 name = "msum-in-toc"
 spelling = "-msum-in-toc"
 kind = "flag"
@@ -15555,7 +15528,7 @@ var = "TARGET_NO_SUM_IN_TOC,0"
 help = "Place symbol+offset constants in TOC"
 
 [[options]]
-id = 1340
+id = 1338
 name = "mminimal-toc"
 spelling = "-mminimal-toc"
 kind = "flag"
@@ -15566,7 +15539,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:224"
 help = "Use only one TOC entry per procedure"
 
 [[options]]
-id = 1341
+id = 1339
 name = "mfull-toc"
 spelling = "-mfull-toc"
 kind = "flag"
@@ -15577,7 +15550,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:228"
 help = "Put everything in the regular TOC"
 
 [[options]]
-id = 1342
+id = 1340
 name = "mvrsave"
 spelling = "-mvrsave"
 kind = "flag"
@@ -15589,7 +15562,7 @@ var = "TARGET_ALTIVEC_VRSAVE"
 help = "Generate VRSAVE instructions when generating AltiVec code"
 
 [[options]]
-id = 1343
+id = 1341
 name = "mvrsave="
 spelling = "-mvrsave="
 kind = "joined"
@@ -15600,7 +15573,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:236"
 help = "-mvrsave=yes/no\tDeprecated option.  Use -mvrsave/-mno-vrsave instead"
 
 [[options]]
-id = 1344
+id = 1342
 name = "misel"
 spelling = "-misel"
 kind = "flag"
@@ -15611,7 +15584,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:240"
 help = "Generate isel instructions"
 
 [[options]]
-id = 1345
+id = 1343
 name = "misel="
 spelling = "-misel="
 kind = "joined"
@@ -15622,7 +15595,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:244"
 help = "-misel=yes/no\tDeprecated option.  Use -misel/-mno-isel instead"
 
 [[options]]
-id = 1346
+id = 1344
 name = "mspe"
 spelling = "-mspe"
 kind = "flag"
@@ -15633,7 +15606,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:248"
 help = "Generate SPE SIMD instructions on E500"
 
 [[options]]
-id = 1347
+id = 1345
 name = "mpaired"
 spelling = "-mpaired"
 kind = "flag"
@@ -15645,7 +15618,7 @@ var = "rs6000_paired_float"
 help = "Generate PPC750CL paired-single instructions"
 
 [[options]]
-id = 1348
+id = 1346
 name = "mspe="
 spelling = "-mspe="
 kind = "joined"
@@ -15656,7 +15629,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:256"
 help = "-mspe=yes/no\tDeprecated option.  Use -mspe/-mno-spe instead"
 
 [[options]]
-id = 1349
+id = 1347
 name = "mdebug="
 spelling = "-mdebug="
 kind = "joined"
@@ -15667,7 +15640,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:260"
 help = "-mdebug=\tEnable debug output"
 
 [[options]]
-id = 1350
+id = 1348
 name = "mabi="
 spelling = "-mabi="
 kind = "joined"
@@ -15678,7 +15651,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:264"
 help = "-mabi=\tSpecify ABI to use"
 
 [[options]]
-id = 1351
+id = 1349
 name = "mcpu="
 spelling = "-mcpu="
 kind = "joined"
@@ -15689,7 +15662,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:268"
 help = "-mcpu=\tUse features of and schedule code for given CPU"
 
 [[options]]
-id = 1352
+id = 1350
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -15700,7 +15673,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:272"
 help = "-mtune=\tSchedule code for given CPU"
 
 [[options]]
-id = 1353
+id = 1351
 name = "mtraceback="
 spelling = "-mtraceback="
 kind = "joined"
@@ -15711,7 +15684,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:276"
 help = "-mtraceback=\tSelect full, part, or no traceback table"
 
 [[options]]
-id = 1354
+id = 1352
 name = "mlongcall"
 spelling = "-mlongcall"
 kind = "flag"
@@ -15723,7 +15696,7 @@ var = "rs6000_default_long_calls"
 help = "Avoid all range limits on call instructions"
 
 [[options]]
-id = 1355
+id = 1353
 name = "mgen-cell-microcode"
 spelling = "-mgen-cell-microcode"
 kind = "flag"
@@ -15735,7 +15708,7 @@ var = "rs6000_gen_cell_microcode"
 help = "Generate Cell microcode"
 
 [[options]]
-id = 1356
+id = 1354
 name = "mwarn-cell-microcode"
 spelling = "-mwarn-cell-microcode"
 kind = "flag"
@@ -15747,7 +15720,7 @@ var = "rs6000_warn_cell_microcode"
 help = "Warn when a Cell microcoded instruction is emitted"
 
 [[options]]
-id = 1357
+id = 1355
 name = "mwarn-altivec-long"
 spelling = "-mwarn-altivec-long"
 kind = "flag"
@@ -15759,7 +15732,7 @@ var = "rs6000_warn_altivec_long"
 help = "Warn about deprecated 'vector long ...' AltiVec type usage"
 
 [[options]]
-id = 1358
+id = 1356
 name = "mfloat-gprs="
 spelling = "-mfloat-gprs="
 kind = "joined"
@@ -15770,7 +15743,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:296"
 help = "-mfloat-gprs=\tSelect GPR floating point method"
 
 [[options]]
-id = 1359
+id = 1357
 name = "mlong-double-"
 spelling = "-mlong-double-"
 kind = "joined"
@@ -15781,7 +15754,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:300"
 help = "-mlong-double-<n>\tSpecify size of long double (64 or 128 bits)"
 
 [[options]]
-id = 1360
+id = 1358
 name = "msched-costly-dep="
 spelling = "-msched-costly-dep="
 kind = "joined"
@@ -15792,7 +15765,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:304"
 help = "Determine which dependences between insns are considered costly"
 
 [[options]]
-id = 1361
+id = 1359
 name = "minsert-sched-nops="
 spelling = "-minsert-sched-nops="
 kind = "joined"
@@ -15803,7 +15776,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:308"
 help = "Specify which post scheduling nop insertion scheme to apply"
 
 [[options]]
-id = 1362
+id = 1360
 name = "malign-"
 spelling = "-malign-"
 kind = "joined"
@@ -15814,7 +15787,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:312"
 help = "Specify alignment of structure fields default/natural"
 
 [[options]]
-id = 1363
+id = 1361
 name = "mprioritize-restricted-insns="
 spelling = "-mprioritize-restricted-insns="
 kind = "joined"
@@ -15826,7 +15799,7 @@ var = "rs6000_sched_restricted_insns_priority"
 help = "Specify scheduling priority for dispatch slot restricted insns"
 
 [[options]]
-id = 1364
+id = 1362
 name = "msingle-float"
 spelling = "-msingle-float"
 kind = "flag"
@@ -15838,7 +15811,7 @@ var = "rs6000_single_float"
 help = "Single-precision floating point unit"
 
 [[options]]
-id = 1365
+id = 1363
 name = "mdouble-float"
 spelling = "-mdouble-float"
 kind = "flag"
@@ -15850,7 +15823,7 @@ var = "rs6000_double_float"
 help = "Double-precision floating point unit"
 
 [[options]]
-id = 1366
+id = 1364
 name = "msimple-fpu"
 spelling = "-msimple-fpu"
 kind = "flag"
@@ -15862,7 +15835,7 @@ var = "rs6000_simple_fpu"
 help = "Floating point unit does not support divide & sqrt"
 
 [[options]]
-id = 1367
+id = 1365
 name = "mfpu="
 spelling = "-mfpu="
 kind = "joined"
@@ -15873,7 +15846,7 @@ source_location = "gcc/config/rs6000/rs6000.opt:332"
 help = "-mfpu=\tSpecify FP (sp, dp, sp-lite, dp-lite) (implies -mxilinx-fpu)"
 
 [[options]]
-id = 1368
+id = 1366
 name = "mxilinx-fpu"
 spelling = "-mxilinx-fpu"
 kind = "flag"
@@ -15885,7 +15858,7 @@ var = "rs6000_xilinx_fpu"
 help = "Specify Xilinx FPU."
 
 [[options]]
-id = 1369
+id = 1367
 name = "mcall-"
 spelling = "-mcall-"
 kind = "joined"
@@ -15896,7 +15869,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:22"
 help = "Select ABI calling convention"
 
 [[options]]
-id = 1370
+id = 1368
 name = "msdata="
 spelling = "-msdata="
 kind = "joined"
@@ -15907,7 +15880,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:26"
 help = "Select method for sdata handling"
 
 [[options]]
-id = 1371
+id = 1369
 name = "mtls-size="
 spelling = "-mtls-size="
 kind = "joined"
@@ -15918,7 +15891,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:30"
 help = "Specify bit size of immediate TLS offsets"
 
 [[options]]
-id = 1372
+id = 1370
 name = "mbit-align"
 spelling = "-mbit-align"
 kind = "flag"
@@ -15930,7 +15903,7 @@ var = "TARGET_NO_BITFIELD_TYPE"
 help = "Align to the base type of the bit-field"
 
 [[options]]
-id = 1373
+id = 1371
 name = "mstrict-align"
 spelling = "-mstrict-align"
 kind = "flag"
@@ -15941,7 +15914,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:38"
 help = "Align to the base type of the bit-field\nDon't assume that unaligned accesses are handled by the system"
 
 [[options]]
-id = 1374
+id = 1372
 name = "mrelocatable"
 spelling = "-mrelocatable"
 kind = "flag"
@@ -15952,7 +15925,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:43"
 help = "Produce code relocatable at runtime"
 
 [[options]]
-id = 1375
+id = 1373
 name = "mrelocatable-lib"
 spelling = "-mrelocatable-lib"
 kind = "flag"
@@ -15963,7 +15936,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:47"
 help = "Produce code relocatable at runtime"
 
 [[options]]
-id = 1376
+id = 1374
 name = "mlittle-endian"
 spelling = "-mlittle-endian"
 kind = "flag"
@@ -15974,7 +15947,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:51"
 help = "Produce little endian code"
 
 [[options]]
-id = 1377
+id = 1375
 name = "mlittle"
 spelling = "-mlittle"
 kind = "flag"
@@ -15985,7 +15958,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:55"
 help = "Produce little endian code"
 
 [[options]]
-id = 1378
+id = 1376
 name = "mbig-endian"
 spelling = "-mbig-endian"
 kind = "flag"
@@ -15996,7 +15969,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:59"
 help = "Produce big endian code"
 
 [[options]]
-id = 1379
+id = 1377
 name = "mbig"
 spelling = "-mbig"
 kind = "flag"
@@ -16007,7 +15980,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:63"
 help = "Produce big endian code"
 
 [[options]]
-id = 1380
+id = 1378
 name = "mno-toc"
 spelling = "-mno-toc"
 kind = "flag"
@@ -16018,7 +15991,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:68"
 help = "no description yet"
 
 [[options]]
-id = 1381
+id = 1379
 name = "mtoc"
 spelling = "-mtoc"
 kind = "flag"
@@ -16029,7 +16002,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:72"
 help = "no description yet"
 
 [[options]]
-id = 1382
+id = 1380
 name = "mprototype"
 spelling = "-mprototype"
 kind = "flag"
@@ -16041,7 +16014,7 @@ var = "target_prototype"
 help = "Assume all variable arg functions are prototyped"
 
 [[options]]
-id = 1383
+id = 1381
 name = "mno-traceback"
 spelling = "-mno-traceback"
 kind = "flag"
@@ -16052,7 +16025,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:81"
 help = "no description yet"
 
 [[options]]
-id = 1384
+id = 1382
 name = "meabi"
 spelling = "-meabi"
 kind = "flag"
@@ -16063,7 +16036,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:85"
 help = "Use EABI"
 
 [[options]]
-id = 1385
+id = 1383
 name = "mbit-word"
 spelling = "-mbit-word"
 kind = "flag"
@@ -16075,7 +16048,7 @@ var = "TARGET_NO_BITFIELD_WORD"
 help = "Allow bit-fields to cross word boundaries"
 
 [[options]]
-id = 1386
+id = 1384
 name = "mregnames"
 spelling = "-mregnames"
 kind = "flag"
@@ -16087,7 +16060,7 @@ var = "rs6000_regnames"
 help = "Use alternate register names"
 
 [[options]]
-id = 1387
+id = 1385
 name = "msdata"
 spelling = "-msdata"
 kind = "flag"
@@ -16098,7 +16071,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:99"
 help = "Use default method for sdata handling"
 
 [[options]]
-id = 1388
+id = 1386
 name = "msim"
 spelling = "-msim"
 kind = "flag"
@@ -16109,7 +16082,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:103"
 help = "Link with libsim.a, libc.a and sim-crt0.o"
 
 [[options]]
-id = 1389
+id = 1387
 name = "mads"
 spelling = "-mads"
 kind = "flag"
@@ -16120,7 +16093,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:107"
 help = "Link with libads.a, libc.a and crt0.o"
 
 [[options]]
-id = 1390
+id = 1388
 name = "myellowknife"
 spelling = "-myellowknife"
 kind = "flag"
@@ -16131,7 +16104,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:111"
 help = "Link with libyk.a, libc.a and crt0.o"
 
 [[options]]
-id = 1391
+id = 1389
 name = "mmvme"
 spelling = "-mmvme"
 kind = "flag"
@@ -16142,7 +16115,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:115"
 help = "Link with libmvme.a, libc.a and crt0.o"
 
 [[options]]
-id = 1392
+id = 1390
 name = "memb"
 spelling = "-memb"
 kind = "flag"
@@ -16153,7 +16126,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:119"
 help = "Set the PPC_EMB bit in the ELF flags header"
 
 [[options]]
-id = 1393
+id = 1391
 name = "mshlib"
 spelling = "-mshlib"
 kind = "flag"
@@ -16164,7 +16137,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:123"
 help = "no description yet"
 
 [[options]]
-id = 1394
+id = 1392
 name = "m64"
 spelling = "-m64"
 kind = "flag"
@@ -16176,7 +16149,7 @@ negative = "m32"
 help = "Generate 64-bit code"
 
 [[options]]
-id = 1395
+id = 1393
 name = "m32"
 spelling = "-m32"
 kind = "flag"
@@ -16188,7 +16161,7 @@ negative = "m64"
 help = "Generate 32-bit code"
 
 [[options]]
-id = 1396
+id = 1394
 name = "mnewlib"
 spelling = "-mnewlib"
 kind = "flag"
@@ -16199,7 +16172,7 @@ source_location = "gcc/config/rs6000/sysv4.opt:135"
 help = "no description yet"
 
 [[options]]
-id = 1397
+id = 1395
 name = "msecure-plt"
 spelling = "-msecure-plt"
 kind = "flag"
@@ -16211,7 +16184,7 @@ var = "secure_plt, 1"
 help = "Generate code to use a non-exec PLT and GOT"
 
 [[options]]
-id = 1398
+id = 1396
 name = "mbss-plt"
 spelling = "-mbss-plt"
 kind = "flag"
@@ -16223,7 +16196,7 @@ var = "secure_plt, 0"
 help = "Generate code for old exec BSS PLT"
 
 [[options]]
-id = 1399
+id = 1397
 name = "m64bit-doubles"
 spelling = "-m64bit-doubles"
 kind = "flag"
@@ -16234,7 +16207,7 @@ source_location = "gcc/config/rx/rx.opt:24"
 help = "Store doubles in 64 bits."
 
 [[options]]
-id = 1400
+id = 1398
 name = "m32bit-doubles"
 spelling = "-m32bit-doubles"
 kind = "flag"
@@ -16245,7 +16218,7 @@ source_location = "gcc/config/rx/rx.opt:28"
 help = "Stores doubles in 32 bits.  This is the default."
 
 [[options]]
-id = 1401
+id = 1399
 name = "nofpu"
 spelling = "-nofpu"
 kind = "flag"
@@ -16256,7 +16229,7 @@ source_location = "gcc/config/rx/rx.opt:32"
 help = "Disable the use of RX FPU instructions."
 
 [[options]]
-id = 1402
+id = 1400
 name = "mnofpu"
 spelling = "-mnofpu"
 kind = "flag"
@@ -16266,7 +16239,7 @@ languages = []
 source_location = "gcc/config/rx/rx.opt:36"
 
 [[options]]
-id = 1403
+id = 1401
 name = "fpu"
 spelling = "-fpu"
 kind = "flag"
@@ -16277,7 +16250,7 @@ source_location = "gcc/config/rx/rx.opt:39"
 help = "Enable the use of RX FPU instructions.  This is the default."
 
 [[options]]
-id = 1404
+id = 1402
 name = "mcpu="
 spelling = "-mcpu="
 kind = "joined"
@@ -16289,7 +16262,7 @@ var = "rx_cpu_name"
 help = "Specify the target RX cpu type."
 
 [[options]]
-id = 1405
+id = 1403
 name = "patch="
 spelling = "-patch="
 kind = "joined"
@@ -16301,7 +16274,7 @@ var = "rx_cpu_name"
 help = "Alias for -mcpu."
 
 [[options]]
-id = 1406
+id = 1404
 name = "mbig-endian-data"
 spelling = "-mbig-endian-data"
 kind = "flag"
@@ -16312,7 +16285,7 @@ source_location = "gcc/config/rx/rx.opt:55"
 help = "Data is stored in big-endian format."
 
 [[options]]
-id = 1407
+id = 1405
 name = "mlittle-endian-data"
 spelling = "-mlittle-endian-data"
 kind = "flag"
@@ -16323,7 +16296,7 @@ source_location = "gcc/config/rx/rx.opt:59"
 help = "Data is stored in little-endian format.  (Default)."
 
 [[options]]
-id = 1408
+id = 1406
 name = "msmall-data-limit="
 spelling = "-msmall-data-limit="
 kind = "joined"
@@ -16335,7 +16308,7 @@ var = "rx_small_data_limit"
 help = "Maximum size of global and static variables which can be placed into the small data area."
 
 [[options]]
-id = 1409
+id = 1407
 name = "msim"
 spelling = "-msim"
 kind = "flag"
@@ -16346,7 +16319,7 @@ source_location = "gcc/config/rx/rx.opt:71"
 help = "Use the simulator runtime."
 
 [[options]]
-id = 1410
+id = 1408
 name = "mas100-syntax"
 spelling = "-mas100-syntax"
 kind = "flag"
@@ -16357,7 +16330,7 @@ source_location = "gcc/config/rx/rx.opt:77"
 help = "Generate assembler output that is compatible with the Renesas AS100 assembler.  This may restrict some of the compiler's capabilities.  The default is to generate GAS compatable syntax."
 
 [[options]]
-id = 1411
+id = 1409
 name = "mrelax"
 spelling = "-mrelax"
 kind = "flag"
@@ -16368,7 +16341,7 @@ source_location = "gcc/config/rx/rx.opt:83"
 help = "Enable linker relaxation."
 
 [[options]]
-id = 1412
+id = 1410
 name = "mmax-constant-size="
 spelling = "-mmax-constant-size="
 kind = "joined"
@@ -16380,7 +16353,7 @@ var = "rx_max_constant_size"
 help = "Maximum size in bytes of constant values allowed as operands."
 
 [[options]]
-id = 1413
+id = 1411
 name = "mint-register="
 spelling = "-mint-register="
 kind = "joined"
@@ -16392,7 +16365,7 @@ var = "rx_interrupt_registers"
 help = "Specifies the number of registers to reserve for interrupt handlers."
 
 [[options]]
-id = 1414
+id = 1412
 name = "msave-acc-in-interrupts"
 spelling = "-msave-acc-in-interrupts"
 kind = "flag"
@@ -16403,7 +16376,7 @@ source_location = "gcc/config/rx/rx.opt:101"
 help = "Specifies whether interrupt functions should save and restore the accumulator register."
 
 [[options]]
-id = 1415
+id = 1413
 name = "m31"
 spelling = "-m31"
 kind = "flag"
@@ -16415,7 +16388,7 @@ negative = "m64"
 help = "31 bit ABI"
 
 [[options]]
-id = 1416
+id = 1414
 name = "m64"
 spelling = "-m64"
 kind = "flag"
@@ -16427,7 +16400,7 @@ negative = "m31"
 help = "64 bit ABI"
 
 [[options]]
-id = 1417
+id = 1415
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -16439,7 +16412,7 @@ var = "s390_arch_string"
 help = "Generate code for given CPU"
 
 [[options]]
-id = 1418
+id = 1416
 name = "mbackchain"
 spelling = "-mbackchain"
 kind = "flag"
@@ -16450,7 +16423,7 @@ source_location = "gcc/config/s390/s390.opt:33"
 help = "Maintain backchain pointer"
 
 [[options]]
-id = 1419
+id = 1417
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -16461,7 +16434,7 @@ source_location = "gcc/config/s390/s390.opt:37"
 help = "Additional debug prints"
 
 [[options]]
-id = 1420
+id = 1418
 name = "mesa"
 spelling = "-mesa"
 kind = "flag"
@@ -16473,7 +16446,7 @@ negative = "mzarch"
 help = "ESA/390 architecture"
 
 [[options]]
-id = 1421
+id = 1419
 name = "mfused-madd"
 spelling = "-mfused-madd"
 kind = "flag"
@@ -16484,7 +16457,7 @@ source_location = "gcc/config/s390/s390.opt:45"
 help = "Enable fused multiply/add instructions"
 
 [[options]]
-id = 1422
+id = 1420
 name = "mhard-dfp"
 spelling = "-mhard-dfp"
 kind = "flag"
@@ -16495,7 +16468,7 @@ source_location = "gcc/config/s390/s390.opt:49"
 help = "Enable decimal floating point hardware support"
 
 [[options]]
-id = 1423
+id = 1421
 name = "mhard-float"
 spelling = "-mhard-float"
 kind = "flag"
@@ -16507,7 +16480,7 @@ negative = "msoft-float"
 help = "Enable hardware floating point"
 
 [[options]]
-id = 1424
+id = 1422
 name = "mlong-double-128"
 spelling = "-mlong-double-128"
 kind = "flag"
@@ -16519,7 +16492,7 @@ negative = "mlong-double-64"
 help = "Use 128-bit long double"
 
 [[options]]
-id = 1425
+id = 1423
 name = "mlong-double-64"
 spelling = "-mlong-double-64"
 kind = "flag"
@@ -16531,7 +16504,7 @@ negative = "mlong-double-128"
 help = "Use 64-bit long double"
 
 [[options]]
-id = 1426
+id = 1424
 name = "mpacked-stack"
 spelling = "-mpacked-stack"
 kind = "flag"
@@ -16542,7 +16515,7 @@ source_location = "gcc/config/s390/s390.opt:65"
 help = "Use packed stack layout"
 
 [[options]]
-id = 1427
+id = 1425
 name = "msmall-exec"
 spelling = "-msmall-exec"
 kind = "flag"
@@ -16553,7 +16526,7 @@ source_location = "gcc/config/s390/s390.opt:69"
 help = "Use bras for executable < 64k"
 
 [[options]]
-id = 1428
+id = 1426
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -16565,7 +16538,7 @@ negative = "mhard-float"
 help = "Disable hardware floating point"
 
 [[options]]
-id = 1429
+id = 1427
 name = "mstack-guard="
 spelling = "-mstack-guard="
 kind = "joined"
@@ -16576,7 +16549,7 @@ source_location = "gcc/config/s390/s390.opt:77"
 help = "Set the max. number of bytes which has to be left to stack size before a trap instruction is triggered"
 
 [[options]]
-id = 1430
+id = 1428
 name = "mstack-size="
 spelling = "-mstack-size="
 kind = "joined"
@@ -16587,7 +16560,7 @@ source_location = "gcc/config/s390/s390.opt:81"
 help = "Emit extra code in the function prologue in order to trap if the stack size exceeds the given limit"
 
 [[options]]
-id = 1431
+id = 1429
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -16598,7 +16571,7 @@ source_location = "gcc/config/s390/s390.opt:85"
 help = "Schedule code for given CPU"
 
 [[options]]
-id = 1432
+id = 1430
 name = "mmvcle"
 spelling = "-mmvcle"
 kind = "flag"
@@ -16609,7 +16582,7 @@ source_location = "gcc/config/s390/s390.opt:89"
 help = "mvcle use"
 
 [[options]]
-id = 1433
+id = 1431
 name = "mwarn-dynamicstack"
 spelling = "-mwarn-dynamicstack"
 kind = "flag"
@@ -16621,7 +16594,7 @@ var = "s390_warn_dynamicstack_p"
 help = "Warn if a function uses alloca or creates an array with dynamic size"
 
 [[options]]
-id = 1434
+id = 1432
 name = "mwarn-framesize="
 spelling = "-mwarn-framesize="
 kind = "joined"
@@ -16632,7 +16605,7 @@ source_location = "gcc/config/s390/s390.opt:97"
 help = "Warn if a single function's framesize exceeds the given framesize"
 
 [[options]]
-id = 1435
+id = 1433
 name = "mzarch"
 spelling = "-mzarch"
 kind = "flag"
@@ -16644,7 +16617,7 @@ negative = "mesa"
 help = "z/Architecture"
 
 [[options]]
-id = 1436
+id = 1434
 name = "mtpf-trace"
 spelling = "-mtpf-trace"
 kind = "flag"
@@ -16655,7 +16628,7 @@ source_location = "gcc/config/s390/tpf.opt:21"
 help = "Enable TPF-OS tracing code"
 
 [[options]]
-id = 1437
+id = 1435
 name = "mmain"
 spelling = "-mmain"
 kind = "flag"
@@ -16666,7 +16639,7 @@ source_location = "gcc/config/s390/tpf.opt:25"
 help = "Specify main object for TPF-OS"
 
 [[options]]
-id = 1438
+id = 1436
 name = "meb"
 spelling = "-meb"
 kind = "flag"
@@ -16677,7 +16650,7 @@ source_location = "gcc/config/score/score.opt:21"
 help = "Generate big-endian code"
 
 [[options]]
-id = 1439
+id = 1437
 name = "mel"
 spelling = "-mel"
 kind = "flag"
@@ -16688,7 +16661,7 @@ source_location = "gcc/config/score/score.opt:25"
 help = "Generate little-endian code"
 
 [[options]]
-id = 1440
+id = 1438
 name = "mnhwloop"
 spelling = "-mnhwloop"
 kind = "flag"
@@ -16699,7 +16672,7 @@ source_location = "gcc/config/score/score.opt:29"
 help = "Disable bcnz instruction"
 
 [[options]]
-id = 1441
+id = 1439
 name = "muls"
 spelling = "-muls"
 kind = "flag"
@@ -16710,7 +16683,7 @@ source_location = "gcc/config/score/score.opt:33"
 help = "Enable unaligned load/store instruction"
 
 [[options]]
-id = 1442
+id = 1440
 name = "mscore5"
 spelling = "-mscore5"
 kind = "flag"
@@ -16721,7 +16694,7 @@ source_location = "gcc/config/score/score.opt:37"
 help = "Support SCORE 5 ISA"
 
 [[options]]
-id = 1443
+id = 1441
 name = "mscore5u"
 spelling = "-mscore5u"
 kind = "flag"
@@ -16732,7 +16705,7 @@ source_location = "gcc/config/score/score.opt:41"
 help = "Support SCORE 5U ISA"
 
 [[options]]
-id = 1444
+id = 1442
 name = "mscore7"
 spelling = "-mscore7"
 kind = "flag"
@@ -16743,7 +16716,7 @@ source_location = "gcc/config/score/score.opt:45"
 help = "Support SCORE 7 ISA"
 
 [[options]]
-id = 1445
+id = 1443
 name = "mscore7d"
 spelling = "-mscore7d"
 kind = "flag"
@@ -16754,7 +16727,7 @@ source_location = "gcc/config/score/score.opt:49"
 help = "Support SCORE 7D ISA"
 
 [[options]]
-id = 1446
+id = 1444
 name = "mscore3"
 spelling = "-mscore3"
 kind = "flag"
@@ -16765,7 +16738,7 @@ source_location = "gcc/config/score/score.opt:53"
 help = "Support SCORE 3 ISA"
 
 [[options]]
-id = 1447
+id = 1445
 name = "mscore3d"
 spelling = "-mscore3d"
 kind = "flag"
@@ -16776,7 +16749,7 @@ source_location = "gcc/config/score/score.opt:57"
 help = "Support SCORE 3d ISA"
 
 [[options]]
-id = 1448
+id = 1446
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -16787,7 +16760,7 @@ source_location = "gcc/config/score/score.opt:61"
 help = "Specify the name of the target architecture"
 
 [[options]]
-id = 1449
+id = 1447
 name = "m1"
 spelling = "-m1"
 kind = "flag"
@@ -16798,7 +16771,7 @@ source_location = "gcc/config/sh/sh.opt:42"
 help = "Generate SH1 code"
 
 [[options]]
-id = 1450
+id = 1448
 name = "m2"
 spelling = "-m2"
 kind = "flag"
@@ -16809,7 +16782,7 @@ source_location = "gcc/config/sh/sh.opt:46"
 help = "Generate SH2 code"
 
 [[options]]
-id = 1451
+id = 1449
 name = "m2a"
 spelling = "-m2a"
 kind = "flag"
@@ -16820,7 +16793,7 @@ source_location = "gcc/config/sh/sh.opt:50"
 help = "Generate default double-precision SH2a-FPU code"
 
 [[options]]
-id = 1452
+id = 1450
 name = "m2a-nofpu"
 spelling = "-m2a-nofpu"
 kind = "flag"
@@ -16831,7 +16804,7 @@ source_location = "gcc/config/sh/sh.opt:54"
 help = "Generate SH2a FPU-less code"
 
 [[options]]
-id = 1453
+id = 1451
 name = "m2a-single"
 spelling = "-m2a-single"
 kind = "flag"
@@ -16842,7 +16815,7 @@ source_location = "gcc/config/sh/sh.opt:58"
 help = "Generate default single-precision SH2a-FPU code"
 
 [[options]]
-id = 1454
+id = 1452
 name = "m2a-single-only"
 spelling = "-m2a-single-only"
 kind = "flag"
@@ -16853,7 +16826,7 @@ source_location = "gcc/config/sh/sh.opt:62"
 help = "Generate only single-precision SH2a-FPU code"
 
 [[options]]
-id = 1455
+id = 1453
 name = "m2e"
 spelling = "-m2e"
 kind = "flag"
@@ -16864,7 +16837,7 @@ source_location = "gcc/config/sh/sh.opt:66"
 help = "Generate SH2e code"
 
 [[options]]
-id = 1456
+id = 1454
 name = "m3"
 spelling = "-m3"
 kind = "flag"
@@ -16875,7 +16848,7 @@ source_location = "gcc/config/sh/sh.opt:70"
 help = "Generate SH3 code"
 
 [[options]]
-id = 1457
+id = 1455
 name = "m3e"
 spelling = "-m3e"
 kind = "flag"
@@ -16886,7 +16859,7 @@ source_location = "gcc/config/sh/sh.opt:74"
 help = "Generate SH3e code"
 
 [[options]]
-id = 1458
+id = 1456
 name = "m4"
 spelling = "-m4"
 kind = "flag"
@@ -16897,7 +16870,7 @@ source_location = "gcc/config/sh/sh.opt:78"
 help = "Generate SH4 code"
 
 [[options]]
-id = 1459
+id = 1457
 name = "m4-100"
 spelling = "-m4-100"
 kind = "flag"
@@ -16908,7 +16881,7 @@ source_location = "gcc/config/sh/sh.opt:82"
 help = "Generate SH4-100 code"
 
 [[options]]
-id = 1460
+id = 1458
 name = "m4-200"
 spelling = "-m4-200"
 kind = "flag"
@@ -16919,7 +16892,7 @@ source_location = "gcc/config/sh/sh.opt:86"
 help = "Generate SH4-200 code"
 
 [[options]]
-id = 1461
+id = 1459
 name = "m4-300"
 spelling = "-m4-300"
 kind = "flag"
@@ -16931,7 +16904,7 @@ var = "TARGET_SH4_300"
 help = "Generate SH4-300 code"
 
 [[options]]
-id = 1462
+id = 1460
 name = "m4-nofpu"
 spelling = "-m4-nofpu"
 kind = "flag"
@@ -16942,7 +16915,7 @@ source_location = "gcc/config/sh/sh.opt:96"
 help = "Generate SH4 FPU-less code"
 
 [[options]]
-id = 1463
+id = 1461
 name = "m4-100-nofpu"
 spelling = "-m4-100-nofpu"
 kind = "flag"
@@ -16953,7 +16926,7 @@ source_location = "gcc/config/sh/sh.opt:100"
 help = "Generate SH4-100 FPU-less code"
 
 [[options]]
-id = 1464
+id = 1462
 name = "m4-200-nofpu"
 spelling = "-m4-200-nofpu"
 kind = "flag"
@@ -16964,7 +16937,7 @@ source_location = "gcc/config/sh/sh.opt:104"
 help = "Generate SH4-200 FPU-less code"
 
 [[options]]
-id = 1465
+id = 1463
 name = "m4-300-nofpu"
 spelling = "-m4-300-nofpu"
 kind = "flag"
@@ -16976,7 +16949,7 @@ var = "TARGET_SH4_300"
 help = "Generate SH4-300 FPU-less code"
 
 [[options]]
-id = 1466
+id = 1464
 name = "m4-340"
 spelling = "-m4-340"
 kind = "flag"
@@ -16988,7 +16961,7 @@ var = "TARGET_SH4_300"
 help = "Generate code for SH4 340 series (MMU/FPU-less)"
 
 [[options]]
-id = 1467
+id = 1465
 name = "m4-400"
 spelling = "-m4-400"
 kind = "flag"
@@ -16999,7 +16972,7 @@ source_location = "gcc/config/sh/sh.opt:117"
 help = "Generate code for SH4 400 series (MMU/FPU-less)"
 
 [[options]]
-id = 1468
+id = 1466
 name = "m4-500"
 spelling = "-m4-500"
 kind = "flag"
@@ -17010,7 +16983,7 @@ source_location = "gcc/config/sh/sh.opt:122"
 help = "Generate code for SH4 500 series (FPU-less)."
 
 [[options]]
-id = 1469
+id = 1467
 name = "m4-single"
 spelling = "-m4-single"
 kind = "flag"
@@ -17021,7 +16994,7 @@ source_location = "gcc/config/sh/sh.opt:127"
 help = "Generate default single-precision SH4 code"
 
 [[options]]
-id = 1470
+id = 1468
 name = "m4-100-single"
 spelling = "-m4-100-single"
 kind = "flag"
@@ -17032,7 +17005,7 @@ source_location = "gcc/config/sh/sh.opt:131"
 help = "Generate default single-precision SH4-100 code"
 
 [[options]]
-id = 1471
+id = 1469
 name = "m4-200-single"
 spelling = "-m4-200-single"
 kind = "flag"
@@ -17043,7 +17016,7 @@ source_location = "gcc/config/sh/sh.opt:135"
 help = "Generate default single-precision SH4-200 code"
 
 [[options]]
-id = 1472
+id = 1470
 name = "m4-300-single"
 spelling = "-m4-300-single"
 kind = "flag"
@@ -17055,7 +17028,7 @@ var = "TARGET_SH4_300"
 help = "Generate default single-precision SH4-300 code"
 
 [[options]]
-id = 1473
+id = 1471
 name = "m4-single-only"
 spelling = "-m4-single-only"
 kind = "flag"
@@ -17066,7 +17039,7 @@ source_location = "gcc/config/sh/sh.opt:143"
 help = "Generate only single-precision SH4 code"
 
 [[options]]
-id = 1474
+id = 1472
 name = "m4-100-single-only"
 spelling = "-m4-100-single-only"
 kind = "flag"
@@ -17077,7 +17050,7 @@ source_location = "gcc/config/sh/sh.opt:147"
 help = "Generate only single-precision SH4-100 code"
 
 [[options]]
-id = 1475
+id = 1473
 name = "m4-200-single-only"
 spelling = "-m4-200-single-only"
 kind = "flag"
@@ -17088,7 +17061,7 @@ source_location = "gcc/config/sh/sh.opt:151"
 help = "Generate only single-precision SH4-200 code"
 
 [[options]]
-id = 1476
+id = 1474
 name = "m4-300-single-only"
 spelling = "-m4-300-single-only"
 kind = "flag"
@@ -17100,7 +17073,7 @@ var = "TARGET_SH4_300"
 help = "Generate only single-precision SH4-300 code"
 
 [[options]]
-id = 1477
+id = 1475
 name = "m4a"
 spelling = "-m4a"
 kind = "flag"
@@ -17111,7 +17084,7 @@ source_location = "gcc/config/sh/sh.opt:159"
 help = "Generate SH4a code"
 
 [[options]]
-id = 1478
+id = 1476
 name = "m4a-nofpu"
 spelling = "-m4a-nofpu"
 kind = "flag"
@@ -17122,7 +17095,7 @@ source_location = "gcc/config/sh/sh.opt:163"
 help = "Generate SH4a FPU-less code"
 
 [[options]]
-id = 1479
+id = 1477
 name = "m4a-single"
 spelling = "-m4a-single"
 kind = "flag"
@@ -17133,7 +17106,7 @@ source_location = "gcc/config/sh/sh.opt:167"
 help = "Generate default single-precision SH4a code"
 
 [[options]]
-id = 1480
+id = 1478
 name = "m4a-single-only"
 spelling = "-m4a-single-only"
 kind = "flag"
@@ -17144,7 +17117,7 @@ source_location = "gcc/config/sh/sh.opt:171"
 help = "Generate only single-precision SH4a code"
 
 [[options]]
-id = 1481
+id = 1479
 name = "m4al"
 spelling = "-m4al"
 kind = "flag"
@@ -17155,7 +17128,7 @@ source_location = "gcc/config/sh/sh.opt:175"
 help = "Generate SH4al-dsp code"
 
 [[options]]
-id = 1482
+id = 1480
 name = "m5-32media"
 spelling = "-m5-32media"
 kind = "flag"
@@ -17166,7 +17139,7 @@ source_location = "gcc/config/sh/sh.opt:179"
 help = "Generate 32-bit SHmedia code"
 
 [[options]]
-id = 1483
+id = 1481
 name = "m5-32media-nofpu"
 spelling = "-m5-32media-nofpu"
 kind = "flag"
@@ -17177,7 +17150,7 @@ source_location = "gcc/config/sh/sh.opt:183"
 help = "Generate 32-bit FPU-less SHmedia code"
 
 [[options]]
-id = 1484
+id = 1482
 name = "m5-64media"
 spelling = "-m5-64media"
 kind = "flag"
@@ -17188,7 +17161,7 @@ source_location = "gcc/config/sh/sh.opt:187"
 help = "Generate 64-bit SHmedia code"
 
 [[options]]
-id = 1485
+id = 1483
 name = "m5-64media-nofpu"
 spelling = "-m5-64media-nofpu"
 kind = "flag"
@@ -17199,7 +17172,7 @@ source_location = "gcc/config/sh/sh.opt:191"
 help = "Generate 64-bit FPU-less SHmedia code"
 
 [[options]]
-id = 1486
+id = 1484
 name = "m5-compact"
 spelling = "-m5-compact"
 kind = "flag"
@@ -17210,7 +17183,7 @@ source_location = "gcc/config/sh/sh.opt:195"
 help = "Generate SHcompact code"
 
 [[options]]
-id = 1487
+id = 1485
 name = "m5-compact-nofpu"
 spelling = "-m5-compact-nofpu"
 kind = "flag"
@@ -17221,7 +17194,7 @@ source_location = "gcc/config/sh/sh.opt:199"
 help = "Generate FPU-less SHcompact code"
 
 [[options]]
-id = 1488
+id = 1486
 name = "madjust-unroll"
 spelling = "-madjust-unroll"
 kind = "flag"
@@ -17232,7 +17205,7 @@ source_location = "gcc/config/sh/sh.opt:203"
 help = "Throttle unrolling to avoid thrashing target registers unless the unroll benefit outweighs this"
 
 [[options]]
-id = 1489
+id = 1487
 name = "mb"
 spelling = "-mb"
 kind = "flag"
@@ -17243,7 +17216,7 @@ source_location = "gcc/config/sh/sh.opt:207"
 help = "Generate code in big endian mode"
 
 [[options]]
-id = 1490
+id = 1488
 name = "mbigtable"
 spelling = "-mbigtable"
 kind = "flag"
@@ -17254,7 +17227,7 @@ source_location = "gcc/config/sh/sh.opt:211"
 help = "Generate 32-bit offsets in switch tables"
 
 [[options]]
-id = 1491
+id = 1489
 name = "mbitops"
 spelling = "-mbitops"
 kind = "flag"
@@ -17265,7 +17238,7 @@ source_location = "gcc/config/sh/sh.opt:215"
 help = "Generate bit instructions"
 
 [[options]]
-id = 1492
+id = 1490
 name = "mbranch-cost="
 spelling = "-mbranch-cost="
 kind = "joined"
@@ -17277,7 +17250,7 @@ var = "sh_branch_cost"
 help = "Cost to assume for a branch insn"
 
 [[options]]
-id = 1493
+id = 1491
 name = "mcbranchdi"
 spelling = "-mcbranchdi"
 kind = "flag"
@@ -17289,7 +17262,7 @@ var = "TARGET_CBRANCHDI4"
 help = "Enable cbranchdi4 pattern"
 
 [[options]]
-id = 1494
+id = 1492
 name = "mcmpeqdi"
 spelling = "-mcmpeqdi"
 kind = "flag"
@@ -17301,7 +17274,7 @@ var = "TARGET_CMPEQDI_T"
 help = "Emit cmpeqdi_t pattern even when -mcbranchdi is in effect."
 
 [[options]]
-id = 1495
+id = 1493
 name = "mcut2-workaround"
 spelling = "-mcut2-workaround"
 kind = "flag"
@@ -17313,7 +17286,7 @@ var = "TARGET_SH5_CUT2_WORKAROUND"
 help = "Enable SH5 cut2 workaround"
 
 [[options]]
-id = 1496
+id = 1494
 name = "mdalign"
 spelling = "-mdalign"
 kind = "flag"
@@ -17324,7 +17297,7 @@ source_location = "gcc/config/sh/sh.opt:235"
 help = "Align doubles at 64-bit boundaries"
 
 [[options]]
-id = 1497
+id = 1495
 name = "mdiv="
 spelling = "-mdiv="
 kind = "joined"
@@ -17336,7 +17309,7 @@ var = "sh_div_str"
 help = "Division strategy, one of: call, call2, fp, inv, inv:minlat, inv20u, inv20l, inv:call, inv:call2, inv:fp, call-div1, call-fp, call-table"
 
 [[options]]
-id = 1498
+id = 1496
 name = "mdivsi3_libfunc="
 spelling = "-mdivsi3_libfunc="
 kind = "joined"
@@ -17348,7 +17321,7 @@ var = "sh_divsi3_libfunc"
 help = "Specify name for 32 bit signed division function"
 
 [[options]]
-id = 1499
+id = 1497
 name = "mfmovd"
 spelling = "-mfmovd"
 kind = "flag"
@@ -17359,7 +17332,7 @@ source_location = "gcc/config/sh/sh.opt:247"
 help = "Enable the use of 64-bit floating point registers in fmov instructions.  See -mdalign if 64-bit alignment is required."
 
 [[options]]
-id = 1500
+id = 1498
 name = "mfixed-range="
 spelling = "-mfixed-range="
 kind = "joined"
@@ -17371,7 +17344,7 @@ var = "sh_fixed_range_str"
 help = "Specify range of registers to make fixed"
 
 [[options]]
-id = 1501
+id = 1499
 name = "mfused-madd"
 spelling = "-mfused-madd"
 kind = "flag"
@@ -17383,7 +17356,7 @@ var = "TARGET_FMAC"
 help = "Enable the use of the fused floating point multiply-accumulate operation"
 
 [[options]]
-id = 1502
+id = 1500
 name = "mgettrcost="
 spelling = "-mgettrcost="
 kind = "joined"
@@ -17395,7 +17368,7 @@ var = "sh_gettrcost"
 help = "Cost to assume for gettr insn"
 
 [[options]]
-id = 1503
+id = 1501
 name = "mhitachi"
 spelling = "-mhitachi"
 kind = "flag"
@@ -17406,7 +17379,7 @@ source_location = "gcc/config/sh/sh.opt:263"
 help = "Follow Renesas (formerly Hitachi) / SuperH calling conventions"
 
 [[options]]
-id = 1504
+id = 1502
 name = "mieee"
 spelling = "-mieee"
 kind = "flag"
@@ -17417,7 +17390,7 @@ source_location = "gcc/config/sh/sh.opt:267"
 help = "Increase the IEEE compliance for floating-point code"
 
 [[options]]
-id = 1505
+id = 1503
 name = "mindexed-addressing"
 spelling = "-mindexed-addressing"
 kind = "flag"
@@ -17428,7 +17401,7 @@ source_location = "gcc/config/sh/sh.opt:271"
 help = "Enable the use of the indexed addressing mode for SHmedia32/SHcompact"
 
 [[options]]
-id = 1506
+id = 1504
 name = "minline-ic_invalidate"
 spelling = "-minline-ic_invalidate"
 kind = "flag"
@@ -17440,7 +17413,7 @@ var = "TARGET_INLINE_IC_INVALIDATE"
 help = "inline code to invalidate instruction cache entries after setting up nested function trampolines"
 
 [[options]]
-id = 1507
+id = 1505
 name = "minvalid-symbols"
 spelling = "-minvalid-symbols"
 kind = "flag"
@@ -17451,7 +17424,7 @@ source_location = "gcc/config/sh/sh.opt:279"
 help = "Assume symbols might be invalid"
 
 [[options]]
-id = 1508
+id = 1506
 name = "misize"
 spelling = "-misize"
 kind = "flag"
@@ -17462,7 +17435,7 @@ source_location = "gcc/config/sh/sh.opt:283"
 help = "Annotate assembler instructions with estimated addresses"
 
 [[options]]
-id = 1509
+id = 1507
 name = "ml"
 spelling = "-ml"
 kind = "flag"
@@ -17473,7 +17446,7 @@ source_location = "gcc/config/sh/sh.opt:287"
 help = "Generate code in little endian mode"
 
 [[options]]
-id = 1510
+id = 1508
 name = "mnomacsave"
 spelling = "-mnomacsave"
 kind = "flag"
@@ -17484,7 +17457,7 @@ source_location = "gcc/config/sh/sh.opt:291"
 help = "Mark MAC register as call-clobbered"
 
 [[options]]
-id = 1511
+id = 1509
 name = "mpadstruct"
 spelling = "-mpadstruct"
 kind = "flag"
@@ -17495,7 +17468,7 @@ source_location = "gcc/config/sh/sh.opt:297"
 help = "Make structs a multiple of 4 bytes (warning: ABI altered)"
 
 [[options]]
-id = 1512
+id = 1510
 name = "mprefergot"
 spelling = "-mprefergot"
 kind = "flag"
@@ -17506,7 +17479,7 @@ source_location = "gcc/config/sh/sh.opt:301"
 help = "Emit function-calls using global offset table when generating PIC"
 
 [[options]]
-id = 1513
+id = 1511
 name = "mpt-fixed"
 spelling = "-mpt-fixed"
 kind = "flag"
@@ -17517,7 +17490,7 @@ source_location = "gcc/config/sh/sh.opt:305"
 help = "Assume pt* instructions won't trap"
 
 [[options]]
-id = 1514
+id = 1512
 name = "mrelax"
 spelling = "-mrelax"
 kind = "flag"
@@ -17528,7 +17501,7 @@ source_location = "gcc/config/sh/sh.opt:309"
 help = "Shorten address references during linking"
 
 [[options]]
-id = 1515
+id = 1513
 name = "mrenesas"
 spelling = "-mrenesas"
 kind = "flag"
@@ -17539,7 +17512,7 @@ source_location = "gcc/config/sh/sh.opt:313"
 help = "Follow Renesas (formerly Hitachi) / SuperH calling conventions"
 
 [[options]]
-id = 1516
+id = 1514
 name = "mspace"
 spelling = "-mspace"
 kind = "flag"
@@ -17550,7 +17523,7 @@ source_location = "gcc/config/sh/sh.opt:317"
 help = "Deprecated.  Use -Os instead"
 
 [[options]]
-id = 1517
+id = 1515
 name = "multcost="
 spelling = "-multcost="
 kind = "joined"
@@ -17562,7 +17535,7 @@ var = "sh_multcost"
 help = "Cost to assume for a multiply insn"
 
 [[options]]
-id = 1518
+id = 1516
 name = "musermode"
 spelling = "-musermode"
 kind = "flag"
@@ -17573,7 +17546,7 @@ source_location = "gcc/config/sh/sh.opt:325"
 help = "Don't generate privileged-mode only code; implies -mno-inline-ic_invalidate if the inline code would not work in user mode."
 
 [[options]]
-id = 1519
+id = 1517
 name = "mpretend-cmove"
 spelling = "-mpretend-cmove"
 kind = "flag"
@@ -17585,7 +17558,7 @@ var = "TARGET_PRETEND_CMOVE"
 help = "Pretend a branch-around-a-move is a conditional move."
 
 [[options]]
-id = 1520
+id = 1518
 name = "mboard="
 spelling = "-mboard="
 kind = "joined"
@@ -17596,7 +17569,7 @@ source_location = "gcc/config/sh/superh.opt:4"
 help = "Board name [and memory region]."
 
 [[options]]
-id = 1521
+id = 1519
 name = "mruntime="
 spelling = "-mruntime="
 kind = "joined"
@@ -17607,7 +17580,7 @@ source_location = "gcc/config/sh/superh.opt:8"
 help = "Runtime name."
 
 [[options]]
-id = 1522
+id = 1520
 name = "mlittle-endian"
 spelling = "-mlittle-endian"
 kind = "flag"
@@ -17618,7 +17591,7 @@ source_location = "gcc/config/sparc/little-endian.opt:21"
 help = "Generate code for little-endian"
 
 [[options]]
-id = 1523
+id = 1521
 name = "mbig-endian"
 spelling = "-mbig-endian"
 kind = "flag"
@@ -17629,7 +17602,7 @@ source_location = "gcc/config/sparc/little-endian.opt:25"
 help = "Generate code for big-endian"
 
 [[options]]
-id = 1524
+id = 1522
 name = "mlong-double-128"
 spelling = "-mlong-double-128"
 kind = "flag"
@@ -17640,7 +17613,7 @@ source_location = "gcc/config/sparc/long-double-switch.opt:21"
 help = "Use 128-bit long double"
 
 [[options]]
-id = 1525
+id = 1523
 name = "mlong-double-64"
 spelling = "-mlong-double-64"
 kind = "flag"
@@ -17651,7 +17624,7 @@ source_location = "gcc/config/sparc/long-double-switch.opt:25"
 help = "Use 64-bit long double"
 
 [[options]]
-id = 1526
+id = 1524
 name = "mfpu"
 spelling = "-mfpu"
 kind = "flag"
@@ -17662,7 +17635,7 @@ source_location = "gcc/config/sparc/sparc.opt:21"
 help = "Use hardware FP"
 
 [[options]]
-id = 1527
+id = 1525
 name = "mhard-float"
 spelling = "-mhard-float"
 kind = "flag"
@@ -17673,7 +17646,7 @@ source_location = "gcc/config/sparc/sparc.opt:25"
 help = "Use hardware FP"
 
 [[options]]
-id = 1528
+id = 1526
 name = "msoft-float"
 spelling = "-msoft-float"
 kind = "flag"
@@ -17684,7 +17657,7 @@ source_location = "gcc/config/sparc/sparc.opt:29"
 help = "Do not use hardware FP"
 
 [[options]]
-id = 1529
+id = 1527
 name = "munaligned-doubles"
 spelling = "-munaligned-doubles"
 kind = "flag"
@@ -17695,7 +17668,7 @@ source_location = "gcc/config/sparc/sparc.opt:33"
 help = "Assume possible double misalignment"
 
 [[options]]
-id = 1530
+id = 1528
 name = "mimpure-text"
 spelling = "-mimpure-text"
 kind = "flag"
@@ -17706,7 +17679,7 @@ source_location = "gcc/config/sparc/sparc.opt:37"
 help = "Pass -assert pure-text to linker"
 
 [[options]]
-id = 1531
+id = 1529
 name = "mapp-regs"
 spelling = "-mapp-regs"
 kind = "flag"
@@ -17717,7 +17690,7 @@ source_location = "gcc/config/sparc/sparc.opt:41"
 help = "Use ABI reserved registers"
 
 [[options]]
-id = 1532
+id = 1530
 name = "mhard-quad-float"
 spelling = "-mhard-quad-float"
 kind = "flag"
@@ -17728,7 +17701,7 @@ source_location = "gcc/config/sparc/sparc.opt:45"
 help = "Use hardware quad FP instructions"
 
 [[options]]
-id = 1533
+id = 1531
 name = "msoft-quad-float"
 spelling = "-msoft-quad-float"
 kind = "flag"
@@ -17739,7 +17712,7 @@ source_location = "gcc/config/sparc/sparc.opt:49"
 help = "Do not use hardware quad fp instructions"
 
 [[options]]
-id = 1534
+id = 1532
 name = "mv8plus"
 spelling = "-mv8plus"
 kind = "flag"
@@ -17750,7 +17723,7 @@ source_location = "gcc/config/sparc/sparc.opt:53"
 help = "Compile for V8+ ABI"
 
 [[options]]
-id = 1535
+id = 1533
 name = "mvis"
 spelling = "-mvis"
 kind = "flag"
@@ -17761,7 +17734,7 @@ source_location = "gcc/config/sparc/sparc.opt:57"
 help = "Use UltraSPARC Visual Instruction Set extensions"
 
 [[options]]
-id = 1536
+id = 1534
 name = "mptr64"
 spelling = "-mptr64"
 kind = "flag"
@@ -17772,7 +17745,7 @@ source_location = "gcc/config/sparc/sparc.opt:61"
 help = "Pointers are 64-bit"
 
 [[options]]
-id = 1537
+id = 1535
 name = "mptr32"
 spelling = "-mptr32"
 kind = "flag"
@@ -17783,7 +17756,7 @@ source_location = "gcc/config/sparc/sparc.opt:65"
 help = "Pointers are 32-bit"
 
 [[options]]
-id = 1538
+id = 1536
 name = "m64"
 spelling = "-m64"
 kind = "flag"
@@ -17794,7 +17767,7 @@ source_location = "gcc/config/sparc/sparc.opt:69"
 help = "Use 64-bit ABI"
 
 [[options]]
-id = 1539
+id = 1537
 name = "m32"
 spelling = "-m32"
 kind = "flag"
@@ -17805,7 +17778,7 @@ source_location = "gcc/config/sparc/sparc.opt:73"
 help = "Use 32-bit ABI"
 
 [[options]]
-id = 1540
+id = 1538
 name = "mstack-bias"
 spelling = "-mstack-bias"
 kind = "flag"
@@ -17816,7 +17789,7 @@ source_location = "gcc/config/sparc/sparc.opt:77"
 help = "Use stack bias"
 
 [[options]]
-id = 1541
+id = 1539
 name = "mfaster-structs"
 spelling = "-mfaster-structs"
 kind = "flag"
@@ -17827,7 +17800,7 @@ source_location = "gcc/config/sparc/sparc.opt:81"
 help = "Use structs on stronger alignment for double-word copies"
 
 [[options]]
-id = 1542
+id = 1540
 name = "mrelax"
 spelling = "-mrelax"
 kind = "flag"
@@ -17838,7 +17811,7 @@ source_location = "gcc/config/sparc/sparc.opt:85"
 help = "Optimize tail call instructions in assembler and linker"
 
 [[options]]
-id = 1543
+id = 1541
 name = "mcpu="
 spelling = "-mcpu="
 kind = "joined"
@@ -17849,7 +17822,7 @@ source_location = "gcc/config/sparc/sparc.opt:89"
 help = "Use features of and schedule code for given CPU"
 
 [[options]]
-id = 1544
+id = 1542
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -17860,7 +17833,7 @@ source_location = "gcc/config/sparc/sparc.opt:93"
 help = "Schedule code for given CPU"
 
 [[options]]
-id = 1545
+id = 1543
 name = "mcmodel="
 spelling = "-mcmodel="
 kind = "joined"
@@ -17872,7 +17845,7 @@ var = "sparc_cmodel_string"
 help = "Use given SPARC-V9 code model"
 
 [[options]]
-id = 1546
+id = 1544
 name = "mstd-struct-return"
 spelling = "-mstd-struct-return"
 kind = "flag"
@@ -17884,7 +17857,7 @@ var = "sparc_std_struct_return"
 help = "Enable strict 32-bit psABI struct return checking."
 
 [[options]]
-id = 1547
+id = 1545
 name = "mwarn-reloc"
 spelling = "-mwarn-reloc"
 kind = "flag"
@@ -17895,7 +17868,7 @@ source_location = "gcc/config/spu/spu.opt:18"
 help = "Emit warnings when run-time relocations are generated"
 
 [[options]]
-id = 1548
+id = 1546
 name = "merror-reloc"
 spelling = "-merror-reloc"
 kind = "flag"
@@ -17906,7 +17879,7 @@ source_location = "gcc/config/spu/spu.opt:22"
 help = "Emit errors when run-time relocations are generated"
 
 [[options]]
-id = 1549
+id = 1547
 name = "mbranch-cost="
 spelling = "-mbranch-cost="
 kind = "joined"
@@ -17918,7 +17891,7 @@ var = "spu_branch_cost"
 help = "Specify cost of branches (Default 20)"
 
 [[options]]
-id = 1550
+id = 1548
 name = "msafe-dma"
 spelling = "-msafe-dma"
 kind = "flag"
@@ -17929,7 +17902,7 @@ source_location = "gcc/config/spu/spu.opt:30"
 help = "Make sure loads and stores are not moved past DMA instructions"
 
 [[options]]
-id = 1551
+id = 1549
 name = "munsafe-dma"
 spelling = "-munsafe-dma"
 kind = "flag"
@@ -17940,7 +17913,7 @@ source_location = "gcc/config/spu/spu.opt:34"
 help = "volatile must be specified on any memory that is effected by DMA"
 
 [[options]]
-id = 1552
+id = 1550
 name = "mdual-nops"
 spelling = "-mdual-nops"
 kind = "flag"
@@ -17952,7 +17925,7 @@ var = "spu_dual_nops,10"
 help = "Insert nops when it might improve performance by allowing dual issue (default)"
 
 [[options]]
-id = 1553
+id = 1551
 name = "mdual-nops="
 spelling = "-mdual-nops="
 kind = "joined"
@@ -17964,7 +17937,7 @@ var = "spu_dual_nops"
 help = "Insert nops when it might improve performance by allowing dual issue (default)"
 
 [[options]]
-id = 1554
+id = 1552
 name = "mstdmain"
 spelling = "-mstdmain"
 kind = "flag"
@@ -17975,7 +17948,7 @@ source_location = "gcc/config/spu/spu.opt:46"
 help = "Use standard main function as entry for startup"
 
 [[options]]
-id = 1555
+id = 1553
 name = "mbranch-hints"
 spelling = "-mbranch-hints"
 kind = "flag"
@@ -17986,7 +17959,7 @@ source_location = "gcc/config/spu/spu.opt:50"
 help = "Generate branch hints for branches"
 
 [[options]]
-id = 1556
+id = 1554
 name = "mhint-max-nops="
 spelling = "-mhint-max-nops="
 kind = "joined"
@@ -17998,7 +17971,7 @@ var = "spu_max_nops"
 help = "Maximum number of nops to insert for a hint (Default 2)"
 
 [[options]]
-id = 1557
+id = 1555
 name = "mhint-max-distance="
 spelling = "-mhint-max-distance="
 kind = "joined"
@@ -18010,7 +17983,7 @@ var = "spu_max_distance_str"
 help = "Approximate maximum number of instructions to allow between a hint and its branch [125]"
 
 [[options]]
-id = 1558
+id = 1556
 name = "msmall-mem"
 spelling = "-msmall-mem"
 kind = "flag"
@@ -18021,7 +17994,7 @@ source_location = "gcc/config/spu/spu.opt:62"
 help = "Generate code for 18 bit addressing"
 
 [[options]]
-id = 1559
+id = 1557
 name = "mlarge-mem"
 spelling = "-mlarge-mem"
 kind = "flag"
@@ -18032,7 +18005,7 @@ source_location = "gcc/config/spu/spu.opt:66"
 help = "Generate code for 32 bit addressing"
 
 [[options]]
-id = 1560
+id = 1558
 name = "mfixed-range="
 spelling = "-mfixed-range="
 kind = "joined"
@@ -18044,7 +18017,7 @@ var = "spu_fixed_range_string"
 help = "Specify range of registers to make fixed"
 
 [[options]]
-id = 1561
+id = 1559
 name = "msafe-hints"
 spelling = "-msafe-hints"
 kind = "flag"
@@ -18055,7 +18028,7 @@ source_location = "gcc/config/spu/spu.opt:74"
 help = "Insert hbrp instructions after hinted branch targets to avoid the SPU hang issue"
 
 [[options]]
-id = 1562
+id = 1560
 name = "march="
 spelling = "-march="
 kind = "joined"
@@ -18067,7 +18040,7 @@ var = "spu_arch_string"
 help = "Generate code for given CPU"
 
 [[options]]
-id = 1563
+id = 1561
 name = "mtune="
 spelling = "-mtune="
 kind = "joined"
@@ -18079,7 +18052,7 @@ var = "spu_tune_string"
 help = "Schedule code for given CPU"
 
 [[options]]
-id = 1564
+id = 1562
 name = "mea32"
 spelling = "-mea32"
 kind = "flag"
@@ -18091,7 +18064,7 @@ var = "spu_ea_model,32"
 help = "Access variables in 32-bit PPU objects (default)"
 
 [[options]]
-id = 1565
+id = 1563
 name = "mea64"
 spelling = "-mea64"
 kind = "flag"
@@ -18103,7 +18076,7 @@ var = "spu_ea_model,64"
 help = "Access variables in 64-bit PPU objects"
 
 [[options]]
-id = 1566
+id = 1564
 name = "maddress-space-conversion"
 spelling = "-maddress-space-conversion"
 kind = "flag"
@@ -18114,7 +18087,7 @@ source_location = "gcc/config/spu/spu.opt:94"
 help = "Allow conversions between __ea and generic pointers (default)"
 
 [[options]]
-id = 1567
+id = 1565
 name = "mcache-size="
 spelling = "-mcache-size="
 kind = "joined"
@@ -18125,7 +18098,7 @@ source_location = "gcc/config/spu/spu.opt:98"
 help = "Size (in KB) of software data cache"
 
 [[options]]
-id = 1568
+id = 1566
 name = "matomic-updates"
 spelling = "-matomic-updates"
 kind = "flag"
@@ -18136,7 +18109,7 @@ source_location = "gcc/config/spu/spu.opt:102"
 help = "Atomically write back software data cache lines (default)"
 
 [[options]]
-id = 1569
+id = 1567
 name = "msim"
 spelling = "-msim"
 kind = "flag"
@@ -18147,7 +18120,7 @@ source_location = "gcc/config/stormy16/stormy16.opt:22"
 help = "Provide libraries for the simulator"
 
 [[options]]
-id = 1570
+id = 1568
 name = "mapp-regs"
 spelling = "-mapp-regs"
 kind = "flag"
@@ -18158,7 +18131,7 @@ source_location = "gcc/config/v850/v850.opt:21"
 help = "Use registers r2 and r5"
 
 [[options]]
-id = 1571
+id = 1569
 name = "mbig-switch"
 spelling = "-mbig-switch"
 kind = "flag"
@@ -18169,7 +18142,7 @@ source_location = "gcc/config/v850/v850.opt:25"
 help = "Use 4 byte entries in switch tables"
 
 [[options]]
-id = 1572
+id = 1570
 name = "mdebug"
 spelling = "-mdebug"
 kind = "flag"
@@ -18180,7 +18153,7 @@ source_location = "gcc/config/v850/v850.opt:29"
 help = "Enable backend debugging"
 
 [[options]]
-id = 1573
+id = 1571
 name = "mdisable-callt"
 spelling = "-mdisable-callt"
 kind = "flag"
@@ -18191,7 +18164,7 @@ source_location = "gcc/config/v850/v850.opt:33"
 help = "Do not use the callt instruction"
 
 [[options]]
-id = 1574
+id = 1572
 name = "mep"
 spelling = "-mep"
 kind = "flag"
@@ -18202,7 +18175,7 @@ source_location = "gcc/config/v850/v850.opt:37"
 help = "Reuse r30 on a per function basis"
 
 [[options]]
-id = 1575
+id = 1573
 name = "mghs"
 spelling = "-mghs"
 kind = "flag"
@@ -18213,7 +18186,7 @@ source_location = "gcc/config/v850/v850.opt:41"
 help = "Support Green Hills ABI"
 
 [[options]]
-id = 1576
+id = 1574
 name = "mlong-calls"
 spelling = "-mlong-calls"
 kind = "flag"
@@ -18224,7 +18197,7 @@ source_location = "gcc/config/v850/v850.opt:45"
 help = "Prohibit PC relative function calls"
 
 [[options]]
-id = 1577
+id = 1575
 name = "mprolog-function"
 spelling = "-mprolog-function"
 kind = "flag"
@@ -18235,7 +18208,7 @@ source_location = "gcc/config/v850/v850.opt:49"
 help = "Use stubs for function prologues"
 
 [[options]]
-id = 1578
+id = 1576
 name = "msda"
 spelling = "-msda"
 kind = "joined"
@@ -18246,7 +18219,7 @@ source_location = "gcc/config/v850/v850.opt:53"
 help = "Set the max size of data eligible for the SDA area"
 
 [[options]]
-id = 1579
+id = 1577
 name = "msmall-sld"
 spelling = "-msmall-sld"
 kind = "flag"
@@ -18257,7 +18230,7 @@ source_location = "gcc/config/v850/v850.opt:57"
 help = "Enable the use of the short load instructions"
 
 [[options]]
-id = 1580
+id = 1578
 name = "mspace"
 spelling = "-mspace"
 kind = "flag"
@@ -18268,7 +18241,7 @@ source_location = "gcc/config/v850/v850.opt:61"
 help = "Same as: -mep -mprolog-function"
 
 [[options]]
-id = 1581
+id = 1579
 name = "mtda"
 spelling = "-mtda"
 kind = "joined"
@@ -18279,7 +18252,7 @@ source_location = "gcc/config/v850/v850.opt:65"
 help = "Set the max size of data eligible for the TDA area"
 
 [[options]]
-id = 1582
+id = 1580
 name = "mstrict-align"
 spelling = "-mstrict-align"
 kind = "flag"
@@ -18290,7 +18263,7 @@ source_location = "gcc/config/v850/v850.opt:69"
 help = "Enforce strict alignment"
 
 [[options]]
-id = 1583
+id = 1581
 name = "mUS-bit-set"
 spelling = "-mUS-bit-set"
 kind = "flag"
@@ -18300,7 +18273,7 @@ languages = []
 source_location = "gcc/config/v850/v850.opt:73"
 
 [[options]]
-id = 1584
+id = 1582
 name = "mv850"
 spelling = "-mv850"
 kind = "flag"
@@ -18311,7 +18284,7 @@ source_location = "gcc/config/v850/v850.opt:76"
 help = "Compile for the v850 processor"
 
 [[options]]
-id = 1585
+id = 1583
 name = "mv850e"
 spelling = "-mv850e"
 kind = "flag"
@@ -18322,7 +18295,7 @@ source_location = "gcc/config/v850/v850.opt:80"
 help = "Compile for the v850e processor"
 
 [[options]]
-id = 1586
+id = 1584
 name = "mv850e1"
 spelling = "-mv850e1"
 kind = "flag"
@@ -18333,7 +18306,7 @@ source_location = "gcc/config/v850/v850.opt:84"
 help = "Compile for the v850e1 processor"
 
 [[options]]
-id = 1587
+id = 1585
 name = "mzda"
 spelling = "-mzda"
 kind = "joined"
@@ -18344,7 +18317,7 @@ source_location = "gcc/config/v850/v850.opt:88"
 help = "Set the max size of data eligible for the ZDA area"
 
 [[options]]
-id = 1588
+id = 1586
 name = "md"
 spelling = "-md"
 kind = "flag"
@@ -18355,7 +18328,7 @@ source_location = "gcc/config/vax/vax.opt:21"
 help = "Target DFLOAT double precision code"
 
 [[options]]
-id = 1589
+id = 1587
 name = "md-float"
 spelling = "-md-float"
 kind = "flag"
@@ -18366,7 +18339,7 @@ source_location = "gcc/config/vax/vax.opt:25"
 help = "Target DFLOAT double precision code"
 
 [[options]]
-id = 1590
+id = 1588
 name = "mg"
 spelling = "-mg"
 kind = "flag"
@@ -18377,7 +18350,7 @@ source_location = "gcc/config/vax/vax.opt:29"
 help = "Generate GFLOAT double precision code"
 
 [[options]]
-id = 1591
+id = 1589
 name = "mg-float"
 spelling = "-mg-float"
 kind = "flag"
@@ -18388,7 +18361,7 @@ source_location = "gcc/config/vax/vax.opt:33"
 help = "Generate GFLOAT double precision code"
 
 [[options]]
-id = 1592
+id = 1590
 name = "mgnu"
 spelling = "-mgnu"
 kind = "flag"
@@ -18399,7 +18372,7 @@ source_location = "gcc/config/vax/vax.opt:37"
 help = "Generate code for GNU assembler (gas)"
 
 [[options]]
-id = 1593
+id = 1591
 name = "munix"
 spelling = "-munix"
 kind = "flag"
@@ -18410,7 +18383,7 @@ source_location = "gcc/config/vax/vax.opt:41"
 help = "Generate code for UNIX assembler"
 
 [[options]]
-id = 1594
+id = 1592
 name = "mvaxc-alignment"
 spelling = "-mvaxc-alignment"
 kind = "flag"
@@ -18421,7 +18394,7 @@ source_location = "gcc/config/vax/vax.opt:45"
 help = "Use VAXC structure conventions"
 
 [[options]]
-id = 1595
+id = 1593
 name = "mqmath"
 spelling = "-mqmath"
 kind = "flag"
@@ -18432,7 +18405,7 @@ source_location = "gcc/config/vax/vax.opt:49"
 help = "Use new adddi3/subdi3 patterns"
 
 [[options]]
-id = 1596
+id = 1594
 name = "mmalloc64"
 spelling = "-mmalloc64"
 kind = "flag"
@@ -18443,7 +18416,7 @@ source_location = "gcc/config/vms/vms.opt:19"
 help = "Malloc data into P2 space"
 
 [[options]]
-id = 1597
+id = 1595
 name = "mdebug-main="
 spelling = "-mdebug-main="
 kind = "joined"
@@ -18455,7 +18428,7 @@ var = "vms_debug_main"
 help = "Set name of main routine for the debugger"
 
 [[options]]
-id = 1598
+id = 1596
 name = "mrtp"
 spelling = "-mrtp"
 kind = "flag"
@@ -18466,7 +18439,7 @@ source_location = "gcc/config/vxworks.opt:22"
 help = "Assume the VxWorks RTP environment"
 
 [[options]]
-id = 1599
+id = 1597
 name = "mvthreads"
 spelling = "-mvthreads"
 kind = "flag"
@@ -18477,7 +18450,7 @@ source_location = "gcc/config/vxworks.opt:29"
 help = "Assume the VxWorks vThreads environment"
 
 [[options]]
-id = 1600
+id = 1598
 name = "mconst16"
 spelling = "-mconst16"
 kind = "flag"
@@ -18488,7 +18461,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:21"
 help = "Use CONST16 instruction to load constants"
 
 [[options]]
-id = 1601
+id = 1599
 name = "mfused-madd"
 spelling = "-mfused-madd"
 kind = "flag"
@@ -18499,7 +18472,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:25"
 help = "Enable fused multiply/add and multiply/subtract FP instructions"
 
 [[options]]
-id = 1602
+id = 1600
 name = "mlongcalls"
 spelling = "-mlongcalls"
 kind = "flag"
@@ -18510,7 +18483,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:29"
 help = "Use indirect CALLXn instructions for large programs"
 
 [[options]]
-id = 1603
+id = 1601
 name = "mtarget-align"
 spelling = "-mtarget-align"
 kind = "flag"
@@ -18521,7 +18494,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:33"
 help = "Automatically align branch targets to reduce branch penalties"
 
 [[options]]
-id = 1604
+id = 1602
 name = "mtext-section-literals"
 spelling = "-mtext-section-literals"
 kind = "flag"
@@ -18532,7 +18505,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:37"
 help = "Intersperse literal pools with code in the text section"
 
 [[options]]
-id = 1605
+id = 1603
 name = "mserialize-volatile"
 spelling = "-mserialize-volatile"
 kind = "flag"
@@ -18543,7 +18516,7 @@ source_location = "gcc/config/xtensa/xtensa.opt:41"
 help = "-mno-serialize-volatile\tDo not serialize volatile memory references with MEMW instructions"
 
 [[options]]
-id = 1606
+id = 1604
 name = "A"
 spelling = "-A"
 kind = "joined-or-separate"
@@ -18553,7 +18526,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:28"
 
 [[options]]
-id = 1607
+id = 1605
 name = "C"
 spelling = "-C"
 kind = "flag"
@@ -18563,7 +18536,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:32"
 
 [[options]]
-id = 1608
+id = 1606
 name = "CC"
 spelling = "-CC"
 kind = "flag"
@@ -18573,7 +18546,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:36"
 
 [[options]]
-id = 1609
+id = 1607
 name = "D"
 spelling = "-D"
 kind = "joined-or-separate"
@@ -18583,7 +18556,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:40"
 
 [[options]]
-id = 1610
+id = 1608
 name = "E"
 spelling = "-E"
 kind = "flag"
@@ -18593,7 +18566,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:44"
 
 [[options]]
-id = 1611
+id = 1609
 name = "H"
 spelling = "-H"
 kind = "flag"
@@ -18603,7 +18576,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:47"
 
 [[options]]
-id = 1612
+id = 1610
 name = "I"
 spelling = "-I"
 kind = "joined-or-separate"
@@ -18613,7 +18586,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:51"
 
 [[options]]
-id = 1613
+id = 1611
 name = "J"
 spelling = "-J"
 kind = "joined-or-separate"
@@ -18624,7 +18597,7 @@ source_location = "gcc/fortran/lang.opt:55"
 help = "-J<directory>\tPut MODULE files in 'directory'"
 
 [[options]]
-id = 1614
+id = 1612
 name = "M"
 spelling = "-M"
 kind = "flag"
@@ -18634,7 +18607,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:59"
 
 [[options]]
-id = 1615
+id = 1613
 name = "MD"
 spelling = "-MD"
 kind = "separate"
@@ -18644,7 +18617,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:63"
 
 [[options]]
-id = 1616
+id = 1614
 name = "MF"
 spelling = "-MF"
 kind = "joined-or-separate"
@@ -18654,7 +18627,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:67"
 
 [[options]]
-id = 1617
+id = 1615
 name = "MG"
 spelling = "-MG"
 kind = "flag"
@@ -18664,7 +18637,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:71"
 
 [[options]]
-id = 1618
+id = 1616
 name = "MM"
 spelling = "-MM"
 kind = "flag"
@@ -18674,7 +18647,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:75"
 
 [[options]]
-id = 1619
+id = 1617
 name = "MMD"
 spelling = "-MMD"
 kind = "separate"
@@ -18684,7 +18657,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:79"
 
 [[options]]
-id = 1620
+id = 1618
 name = "MP"
 spelling = "-MP"
 kind = "flag"
@@ -18694,7 +18667,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:83"
 
 [[options]]
-id = 1621
+id = 1619
 name = "MT"
 spelling = "-MT"
 kind = "joined-or-separate"
@@ -18704,7 +18677,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:87"
 
 [[options]]
-id = 1622
+id = 1620
 name = "MQ"
 spelling = "-MQ"
 kind = "joined-or-separate"
@@ -18714,7 +18687,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:91"
 
 [[options]]
-id = 1623
+id = 1621
 name = "P"
 spelling = "-P"
 kind = "flag"
@@ -18724,7 +18697,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:95"
 
 [[options]]
-id = 1624
+id = 1622
 name = "U"
 spelling = "-U"
 kind = "joined-or-separate"
@@ -18734,7 +18707,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:99"
 
 [[options]]
-id = 1625
+id = 1623
 name = "Wall"
 spelling = "-Wall"
 kind = "flag"
@@ -18744,7 +18717,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:103"
 
 [[options]]
-id = 1626
+id = 1624
 name = "Waliasing"
 spelling = "-Waliasing"
 kind = "flag"
@@ -18755,7 +18728,7 @@ source_location = "gcc/fortran/lang.opt:107"
 help = "Warn about possible aliasing of dummy arguments"
 
 [[options]]
-id = 1627
+id = 1625
 name = "Walign-commons"
 spelling = "-Walign-commons"
 kind = "flag"
@@ -18766,7 +18739,7 @@ source_location = "gcc/fortran/lang.opt:111"
 help = "Warn about alignment of COMMON blocks"
 
 [[options]]
-id = 1628
+id = 1626
 name = "Wampersand"
 spelling = "-Wampersand"
 kind = "flag"
@@ -18777,7 +18750,7 @@ source_location = "gcc/fortran/lang.opt:115"
 help = "Warn about missing ampersand in continued character constants"
 
 [[options]]
-id = 1629
+id = 1627
 name = "Warray-temporaries"
 spelling = "-Warray-temporaries"
 kind = "flag"
@@ -18788,7 +18761,7 @@ source_location = "gcc/fortran/lang.opt:119"
 help = "Warn about creation of array temporaries"
 
 [[options]]
-id = 1630
+id = 1628
 name = "Wcharacter-truncation"
 spelling = "-Wcharacter-truncation"
 kind = "flag"
@@ -18799,7 +18772,7 @@ source_location = "gcc/fortran/lang.opt:123"
 help = "Warn about truncated character expressions"
 
 [[options]]
-id = 1631
+id = 1629
 name = "Wconversion"
 spelling = "-Wconversion"
 kind = "flag"
@@ -18809,7 +18782,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:127"
 
 [[options]]
-id = 1632
+id = 1630
 name = "Wimplicit-interface"
 spelling = "-Wimplicit-interface"
 kind = "flag"
@@ -18820,7 +18793,7 @@ source_location = "gcc/fortran/lang.opt:131"
 help = "Warn about calls with implicit interface"
 
 [[options]]
-id = 1633
+id = 1631
 name = "Wimplicit-procedure"
 spelling = "-Wimplicit-procedure"
 kind = "flag"
@@ -18831,7 +18804,7 @@ source_location = "gcc/fortran/lang.opt:135"
 help = "Warn about called procedures not explicitly declared"
 
 [[options]]
-id = 1634
+id = 1632
 name = "Wline-truncation"
 spelling = "-Wline-truncation"
 kind = "flag"
@@ -18842,7 +18815,7 @@ source_location = "gcc/fortran/lang.opt:139"
 help = "Warn about truncated source lines"
 
 [[options]]
-id = 1635
+id = 1633
 name = "Wintrinsics-std"
 spelling = "-Wintrinsics-std"
 kind = "flag"
@@ -18853,7 +18826,7 @@ source_location = "gcc/fortran/lang.opt:143"
 help = "Warn on intrinsics not part of the selected standard"
 
 [[options]]
-id = 1636
+id = 1634
 name = "Wreturn-type"
 spelling = "-Wreturn-type"
 kind = "flag"
@@ -18863,7 +18836,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:147"
 
 [[options]]
-id = 1637
+id = 1635
 name = "Wsurprising"
 spelling = "-Wsurprising"
 kind = "flag"
@@ -18874,7 +18847,7 @@ source_location = "gcc/fortran/lang.opt:151"
 help = "Warn about \\\"suspicious\\\" constructs"
 
 [[options]]
-id = 1638
+id = 1636
 name = "Wtabs"
 spelling = "-Wtabs"
 kind = "flag"
@@ -18885,7 +18858,7 @@ source_location = "gcc/fortran/lang.opt:155"
 help = "Permit nonconforming uses of the tab character"
 
 [[options]]
-id = 1639
+id = 1637
 name = "Wunderflow"
 spelling = "-Wunderflow"
 kind = "flag"
@@ -18896,7 +18869,7 @@ source_location = "gcc/fortran/lang.opt:159"
 help = "Warn about underflow of numerical constant expressions"
 
 [[options]]
-id = 1640
+id = 1638
 name = "Wintrinsic-shadow"
 spelling = "-Wintrinsic-shadow"
 kind = "flag"
@@ -18907,7 +18880,7 @@ source_location = "gcc/fortran/lang.opt:163"
 help = "Warn if a user-procedure has the same name as an intrinsic"
 
 [[options]]
-id = 1641
+id = 1639
 name = "cpp"
 spelling = "-cpp"
 kind = "joined-or-separate"
@@ -18919,7 +18892,7 @@ negative = "nocpp"
 help = "Enable preprocessing"
 
 [[options]]
-id = 1642
+id = 1640
 name = "nocpp"
 spelling = "-nocpp"
 kind = "flag"
@@ -18931,7 +18904,7 @@ negative = "cpp"
 help = "Disable preprocessing"
 
 [[options]]
-id = 1643
+id = 1641
 name = "d"
 spelling = "-d"
 kind = "joined"
@@ -18941,7 +18914,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:175"
 
 [[options]]
-id = 1644
+id = 1642
 name = "falign-commons"
 spelling = "-falign-commons"
 kind = "flag"
@@ -18952,7 +18925,7 @@ source_location = "gcc/fortran/lang.opt:179"
 help = "Enable alignment of COMMON blocks"
 
 [[options]]
-id = 1645
+id = 1643
 name = "fall-intrinsics"
 spelling = "-fall-intrinsics"
 kind = "flag"
@@ -18963,7 +18936,7 @@ source_location = "gcc/fortran/lang.opt:183"
 help = "All intrinsics procedures are available regardless of selected standard"
 
 [[options]]
-id = 1646
+id = 1644
 name = "fallow-leading-underscore"
 spelling = "-fallow-leading-underscore"
 kind = "flag"
@@ -18973,7 +18946,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:187"
 
 [[options]]
-id = 1647
+id = 1645
 name = "fautomatic"
 spelling = "-fautomatic"
 kind = "flag"
@@ -18984,7 +18957,7 @@ source_location = "gcc/fortran/lang.opt:191"
 help = "Do not treat local variables and COMMON blocks as if they were named in SAVE statements"
 
 [[options]]
-id = 1648
+id = 1646
 name = "fbackslash"
 spelling = "-fbackslash"
 kind = "flag"
@@ -18995,7 +18968,7 @@ source_location = "gcc/fortran/lang.opt:195"
 help = "Specify that backslash in string introduces an escape character"
 
 [[options]]
-id = 1649
+id = 1647
 name = "fbacktrace"
 spelling = "-fbacktrace"
 kind = "flag"
@@ -19006,7 +18979,7 @@ source_location = "gcc/fortran/lang.opt:199"
 help = "Produce a backtrace when a runtime error is encountered"
 
 [[options]]
-id = 1650
+id = 1648
 name = "fblas-matmul-limit="
 spelling = "-fblas-matmul-limit="
 kind = "joined"
@@ -19017,7 +18990,7 @@ source_location = "gcc/fortran/lang.opt:203"
 help = "-fblas-matmul-limit=<n>\tSize of the smallest matrix for which matmul will use BLAS"
 
 [[options]]
-id = 1651
+id = 1649
 name = "fcheck-array-temporaries"
 spelling = "-fcheck-array-temporaries"
 kind = "flag"
@@ -19028,7 +19001,7 @@ source_location = "gcc/fortran/lang.opt:207"
 help = "Produce a warning at runtime if a array temporary has been created for a procedure argument"
 
 [[options]]
-id = 1652
+id = 1650
 name = "fconvert=big-endian"
 spelling = "-fconvert=big-endian"
 kind = "flag"
@@ -19039,7 +19012,7 @@ source_location = "gcc/fortran/lang.opt:211"
 help = "Use big-endian format for unformatted files"
 
 [[options]]
-id = 1653
+id = 1651
 name = "fconvert=little-endian"
 spelling = "-fconvert=little-endian"
 kind = "flag"
@@ -19050,7 +19023,7 @@ source_location = "gcc/fortran/lang.opt:215"
 help = "Use little-endian format for unformatted files"
 
 [[options]]
-id = 1654
+id = 1652
 name = "fconvert=native"
 spelling = "-fconvert=native"
 kind = "flag"
@@ -19061,7 +19034,7 @@ source_location = "gcc/fortran/lang.opt:219"
 help = "Use native format for unformatted files"
 
 [[options]]
-id = 1655
+id = 1653
 name = "fconvert=swap"
 spelling = "-fconvert=swap"
 kind = "flag"
@@ -19072,7 +19045,7 @@ source_location = "gcc/fortran/lang.opt:223"
 help = "Swap endianness for unformatted files"
 
 [[options]]
-id = 1656
+id = 1654
 name = "fcray-pointer"
 spelling = "-fcray-pointer"
 kind = "flag"
@@ -19083,7 +19056,7 @@ source_location = "gcc/fortran/lang.opt:227"
 help = "Use the Cray Pointer extension"
 
 [[options]]
-id = 1657
+id = 1655
 name = "fd-lines-as-code"
 spelling = "-fd-lines-as-code"
 kind = "flag"
@@ -19094,7 +19067,7 @@ source_location = "gcc/fortran/lang.opt:231"
 help = "Ignore 'D' in column one in fixed form"
 
 [[options]]
-id = 1658
+id = 1656
 name = "fd-lines-as-comments"
 spelling = "-fd-lines-as-comments"
 kind = "flag"
@@ -19105,7 +19078,7 @@ source_location = "gcc/fortran/lang.opt:235"
 help = "Treat lines with 'D' in column one as comments"
 
 [[options]]
-id = 1659
+id = 1657
 name = "fdefault-double-8"
 spelling = "-fdefault-double-8"
 kind = "flag"
@@ -19116,7 +19089,7 @@ source_location = "gcc/fortran/lang.opt:239"
 help = "Set the default double precision kind to an 8 byte wide type"
 
 [[options]]
-id = 1660
+id = 1658
 name = "fdefault-integer-8"
 spelling = "-fdefault-integer-8"
 kind = "flag"
@@ -19127,7 +19100,7 @@ source_location = "gcc/fortran/lang.opt:243"
 help = "Set the default integer kind to an 8 byte wide type"
 
 [[options]]
-id = 1661
+id = 1659
 name = "fdefault-real-8"
 spelling = "-fdefault-real-8"
 kind = "flag"
@@ -19138,7 +19111,7 @@ source_location = "gcc/fortran/lang.opt:247"
 help = "Set the default real kind to an 8 byte wide type"
 
 [[options]]
-id = 1662
+id = 1660
 name = "fdollar-ok"
 spelling = "-fdollar-ok"
 kind = "flag"
@@ -19149,7 +19122,7 @@ source_location = "gcc/fortran/lang.opt:251"
 help = "Allow dollar signs in entity names"
 
 [[options]]
-id = 1663
+id = 1661
 name = "fdump-core"
 spelling = "-fdump-core"
 kind = "flag"
@@ -19160,7 +19133,7 @@ source_location = "gcc/fortran/lang.opt:255"
 help = "Dump a core file when a runtime error occurs"
 
 [[options]]
-id = 1664
+id = 1662
 name = "fdump-parse-tree"
 spelling = "-fdump-parse-tree"
 kind = "flag"
@@ -19171,7 +19144,7 @@ source_location = "gcc/fortran/lang.opt:259"
 help = "Display the code tree after parsing"
 
 [[options]]
-id = 1665
+id = 1663
 name = "fexternal-blas"
 spelling = "-fexternal-blas"
 kind = "flag"
@@ -19182,7 +19155,7 @@ source_location = "gcc/fortran/lang.opt:263"
 help = "Specify that an external BLAS library should be used for matmul calls on large-size arrays"
 
 [[options]]
-id = 1666
+id = 1664
 name = "ff2c"
 spelling = "-ff2c"
 kind = "flag"
@@ -19193,7 +19166,7 @@ source_location = "gcc/fortran/lang.opt:267"
 help = "Use f2c calling convention"
 
 [[options]]
-id = 1667
+id = 1665
 name = "ffixed-form"
 spelling = "-ffixed-form"
 kind = "flag"
@@ -19204,7 +19177,7 @@ source_location = "gcc/fortran/lang.opt:271"
 help = "Assume that the source file is fixed form"
 
 [[options]]
-id = 1668
+id = 1666
 name = "fintrinsic-modules-path"
 spelling = "-fintrinsic-modules-path"
 kind = "joined-or-separate"
@@ -19215,7 +19188,7 @@ source_location = "gcc/fortran/lang.opt:275"
 help = "Specify where to find the compiled intrinsic modules"
 
 [[options]]
-id = 1669
+id = 1667
 name = "ffixed-line-length-none"
 spelling = "-ffixed-line-length-none"
 kind = "flag"
@@ -19226,7 +19199,7 @@ source_location = "gcc/fortran/lang.opt:279"
 help = "Allow arbitrary character line width in fixed mode"
 
 [[options]]
-id = 1670
+id = 1668
 name = "ffixed-line-length-"
 spelling = "-ffixed-line-length-"
 kind = "joined"
@@ -19237,7 +19210,7 @@ source_location = "gcc/fortran/lang.opt:283"
 help = "-ffixed-line-length-<n>\tUse n as character line width in fixed mode"
 
 [[options]]
-id = 1671
+id = 1669
 name = "ffpe-trap="
 spelling = "-ffpe-trap="
 kind = "joined-or-missing"
@@ -19248,7 +19221,7 @@ source_location = "gcc/fortran/lang.opt:287"
 help = "-ffpe-trap=[...]\tStop on following floating point exceptions"
 
 [[options]]
-id = 1672
+id = 1670
 name = "ffree-form"
 spelling = "-ffree-form"
 kind = "flag"
@@ -19259,7 +19232,7 @@ source_location = "gcc/fortran/lang.opt:291"
 help = "Assume that the source file is free form"
 
 [[options]]
-id = 1673
+id = 1671
 name = "ffree-line-length-none"
 spelling = "-ffree-line-length-none"
 kind = "flag"
@@ -19270,7 +19243,7 @@ source_location = "gcc/fortran/lang.opt:295"
 help = "Allow arbitrary character line width in free mode"
 
 [[options]]
-id = 1674
+id = 1672
 name = "ffree-line-length-"
 spelling = "-ffree-line-length-"
 kind = "joined"
@@ -19281,7 +19254,7 @@ source_location = "gcc/fortran/lang.opt:299"
 help = "-ffree-line-length-<n>\tUse n as character line width in free mode"
 
 [[options]]
-id = 1675
+id = 1673
 name = "fimplicit-none"
 spelling = "-fimplicit-none"
 kind = "flag"
@@ -19292,7 +19265,7 @@ source_location = "gcc/fortran/lang.opt:303"
 help = "Specify that no implicit typing is allowed, unless overridden by explicit IMPLICIT statements"
 
 [[options]]
-id = 1676
+id = 1674
 name = "finit-character="
 spelling = "-finit-character="
 kind = "joined"
@@ -19303,7 +19276,7 @@ source_location = "gcc/fortran/lang.opt:307"
 help = "-finit-character=<n>\tInitialize local character variables to ASCII value n"
 
 [[options]]
-id = 1677
+id = 1675
 name = "finit-integer="
 spelling = "-finit-integer="
 kind = "joined"
@@ -19314,7 +19287,7 @@ source_location = "gcc/fortran/lang.opt:311"
 help = "-finit-integer=<n>\tInitialize local integer variables to n"
 
 [[options]]
-id = 1678
+id = 1676
 name = "finit-local-zero"
 spelling = "-finit-local-zero"
 kind = "flag"
@@ -19325,7 +19298,7 @@ source_location = "gcc/fortran/lang.opt:315"
 help = "Initialize local variables to zero (from g77)"
 
 [[options]]
-id = 1679
+id = 1677
 name = "finit-logical="
 spelling = "-finit-logical="
 kind = "joined"
@@ -19336,7 +19309,7 @@ source_location = "gcc/fortran/lang.opt:319"
 help = "-finit-logical=<true|false>\tInitialize local logical variables"
 
 [[options]]
-id = 1680
+id = 1678
 name = "finit-real="
 spelling = "-finit-real="
 kind = "joined"
@@ -19347,7 +19320,7 @@ source_location = "gcc/fortran/lang.opt:323"
 help = "-finit-real=<zero|nan|inf|-inf>\tInitialize local real variables"
 
 [[options]]
-id = 1681
+id = 1679
 name = "fmax-array-constructor="
 spelling = "-fmax-array-constructor="
 kind = "joined"
@@ -19358,7 +19331,7 @@ source_location = "gcc/fortran/lang.opt:327"
 help = "-fmax-array-constructor=<n>\tMaximum number of objects in an array constructor"
 
 [[options]]
-id = 1682
+id = 1680
 name = "fmax-errors="
 spelling = "-fmax-errors="
 kind = "joined"
@@ -19369,7 +19342,7 @@ source_location = "gcc/fortran/lang.opt:331"
 help = "-fmax-errors=<n>\tMaximum number of errors to report"
 
 [[options]]
-id = 1683
+id = 1681
 name = "fmax-identifier-length="
 spelling = "-fmax-identifier-length="
 kind = "joined"
@@ -19380,7 +19353,7 @@ source_location = "gcc/fortran/lang.opt:335"
 help = "-fmax-identifier-length=<n>\tMaximum identifier length"
 
 [[options]]
-id = 1684
+id = 1682
 name = "fmax-subrecord-length="
 spelling = "-fmax-subrecord-length="
 kind = "joined"
@@ -19391,7 +19364,7 @@ source_location = "gcc/fortran/lang.opt:339"
 help = "-fmax-subrecord-length=<n>\tMaximum length for subrecords"
 
 [[options]]
-id = 1685
+id = 1683
 name = "fmax-stack-var-size="
 spelling = "-fmax-stack-var-size="
 kind = "joined"
@@ -19402,7 +19375,7 @@ source_location = "gcc/fortran/lang.opt:343"
 help = "-fmax-stack-var-size=<n>\tSize in bytes of the largest array that will be put on the stack"
 
 [[options]]
-id = 1686
+id = 1684
 name = "fmodule-private"
 spelling = "-fmodule-private"
 kind = "flag"
@@ -19413,7 +19386,7 @@ source_location = "gcc/fortran/lang.opt:347"
 help = "Set default accessibility of module entities to PRIVATE."
 
 [[options]]
-id = 1687
+id = 1685
 name = "fopenmp"
 spelling = "-fopenmp"
 kind = "flag"
@@ -19423,7 +19396,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:351"
 
 [[options]]
-id = 1688
+id = 1686
 name = "fpack-derived"
 spelling = "-fpack-derived"
 kind = "flag"
@@ -19434,7 +19407,7 @@ source_location = "gcc/fortran/lang.opt:355"
 help = "Try to lay out derived types as compactly as possible"
 
 [[options]]
-id = 1689
+id = 1687
 name = "fpreprocessed"
 spelling = "-fpreprocessed"
 kind = "flag"
@@ -19444,7 +19417,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:359"
 
 [[options]]
-id = 1690
+id = 1688
 name = "fprotect-parens"
 spelling = "-fprotect-parens"
 kind = "flag"
@@ -19455,7 +19428,7 @@ source_location = "gcc/fortran/lang.opt:363"
 help = "Protect parentheses in expressions"
 
 [[options]]
-id = 1691
+id = 1689
 name = "frange-check"
 spelling = "-frange-check"
 kind = "flag"
@@ -19466,7 +19439,7 @@ source_location = "gcc/fortran/lang.opt:367"
 help = "Enable range checking during compilation"
 
 [[options]]
-id = 1692
+id = 1690
 name = "frecord-marker=4"
 spelling = "-frecord-marker=4"
 kind = "flag"
@@ -19477,7 +19450,7 @@ source_location = "gcc/fortran/lang.opt:371"
 help = "Use a 4-byte record marker for unformatted files"
 
 [[options]]
-id = 1693
+id = 1691
 name = "frecord-marker=8"
 spelling = "-frecord-marker=8"
 kind = "flag"
@@ -19488,7 +19461,7 @@ source_location = "gcc/fortran/lang.opt:375"
 help = "Use an 8-byte record marker for unformatted files"
 
 [[options]]
-id = 1694
+id = 1692
 name = "frecursive"
 spelling = "-frecursive"
 kind = "flag"
@@ -19499,7 +19472,7 @@ source_location = "gcc/fortran/lang.opt:379"
 help = "Allocate local variables on the stack to allow indirect recursion"
 
 [[options]]
-id = 1695
+id = 1693
 name = "frepack-arrays"
 spelling = "-frepack-arrays"
 kind = "flag"
@@ -19510,7 +19483,7 @@ source_location = "gcc/fortran/lang.opt:383"
 help = "Copy array sections into a contiguous block on procedure entry"
 
 [[options]]
-id = 1696
+id = 1694
 name = "fcheck="
 spelling = "-fcheck="
 kind = "joined-or-missing"
@@ -19521,7 +19494,7 @@ source_location = "gcc/fortran/lang.opt:387"
 help = "-fcheck=[...]\tSpecify which runtime checks are to be performed"
 
 [[options]]
-id = 1697
+id = 1695
 name = "fsecond-underscore"
 spelling = "-fsecond-underscore"
 kind = "flag"
@@ -19532,7 +19505,7 @@ source_location = "gcc/fortran/lang.opt:391"
 help = "Append a second underscore if the name already contains an underscore"
 
 [[options]]
-id = 1698
+id = 1696
 name = "fshort-enums"
 spelling = "-fshort-enums"
 kind = "flag"
@@ -19542,7 +19515,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:395"
 
 [[options]]
-id = 1699
+id = 1697
 name = "fsign-zero"
 spelling = "-fsign-zero"
 kind = "flag"
@@ -19553,7 +19526,7 @@ source_location = "gcc/fortran/lang.opt:399"
 help = "Apply negative sign to zero values"
 
 [[options]]
-id = 1700
+id = 1698
 name = "funderscoring"
 spelling = "-funderscoring"
 kind = "flag"
@@ -19564,7 +19537,7 @@ source_location = "gcc/fortran/lang.opt:403"
 help = "Append underscores to externally visible names"
 
 [[options]]
-id = 1701
+id = 1699
 name = "fwhole-file"
 spelling = "-fwhole-file"
 kind = "flag"
@@ -19575,7 +19548,7 @@ source_location = "gcc/fortran/lang.opt:407"
 help = "Compile all program units at once and check all interfaces"
 
 [[options]]
-id = 1702
+id = 1700
 name = "fworking-directory"
 spelling = "-fworking-directory"
 kind = "flag"
@@ -19585,7 +19558,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:411"
 
 [[options]]
-id = 1703
+id = 1701
 name = "idirafter"
 spelling = "-idirafter"
 kind = "joined-or-separate"
@@ -19595,7 +19568,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:415"
 
 [[options]]
-id = 1704
+id = 1702
 name = "imultilib"
 spelling = "-imultilib"
 kind = "joined-or-separate"
@@ -19605,7 +19578,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:419"
 
 [[options]]
-id = 1705
+id = 1703
 name = "iprefix"
 spelling = "-iprefix"
 kind = "joined-or-separate"
@@ -19615,7 +19588,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:423"
 
 [[options]]
-id = 1706
+id = 1704
 name = "iquote"
 spelling = "-iquote"
 kind = "joined-or-separate"
@@ -19625,7 +19598,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:427"
 
 [[options]]
-id = 1707
+id = 1705
 name = "isysroot"
 spelling = "-isysroot"
 kind = "joined-or-separate"
@@ -19635,7 +19608,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:431"
 
 [[options]]
-id = 1708
+id = 1706
 name = "isystem"
 spelling = "-isystem"
 kind = "joined-or-separate"
@@ -19645,7 +19618,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:435"
 
 [[options]]
-id = 1709
+id = 1707
 name = "nostdinc"
 spelling = "-nostdinc"
 kind = "flag"
@@ -19655,7 +19628,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:439"
 
 [[options]]
-id = 1710
+id = 1708
 name = "o"
 spelling = "-o"
 kind = "joined-or-separate"
@@ -19665,7 +19638,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:443"
 
 [[options]]
-id = 1711
+id = 1709
 name = "static-libgfortran"
 spelling = "-static-libgfortran"
 kind = "flag"
@@ -19676,7 +19649,7 @@ source_location = "gcc/fortran/lang.opt:447"
 help = "Statically link the GNU Fortran helper library (libgfortran)"
 
 [[options]]
-id = 1712
+id = 1710
 name = "std=f2003"
 spelling = "-std=f2003"
 kind = "flag"
@@ -19687,7 +19660,7 @@ source_location = "gcc/fortran/lang.opt:451"
 help = "Conform to the ISO Fortran 2003 standard"
 
 [[options]]
-id = 1713
+id = 1711
 name = "std=f2008"
 spelling = "-std=f2008"
 kind = "flag"
@@ -19698,7 +19671,7 @@ source_location = "gcc/fortran/lang.opt:455"
 help = "Conform to the ISO Fortran 2008 standard"
 
 [[options]]
-id = 1714
+id = 1712
 name = "std=f95"
 spelling = "-std=f95"
 kind = "flag"
@@ -19709,7 +19682,7 @@ source_location = "gcc/fortran/lang.opt:459"
 help = "Conform to the ISO Fortran 95 standard"
 
 [[options]]
-id = 1715
+id = 1713
 name = "std=gnu"
 spelling = "-std=gnu"
 kind = "flag"
@@ -19720,7 +19693,7 @@ source_location = "gcc/fortran/lang.opt:463"
 help = "Conform to nothing in particular"
 
 [[options]]
-id = 1716
+id = 1714
 name = "std=legacy"
 spelling = "-std=legacy"
 kind = "flag"
@@ -19731,7 +19704,7 @@ source_location = "gcc/fortran/lang.opt:467"
 help = "Accept extensions to support legacy code"
 
 [[options]]
-id = 1717
+id = 1715
 name = "undef"
 spelling = "-undef"
 kind = "flag"
@@ -19741,7 +19714,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:471"
 
 [[options]]
-id = 1718
+id = 1716
 name = "v"
 spelling = "-v"
 kind = "flag"
@@ -19751,7 +19724,7 @@ languages = ["Fortran"]
 source_location = "gcc/fortran/lang.opt:475"
 
 [[options]]
-id = 1719
+id = 1717
 name = "I"
 spelling = "-I"
 kind = "joined-or-separate"
@@ -19761,7 +19734,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:27"
 
 [[options]]
-id = 1720
+id = 1718
 name = "M"
 spelling = "-M"
 kind = "flag"
@@ -19771,7 +19744,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:31"
 
 [[options]]
-id = 1721
+id = 1719
 name = "MD_"
 spelling = "-MD_"
 kind = "flag"
@@ -19781,7 +19754,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:35"
 
 [[options]]
-id = 1722
+id = 1720
 name = "MF"
 spelling = "-MF"
 kind = "separate"
@@ -19791,7 +19764,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:39"
 
 [[options]]
-id = 1723
+id = 1721
 name = "MM"
 spelling = "-MM"
 kind = "flag"
@@ -19801,7 +19774,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:43"
 
 [[options]]
-id = 1724
+id = 1722
 name = "MMD_"
 spelling = "-MMD_"
 kind = "flag"
@@ -19811,7 +19784,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:47"
 
 [[options]]
-id = 1725
+id = 1723
 name = "MP"
 spelling = "-MP"
 kind = "flag"
@@ -19821,7 +19794,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:51"
 
 [[options]]
-id = 1726
+id = 1724
 name = "MT"
 spelling = "-MT"
 kind = "separate"
@@ -19831,7 +19804,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:55"
 
 [[options]]
-id = 1727
+id = 1725
 name = "Wall"
 spelling = "-Wall"
 kind = "flag"
@@ -19841,7 +19814,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:59"
 
 [[options]]
-id = 1728
+id = 1726
 name = "Wdeprecated"
 spelling = "-Wdeprecated"
 kind = "flag"
@@ -19852,7 +19825,7 @@ source_location = "gcc/java/lang.opt:63"
 var = "warn_deprecated"
 
 [[options]]
-id = 1729
+id = 1727
 name = "Wextraneous-semicolon"
 spelling = "-Wextraneous-semicolon"
 kind = "flag"
@@ -19864,7 +19837,7 @@ var = "flag_extraneous_semicolon"
 help = "Warn if deprecated empty statements are found"
 
 [[options]]
-id = 1730
+id = 1728
 name = "Wout-of-date"
 spelling = "-Wout-of-date"
 kind = "flag"
@@ -19876,7 +19849,7 @@ var = "flag_newer"
 help = "Warn if .class files are out of date"
 
 [[options]]
-id = 1731
+id = 1729
 name = "Wredundant-modifiers"
 spelling = "-Wredundant-modifiers"
 kind = "flag"
@@ -19888,7 +19861,7 @@ var = "flag_redundant"
 help = "Warn if modifiers are specified when not necessary"
 
 [[options]]
-id = 1732
+id = 1730
 name = "fCLASSPATH="
 spelling = "-fCLASSPATH="
 kind = "joined-or-missing"
@@ -19899,7 +19872,7 @@ source_location = "gcc/java/lang.opt:79"
 help = "--CLASSPATH\tDeprecated; use --classpath instead"
 
 [[options]]
-id = 1733
+id = 1731
 name = "faux-classpath"
 spelling = "-faux-classpath"
 kind = "separate"
@@ -19909,7 +19882,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:83"
 
 [[options]]
-id = 1734
+id = 1732
 name = "fassert"
 spelling = "-fassert"
 kind = "flag"
@@ -19921,7 +19894,7 @@ var = "flag_assert"
 help = "Permit the use of the assert keyword"
 
 [[options]]
-id = 1735
+id = 1733
 name = "fassume-compiled"
 spelling = "-fassume-compiled"
 kind = "flag"
@@ -19931,7 +19904,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:90"
 
 [[options]]
-id = 1736
+id = 1734
 name = "fassume-compiled="
 spelling = "-fassume-compiled="
 kind = "joined-or-missing"
@@ -19941,7 +19914,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:93"
 
 [[options]]
-id = 1737
+id = 1735
 name = "fenable-assertions"
 spelling = "-fenable-assertions"
 kind = "flag"
@@ -19951,7 +19924,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:96"
 
 [[options]]
-id = 1738
+id = 1736
 name = "fenable-assertions="
 spelling = "-fenable-assertions="
 kind = "joined-or-missing"
@@ -19961,7 +19934,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:99"
 
 [[options]]
-id = 1739
+id = 1737
 name = "fdisable-assertions"
 spelling = "-fdisable-assertions"
 kind = "flag"
@@ -19971,7 +19944,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:102"
 
 [[options]]
-id = 1740
+id = 1738
 name = "fdisable-assertions="
 spelling = "-fdisable-assertions="
 kind = "joined-or-missing"
@@ -19981,7 +19954,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:105"
 
 [[options]]
-id = 1741
+id = 1739
 name = "fbootclasspath="
 spelling = "-fbootclasspath="
 kind = "joined-or-missing"
@@ -19992,7 +19965,7 @@ source_location = "gcc/java/lang.opt:108"
 help = "--bootclasspath=<path>\tReplace system path"
 
 [[options]]
-id = 1742
+id = 1740
 name = "fcheck-references"
 spelling = "-fcheck-references"
 kind = "flag"
@@ -20004,7 +19977,7 @@ var = "flag_check_references"
 help = "Generate checks for references to NULL"
 
 [[options]]
-id = 1743
+id = 1741
 name = "fclasspath="
 spelling = "-fclasspath="
 kind = "joined-or-missing"
@@ -20015,7 +19988,7 @@ source_location = "gcc/java/lang.opt:116"
 help = "--classpath=<path>\tSet class path"
 
 [[options]]
-id = 1744
+id = 1742
 name = "fcompile-resource="
 spelling = "-fcompile-resource="
 kind = "joined"
@@ -20025,7 +19998,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:120"
 
 [[options]]
-id = 1745
+id = 1743
 name = "femit-class-file"
 spelling = "-femit-class-file"
 kind = "flag"
@@ -20037,7 +20010,7 @@ var = "flag_emit_class_files"
 help = "Output a class file"
 
 [[options]]
-id = 1746
+id = 1744
 name = "femit-class-files"
 spelling = "-femit-class-files"
 kind = "flag"
@@ -20049,7 +20022,7 @@ var = "flag_emit_class_files"
 help = "Alias for -femit-class-file"
 
 [[options]]
-id = 1747
+id = 1745
 name = "fencoding="
 spelling = "-fencoding="
 kind = "joined"
@@ -20060,7 +20033,7 @@ source_location = "gcc/java/lang.opt:131"
 help = "--encoding=<encoding>\tChoose input encoding (defaults from your locale)"
 
 [[options]]
-id = 1748
+id = 1746
 name = "fextdirs="
 spelling = "-fextdirs="
 kind = "joined"
@@ -20071,7 +20044,7 @@ source_location = "gcc/java/lang.opt:135"
 help = "--extdirs=<path>\tSet the extension directory path"
 
 [[options]]
-id = 1749
+id = 1747
 name = "fsource-filename="
 spelling = "-fsource-filename="
 kind = "joined"
@@ -20081,7 +20054,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:139"
 
 [[options]]
-id = 1750
+id = 1748
 name = "ffilelist-file"
 spelling = "-ffilelist-file"
 kind = "flag"
@@ -20093,7 +20066,7 @@ var = "flag_filelist_file"
 help = "Input file is a file with a list of filenames to compile"
 
 [[options]]
-id = 1751
+id = 1749
 name = "fsaw-java-file"
 spelling = "-fsaw-java-file"
 kind = "flag"
@@ -20103,7 +20076,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:146"
 
 [[options]]
-id = 1752
+id = 1750
 name = "fforce-classes-archive-check"
 spelling = "-fforce-classes-archive-check"
 kind = "flag"
@@ -20115,7 +20088,7 @@ var = "flag_force_classes_archive_check"
 help = "Always check for non gcj generated classes archives"
 
 [[options]]
-id = 1753
+id = 1751
 name = "fhash-synchronization"
 spelling = "-fhash-synchronization"
 kind = "flag"
@@ -20127,7 +20100,7 @@ var = "flag_hash_synchronization"
 help = "Assume the runtime uses a hash table to map an object to its synchronization structure"
 
 [[options]]
-id = 1754
+id = 1752
 name = "findirect-classes"
 spelling = "-findirect-classes"
 kind = "flag"
@@ -20139,7 +20112,7 @@ var = "flag_indirect_classes"
 help = "Generate instances of Class at runtime"
 
 [[options]]
-id = 1755
+id = 1753
 name = "findirect-dispatch"
 spelling = "-findirect-dispatch"
 kind = "flag"
@@ -20151,7 +20124,7 @@ var = "flag_indirect_dispatch"
 help = "Use offset tables for virtual method calls"
 
 [[options]]
-id = 1756
+id = 1754
 name = "finline-functions"
 spelling = "-finline-functions"
 kind = "flag"
@@ -20161,7 +20134,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:165"
 
 [[options]]
-id = 1757
+id = 1755
 name = "fjni"
 spelling = "-fjni"
 kind = "flag"
@@ -20173,7 +20146,7 @@ var = "flag_jni"
 help = "Assume native functions are implemented using JNI"
 
 [[options]]
-id = 1758
+id = 1756
 name = "foptimize-static-class-initialization"
 spelling = "-foptimize-static-class-initialization"
 kind = "flag"
@@ -20185,7 +20158,7 @@ var = "flag_optimize_sci"
 help = "Enable optimization of static class initialization code"
 
 [[options]]
-id = 1759
+id = 1757
 name = "foutput-class-dir="
 spelling = "-foutput-class-dir="
 kind = "joined"
@@ -20195,7 +20168,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:176"
 
 [[options]]
-id = 1760
+id = 1758
 name = "freduced-reflection"
 spelling = "-freduced-reflection"
 kind = "flag"
@@ -20207,7 +20180,7 @@ var = "flag_reduced_reflection"
 help = "Reduce the amount of reflection meta-data generated"
 
 [[options]]
-id = 1761
+id = 1759
 name = "fstore-check"
 spelling = "-fstore-check"
 kind = "flag"
@@ -20219,7 +20192,7 @@ var = "flag_store_check"
 help = "Enable assignability checks for stores into object arrays"
 
 [[options]]
-id = 1762
+id = 1760
 name = "fuse-boehm-gc"
 spelling = "-fuse-boehm-gc"
 kind = "flag"
@@ -20231,7 +20204,7 @@ var = "flag_use_boehm_gc"
 help = "Generate code for the Boehm GC"
 
 [[options]]
-id = 1763
+id = 1761
 name = "fuse-divide-subroutine"
 spelling = "-fuse-divide-subroutine"
 kind = "flag"
@@ -20243,7 +20216,7 @@ var = "flag_use_divide_subroutine"
 help = "Call a library routine to do integer divisions"
 
 [[options]]
-id = 1764
+id = 1762
 name = "fuse-atomic-builtins"
 spelling = "-fuse-atomic-builtins"
 kind = "flag"
@@ -20255,7 +20228,7 @@ var = "flag_use_atomic_builtins"
 help = "Generate code for built-in atomic operations"
 
 [[options]]
-id = 1765
+id = 1763
 name = "fbootstrap-classes"
 spelling = "-fbootstrap-classes"
 kind = "flag"
@@ -20267,7 +20240,7 @@ var = "flag_bootstrap_classes"
 help = "Generated should be loaded by bootstrap loader"
 
 [[options]]
-id = 1766
+id = 1764
 name = "fsource="
 spelling = "-fsource="
 kind = "joined"
@@ -20278,7 +20251,7 @@ source_location = "gcc/java/lang.opt:203"
 help = "Set the source language version"
 
 [[options]]
-id = 1767
+id = 1765
 name = "ftarget="
 spelling = "-ftarget="
 kind = "joined"
@@ -20289,7 +20262,7 @@ source_location = "gcc/java/lang.opt:207"
 help = "Set the target VM version"
 
 [[options]]
-id = 1768
+id = 1766
 name = "version"
 spelling = "-version"
 kind = "flag"
@@ -20299,7 +20272,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:211"
 
 [[options]]
-id = 1769
+id = 1767
 name = "Wconstructor-name"
 spelling = "-Wconstructor-name"
 kind = "flag"
@@ -20309,7 +20282,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:219"
 
 [[options]]
-id = 1770
+id = 1768
 name = "Wpkg-default-method"
 spelling = "-Wpkg-default-method"
 kind = "flag"
@@ -20319,7 +20292,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:222"
 
 [[options]]
-id = 1771
+id = 1769
 name = "Wmasked-catch-block"
 spelling = "-Wmasked-catch-block"
 kind = "flag"
@@ -20329,7 +20302,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:225"
 
 [[options]]
-id = 1772
+id = 1770
 name = "Wall-deprecation"
 spelling = "-Wall-deprecation"
 kind = "flag"
@@ -20339,7 +20312,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:228"
 
 [[options]]
-id = 1773
+id = 1771
 name = "Wunused-local"
 spelling = "-Wunused-local"
 kind = "flag"
@@ -20349,7 +20322,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:231"
 
 [[options]]
-id = 1774
+id = 1772
 name = "Wunused-argument"
 spelling = "-Wunused-argument"
 kind = "flag"
@@ -20359,7 +20332,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:234"
 
 [[options]]
-id = 1775
+id = 1773
 name = "Wunused-import"
 spelling = "-Wunused-import"
 kind = "flag"
@@ -20369,7 +20342,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:237"
 
 [[options]]
-id = 1776
+id = 1774
 name = "Wunused-private"
 spelling = "-Wunused-private"
 kind = "flag"
@@ -20379,7 +20352,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:240"
 
 [[options]]
-id = 1777
+id = 1775
 name = "Wunused-label"
 spelling = "-Wunused-label"
 kind = "flag"
@@ -20389,7 +20362,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:243"
 
 [[options]]
-id = 1778
+id = 1776
 name = "Wlocal-hiding"
 spelling = "-Wlocal-hiding"
 kind = "flag"
@@ -20399,7 +20372,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:246"
 
 [[options]]
-id = 1779
+id = 1777
 name = "Wfield-hiding"
 spelling = "-Wfield-hiding"
 kind = "flag"
@@ -20409,7 +20382,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:249"
 
 [[options]]
-id = 1780
+id = 1778
 name = "Wspecial-param-hiding"
 spelling = "-Wspecial-param-hiding"
 kind = "flag"
@@ -20419,7 +20392,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:252"
 
 [[options]]
-id = 1781
+id = 1779
 name = "Wcondition-assign"
 spelling = "-Wcondition-assign"
 kind = "flag"
@@ -20429,7 +20402,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:255"
 
 [[options]]
-id = 1782
+id = 1780
 name = "Wsynthetic-access"
 spelling = "-Wsynthetic-access"
 kind = "flag"
@@ -20439,7 +20412,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:258"
 
 [[options]]
-id = 1783
+id = 1781
 name = "Wnls"
 spelling = "-Wnls"
 kind = "flag"
@@ -20449,7 +20422,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:261"
 
 [[options]]
-id = 1784
+id = 1782
 name = "Wstatic-receiver"
 spelling = "-Wstatic-receiver"
 kind = "flag"
@@ -20459,7 +20432,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:264"
 
 [[options]]
-id = 1785
+id = 1783
 name = "Windirect-static"
 spelling = "-Windirect-static"
 kind = "flag"
@@ -20469,7 +20442,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:267"
 
 [[options]]
-id = 1786
+id = 1784
 name = "Wno-effect-assign"
 spelling = "-Wno-effect-assign"
 kind = "flag"
@@ -20479,7 +20452,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:270"
 
 [[options]]
-id = 1787
+id = 1785
 name = "Wintf-non-inherited"
 spelling = "-Wintf-non-inherited"
 kind = "flag"
@@ -20489,7 +20462,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:273"
 
 [[options]]
-id = 1788
+id = 1786
 name = "Wchar-concat"
 spelling = "-Wchar-concat"
 kind = "flag"
@@ -20499,7 +20472,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:276"
 
 [[options]]
-id = 1789
+id = 1787
 name = "Wserial"
 spelling = "-Wserial"
 kind = "flag"
@@ -20509,7 +20482,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:279"
 
 [[options]]
-id = 1790
+id = 1788
 name = "Wempty-block"
 spelling = "-Wempty-block"
 kind = "flag"
@@ -20519,7 +20492,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:282"
 
 [[options]]
-id = 1791
+id = 1789
 name = "Wuseless-type-check"
 spelling = "-Wuseless-type-check"
 kind = "flag"
@@ -20529,7 +20502,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:285"
 
 [[options]]
-id = 1792
+id = 1790
 name = "Wuncheck"
 spelling = "-Wuncheck"
 kind = "flag"
@@ -20539,7 +20512,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:288"
 
 [[options]]
-id = 1793
+id = 1791
 name = "Wraw"
 spelling = "-Wraw"
 kind = "flag"
@@ -20549,7 +20522,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:291"
 
 [[options]]
-id = 1794
+id = 1792
 name = "Wfinal-bound"
 spelling = "-Wfinal-bound"
 kind = "flag"
@@ -20559,7 +20532,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:294"
 
 [[options]]
-id = 1795
+id = 1793
 name = "Wsuppress"
 spelling = "-Wsuppress"
 kind = "flag"
@@ -20569,7 +20542,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:297"
 
 [[options]]
-id = 1796
+id = 1794
 name = "Wwarning-token"
 spelling = "-Wwarning-token"
 kind = "flag"
@@ -20579,7 +20552,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:300"
 
 [[options]]
-id = 1797
+id = 1795
 name = "Wunnecessary-else"
 spelling = "-Wunnecessary-else"
 kind = "flag"
@@ -20589,7 +20562,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:303"
 
 [[options]]
-id = 1798
+id = 1796
 name = "Wjavadoc"
 spelling = "-Wjavadoc"
 kind = "flag"
@@ -20599,7 +20572,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:306"
 
 [[options]]
-id = 1799
+id = 1797
 name = "Wall-javadoc"
 spelling = "-Wall-javadoc"
 kind = "flag"
@@ -20609,7 +20582,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:309"
 
 [[options]]
-id = 1800
+id = 1798
 name = "Wtasks"
 spelling = "-Wtasks"
 kind = "flag"
@@ -20619,7 +20592,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:312"
 
 [[options]]
-id = 1801
+id = 1799
 name = "Wassert-identifier"
 spelling = "-Wassert-identifier"
 kind = "flag"
@@ -20629,7 +20602,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:315"
 
 [[options]]
-id = 1802
+id = 1800
 name = "Wenum-identifier"
 spelling = "-Wenum-identifier"
 kind = "flag"
@@ -20639,7 +20612,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:318"
 
 [[options]]
-id = 1803
+id = 1801
 name = "Wfinally"
 spelling = "-Wfinally"
 kind = "flag"
@@ -20649,7 +20622,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:321"
 
 [[options]]
-id = 1804
+id = 1802
 name = "Wunused-thrown"
 spelling = "-Wunused-thrown"
 kind = "flag"
@@ -20659,7 +20632,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:324"
 
 [[options]]
-id = 1805
+id = 1803
 name = "Wunqualified-field"
 spelling = "-Wunqualified-field"
 kind = "flag"
@@ -20669,7 +20642,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:327"
 
 [[options]]
-id = 1806
+id = 1804
 name = "Wtype-hiding"
 spelling = "-Wtype-hiding"
 kind = "flag"
@@ -20679,7 +20652,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:330"
 
 [[options]]
-id = 1807
+id = 1805
 name = "Wvarargs-cast"
 spelling = "-Wvarargs-cast"
 kind = "flag"
@@ -20689,7 +20662,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:333"
 
 [[options]]
-id = 1808
+id = 1806
 name = "Wnull"
 spelling = "-Wnull"
 kind = "flag"
@@ -20699,7 +20672,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:336"
 
 [[options]]
-id = 1809
+id = 1807
 name = "Wboxing"
 spelling = "-Wboxing"
 kind = "flag"
@@ -20709,7 +20682,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:339"
 
 [[options]]
-id = 1810
+id = 1808
 name = "Wover-ann"
 spelling = "-Wover-ann"
 kind = "flag"
@@ -20719,7 +20692,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:342"
 
 [[options]]
-id = 1811
+id = 1809
 name = "Wdep-ann"
 spelling = "-Wdep-ann"
 kind = "flag"
@@ -20729,7 +20702,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:345"
 
 [[options]]
-id = 1812
+id = 1810
 name = "Wintf-annotation"
 spelling = "-Wintf-annotation"
 kind = "flag"
@@ -20739,7 +20712,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:348"
 
 [[options]]
-id = 1813
+id = 1811
 name = "Wenum-switch"
 spelling = "-Wenum-switch"
 kind = "flag"
@@ -20749,7 +20722,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:351"
 
 [[options]]
-id = 1814
+id = 1812
 name = "Whiding"
 spelling = "-Whiding"
 kind = "flag"
@@ -20759,7 +20732,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:354"
 
 [[options]]
-id = 1815
+id = 1813
 name = "Wstatic-access"
 spelling = "-Wstatic-access"
 kind = "flag"
@@ -20769,7 +20742,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:357"
 
 [[options]]
-id = 1816
+id = 1814
 name = "Wunused"
 spelling = "-Wunused"
 kind = "flag"
@@ -20779,7 +20752,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:360"
 
 [[options]]
-id = 1817
+id = 1815
 name = "Wparam-assign"
 spelling = "-Wparam-assign"
 kind = "flag"
@@ -20789,7 +20762,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:363"
 
 [[options]]
-id = 1818
+id = 1816
 name = "Wdiscouraged"
 spelling = "-Wdiscouraged"
 kind = "flag"
@@ -20799,7 +20772,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:366"
 
 [[options]]
-id = 1819
+id = 1817
 name = "Wforbidden"
 spelling = "-Wforbidden"
 kind = "flag"
@@ -20809,7 +20782,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:369"
 
 [[options]]
-id = 1820
+id = 1818
 name = "Wfallthrough"
 spelling = "-Wfallthrough"
 kind = "flag"
@@ -20819,7 +20792,7 @@ languages = ["Java"]
 source_location = "gcc/java/lang.opt:372"
 
 [[options]]
-id = 1821
+id = 1819
 name = "fltrans"
 spelling = "-fltrans"
 kind = "flag"
@@ -20831,7 +20804,7 @@ var = "flag_ltrans"
 help = "Run the link-time optimizer in local transformation (LTRANS) mode."
 
 [[options]]
-id = 1822
+id = 1820
 name = "fltrans-output-list="
 spelling = "-fltrans-output-list="
 kind = "joined"
@@ -20843,7 +20816,7 @@ var = "ltrans_output_list"
 help = "Specify a file to which a list of files output by LTRANS is written."
 
 [[options]]
-id = 1823
+id = 1821
 name = "fwpa"
 spelling = "-fwpa"
 kind = "flag"
@@ -20855,7 +20828,7 @@ var = "flag_wpa"
 help = "Run the link-time optimizer in whole program analysis (WPA) mode."
 
 [[options]]
-id = 1824
+id = 1822
 name = "fresolution"
 spelling = "-fresolution"
 kind = "separate"

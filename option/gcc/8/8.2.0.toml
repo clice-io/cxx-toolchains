@@ -13095,11 +13095,11 @@ source_location = "gcc/c-family/c.opt:1339"
 
 [[options]]
 id = 350
-name = "fcilkplus Undocumented"
-spelling = "-fcilkplus Undocumented"
+name = "fcilkplus"
+spelling = "-fcilkplus"
 kind = "flag"
-properties = ["C", "ObjC", "C++", "ObjC++", "LTO", "Report", "Var(flag_cilkplus)", "Init(0)"]
-flags = ["Report"]
+properties = ["Undocumented", "C", "ObjC", "C++", "ObjC++", "LTO", "Report", "Var(flag_cilkplus)", "Init(0)"]
+flags = ["Undocumented", "Report"]
 languages = ["C", "ObjC", "C++", "ObjC++", "LTO"]
 source_location = "gcc/c-family/c.opt:1342"
 var = "flag_cilkplus"

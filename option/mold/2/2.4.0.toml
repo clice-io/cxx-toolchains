@@ -125,7 +125,7 @@ section = "MOLD-SPECIFIC OPTIONS"
 spellings = ["--shuffle-sections"]
 syntax = "--shuffle-sections, --shuffle-sections=<number>"
 forms = ["--shuffle-sections", "--shuffle-sections=<number>"]
-argument_kind = "required"
+argument_kind = "optional"
 description = "Randomize the output by shuffling the order of input sections before assigning them the offsets in the output file. If a number is given, it's used as a seed for the random number generator, so that the linker produces the same output for the same seed. If no seed is given, a random number is used as a seed. This option is useful for benchmarking. Modern CPUs are sensitive to a program's memory layout. A seemingly benign change in program layout, such as a small size increase of a function in the middle of a program, can affect the program's performance. Therefore, even if you write new code and get a good benchmark result, it is hard to say whether the new code improves the program's performance; it is possible that the new memory layout happens to perform better. By running a benchmark multiple times with randomized memory layouts using --shuffle-sections, you can isolate your program's real performance number from the randomness caused by memory layout changes."
 source_location = "docs/mold.md:187"
 
@@ -1052,7 +1052,7 @@ source_location = "docs/mold.md:644"
 [[options]]
 id = 104
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z cet-report"]
+spellings = ["-z"]
 syntax = "-z cet-report=[ warning | error | none ]"
 forms = ["-z cet-report=[ warning | error | none ]"]
 argument_kind = "optional"
@@ -1062,127 +1062,127 @@ source_location = "docs/mold.md:649"
 [[options]]
 id = 105
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z now", "-z lazy"]
+spellings = ["-z"]
 syntax = "-z now, -z lazy"
 forms = ["-z now", "-z lazy"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, functions referring to other ELF modules are resolved by the dynamic linker when they are called for the first time. -z now marks an executable or a shared library file so that all dynamic symbols are resolved when a file is loaded to memory. -z lazy restores the default behavior."
 source_location = "docs/mold.md:665"
 
 [[options]]
 id = 106
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z origin"]
+spellings = ["-z"]
 syntax = "-z origin"
 forms = ["-z origin"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object requiring immediate $ORIGIN processing at runtime."
 source_location = "docs/mold.md:671"
 
 [[options]]
 id = 107
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z ibt"]
+spellings = ["-z"]
 syntax = "-z ibt"
 forms = ["-z ibt"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Turn on GNUPROPERTY_X86_FEATURE_1IBT bit in.note.gnu.property section to indicate that the output uses IBT-enabled PLT. This option implies -z ibtplt."
 source_location = "docs/mold.md:674"
 
 [[options]]
 id = 108
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z ibtplt"]
+spellings = ["-z"]
 syntax = "-z ibtplt"
 forms = ["-z ibtplt"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Generate Intel Branch Tracking (IBT)-enabled PLT which is the default on x86-64. This is the default."
 source_location = "docs/mold.md:679"
 
 [[options]]
 id = 109
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z execstack", "-z noexecstack"]
+spellings = ["-z"]
 syntax = "-z execstack, -z noexecstack"
 forms = ["-z execstack", "-z noexecstack"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, the pages for the stack area (i.e. the pages where local variables reside) are not executable for security reasons. -z execstack makes it executable. -z noexecstack restores the default behavior."
 source_location = "docs/mold.md:683"
 
 [[options]]
 id = 110
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z keep-text-section-prefix", "-z nokeep-text-section-prefix"]
+spellings = ["-z"]
 syntax = "-z keep-text-section-prefix, -z nokeep-text-section-prefix"
 forms = ["-z keep-text-section-prefix", "-z nokeep-text-section-prefix"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Keep.text.hot,.text.unknown,.text.unlikely,.text.startup, and.text.exit as separate sections in the final binary instead of merging them as.text."
 source_location = "docs/mold.md:688"
 
 [[options]]
 id = 111
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z relro", "-z norelro"]
+spellings = ["-z"]
 syntax = "-z relro, -z norelro"
 forms = ["-z relro", "-z norelro"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Some sections such as.dynamic have to be writable only during an executable or a shared library file is being loaded to memory. Once the dynamic linker finishes its job, such sections won't be mutated by anyone. As a security mitigation, it is preferred to make such segments read-only during program execution. -z relro puts such sections into a special segment called relro. The dynamic linker makes a relro segment read-only after it finishes its job. By default, mold generates a relro segment. -z norelro disables the feature."
 source_location = "docs/mold.md:693"
 
 [[options]]
 id = 112
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z sectionheader", "-z nosectionheader"]
+spellings = ["-z"]
 syntax = "-z sectionheader, -z nosectionheader"
 forms = ["-z sectionheader", "-z nosectionheader"]
-argument_kind = "none"
+argument_kind = "required"
 description = "-z nosectionheader tell the linker to omit the section header. By default, the linker does not omit the section header."
 source_location = "docs/mold.md:706"
 
 [[options]]
 id = 113
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z separate-loadable-segments", "-z separate-code", "-z noseparate-code"]
+spellings = ["-z"]
 syntax = "-z separate-loadable-segments, -z separate-code, -z noseparate-code"
 forms = ["-z separate-loadable-segments", "-z separate-code", "-z noseparate-code"]
-argument_kind = "none"
+argument_kind = "required"
 description = "If one memory page contains multiple segments, the page protection bits are set in such a way that the needed attributes (writable or executable) are satisfied for all segments. This usually happens at a boundary of two segments with two different attributes. separate-loadable-segments adds paddings between segments with different attributes so that they do not share the same page. This is the default. separate-code adds paddings only between executable and non-executable segments. noseparate-code does not add any paddings between segments."
 source_location = "docs/mold.md:710"
 
 [[options]]
 id = 114
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z defs", "-z nodefs"]
+spellings = ["-z"]
 syntax = "-z defs, -z nodefs"
 forms = ["-z defs", "-z nodefs"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Report undefined symbols (even with --shared)."
 source_location = "docs/mold.md:724"
 
 [[options]]
 id = 115
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z shstk"]
+spellings = ["-z"]
 syntax = "-z shstk"
 forms = ["-z shstk"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Enforce shadow stack by turning GNUPROPERTY_X86_FEATURE_1SHSTK bit in.note.gnu.property output section. Shadow stack is part of Intel Control-flow Enforcement Technology (CET), which is available since Tiger Lake (2020)."
 source_location = "docs/mold.md:727"
 
 [[options]]
 id = 116
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z text", "-z notext", "-z textoff"]
+spellings = ["-z"]
 syntax = "-z text, -z notext, -z textoff"
 forms = ["-z text", "-z notext", "-z textoff"]
-argument_kind = "none"
+argument_kind = "required"
 description = "mold by default reports an error if dynamic relocations are created in read-only sections. If -z notext or -z textoff are given, mold creates such dynamic relocations without reporting an error. -z text restores the default behavior."
 source_location = "docs/mold.md:733"
 
 [[options]]
 id = 117
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z max-page-size"]
+spellings = ["-z"]
 syntax = "-z max-page-size=<number>"
 forms = ["-z max-page-size=<number>"]
 argument_kind = "required"
@@ -1192,77 +1192,77 @@ source_location = "docs/mold.md:739"
 [[options]]
 id = 118
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z nodefaultlib"]
+spellings = ["-z"]
 syntax = "-z nodefaultlib"
 forms = ["-z nodefaultlib"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Make the dynamic loader ignore default search paths."
 source_location = "docs/mold.md:744"
 
 [[options]]
 id = 119
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z nodelete"]
+spellings = ["-z"]
 syntax = "-z nodelete"
 forms = ["-z nodelete"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO non-deletable at runtime."
 source_location = "docs/mold.md:747"
 
 [[options]]
 id = 120
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z nodlopen"]
+spellings = ["-z"]
 syntax = "-z nodlopen"
 forms = ["-z nodlopen"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to dlopen(3). This option makes it possible for the linker to optimize thread-local variable accesses by rewriting instructions for some targets."
 source_location = "docs/mold.md:750"
 
 [[options]]
 id = 121
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z nodump"]
+spellings = ["-z"]
 syntax = "-z nodump"
 forms = ["-z nodump"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to dldump(3)."
 source_location = "docs/mold.md:755"
 
 [[options]]
 id = 122
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z nocopyreloc"]
+spellings = ["-z"]
 syntax = "-z nocopyreloc"
 forms = ["-z nocopyreloc"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Do not create copy relocations."
 source_location = "docs/mold.md:758"
 
 [[options]]
 id = 123
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z initfirst"]
+spellings = ["-z"]
 syntax = "-z initfirst"
 forms = ["-z initfirst"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO to be initialized first at runtime."
 source_location = "docs/mold.md:761"
 
 [[options]]
 id = 124
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-z interpose"]
+spellings = ["-z"]
 syntax = "-z interpose"
 forms = ["-z interpose"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object to interpose all DSOs but executable."
 source_location = "docs/mold.md:764"
 
 [[options]]
 id = 125
 section = "GNU-COMPATIBLE OPTIONS"
-spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--dc", "--dp", "--end-group", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--nostdlib", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z combreloc", "-z common-page-size", "-z nocombreloc"]
+spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--dc", "--dp", "--end-group", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--nostdlib", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z"]
 syntax = "-(, -), -EL, -O<number>, --allow-shlib-undefined, --dc, --dp, --end-group, --no-add-needed, --no-allow-shlib-undefined, --no-copy-dt-needed-entries, --no-fatal-warnings, --nostdlib, --rpath-link=<dir>, --sort-common, --sort-section, --start-group, --warn-constructors, --warn-once, --fix-cortex-a53-835769, --fix-cortex-a53-843419, -z combreloc, -z common-page-size, -z nocombreloc"
 forms = ["-(", "-)", "-EL", "-O<number>", "--allow-shlib-undefined", "--dc", "--dp", "--end-group", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--nostdlib", "--rpath-link=<dir>", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z combreloc", "-z common-page-size", "-z nocombreloc"]
 argument_kind = "required"

@@ -12,7 +12,7 @@ source_kind = "microsoft-docs"
 version_granularity = "visual_studio_major"
 source_paths = ["docs/build/reference/compiler-options-listed-alphabetically.md", "docs/build/reference/linker-options.md"]
 generator = "scripts/update_msvc_options.py"
-option_count = 311
+option_count = 307
 
 [[source_files]]
 path = "docs/build/reference/compiler-options-listed-alphabetically.md"
@@ -608,17 +608,6 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/feature-ena
 [[options]]
 driver = "cl"
 id = 54
-spellings = ["/forceInterlockedFunctions"]
-syntax = "/forceInterlockedFunctions"
-argument_kind = "none"
-purpose = "Dynamically selects between Armv8.0 load, store exclusive instructions or Armv8.1 LSE atomic instructions based on target CPU.<sup>17.14</sup>"
-source_location = "docs/build/reference/compiler-options-listed-alphabetically.md:71"
-details_path = "docs/build/reference/force-interlocked-functions.md"
-details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/force-interlocked-functions?view=msvc-140&preserve-view=true"
-
-[[options]]
-driver = "cl"
-id = 55
 spellings = ["/FI"]
 syntax = "/FI<file>"
 argument_kind = "joined"
@@ -629,7 +618,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fi-name-for
 
 [[options]]
 driver = "cl"
-id = 56
+id = 55
 spellings = ["/Fi"]
 syntax = "/Fi"
 argument_kind = "none"
@@ -640,7 +629,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fi-preproce
 
 [[options]]
 driver = "cl"
-id = 57
+id = 56
 spellings = ["/Fm"]
 syntax = "/Fm"
 argument_kind = "none"
@@ -651,7 +640,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fm-name-map
 
 [[options]]
 driver = "cl"
-id = 58
+id = 57
 spellings = ["/Fo"]
 syntax = "/Fo"
 argument_kind = "none"
@@ -662,7 +651,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fo-object-f
 
 [[options]]
 driver = "cl"
-id = 59
+id = 58
 spellings = ["/Fp"]
 syntax = "/Fp"
 argument_kind = "none"
@@ -673,7 +662,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fp-name-dot
 
 [[options]]
 driver = "cl"
-id = 60
+id = 59
 spellings = ["/fp:contract"]
 syntax = "/fp:contract"
 argument_kind = "none"
@@ -684,7 +673,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fp-specify-
 
 [[options]]
 driver = "cl"
-id = 61
+id = 60
 spellings = ["/fp:fast"]
 syntax = "/fp:fast"
 argument_kind = "none"
@@ -695,7 +684,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fp-specify-
 
 [[options]]
 driver = "cl"
-id = 62
+id = 61
 spellings = ["/fp:precise"]
 syntax = "/fp:precise"
 argument_kind = "none"
@@ -706,7 +695,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fp-specify-
 
 [[options]]
 driver = "cl"
-id = 63
+id = 62
 spellings = ["/fp:strict"]
 syntax = "/fp:strict"
 argument_kind = "none"
@@ -717,7 +706,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fp-specify-
 
 [[options]]
 driver = "cl"
-id = 64
+id = 63
 spellings = ["/fpcvt:BC"]
 syntax = "/fpcvt:BC"
 argument_kind = "none"
@@ -728,7 +717,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fpcvt?view=
 
 [[options]]
 driver = "cl"
-id = 65
+id = 64
 spellings = ["/fpcvt:IA"]
 syntax = "/fpcvt:IA"
 argument_kind = "none"
@@ -739,8 +728,8 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fpcvt?view=
 
 [[options]]
 driver = "cl"
-id = 66
-spellings = ["/FR"]
+id = 65
+spellings = ["/FR", "/Fr"]
 syntax = "/FR, /Fr"
 argument_kind = "none"
 purpose = "Name generated .sbr browser files. /Fr is deprecated."
@@ -750,7 +739,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fr-fr-creat
 
 [[options]]
 driver = "cl"
-id = 67
+id = 66
 spellings = ["/FS"]
 syntax = "/FS"
 argument_kind = "none"
@@ -761,7 +750,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fs-force-sy
 
 [[options]]
 driver = "cl"
-id = 68
+id = 67
 spellings = ["/fsanitize"]
 syntax = "/fsanitize"
 argument_kind = "none"
@@ -772,7 +761,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fsanitize?v
 
 [[options]]
 driver = "cl"
-id = 69
+id = 68
 spellings = ["/fsanitize-coverage"]
 syntax = "/fsanitize-coverage"
 argument_kind = "none"
@@ -783,7 +772,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fsanitize-c
 
 [[options]]
 driver = "cl"
-id = 70
+id = 69
 spellings = ["/Ft"]
 syntax = "/Ft<dir>"
 argument_kind = "joined"
@@ -792,7 +781,7 @@ source_location = "docs/build/reference/compiler-options-listed-alphabetically.m
 
 [[options]]
 driver = "cl"
-id = 71
+id = 70
 spellings = ["/FU"]
 syntax = "/FU<file>"
 argument_kind = "joined"
@@ -803,7 +792,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fu-name-for
 
 [[options]]
 driver = "cl"
-id = 72
+id = 71
 spellings = ["/Fx"]
 syntax = "/Fx"
 argument_kind = "none"
@@ -814,7 +803,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fx-merge-in
 
 [[options]]
 driver = "cl"
-id = 73
+id = 72
 spellings = ["/GA"]
 syntax = "/GA"
 argument_kind = "none"
@@ -825,7 +814,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ga-optimize
 
 [[options]]
 driver = "cl"
-id = 74
+id = 73
 spellings = ["/Gd"]
 syntax = "/Gd"
 argument_kind = "none"
@@ -836,7 +825,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gd-gr-gv-gz
 
 [[options]]
 driver = "cl"
-id = 75
+id = 74
 spellings = ["/Ge"]
 syntax = "/Ge"
 argument_kind = "none"
@@ -847,7 +836,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ge-enable-s
 
 [[options]]
 driver = "cl"
-id = 76
+id = 75
 spellings = ["/GF"]
 syntax = "/GF"
 argument_kind = "none"
@@ -858,7 +847,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gf-eliminat
 
 [[options]]
 driver = "cl"
-id = 77
+id = 76
 spellings = ["/GH"]
 syntax = "/GH"
 argument_kind = "none"
@@ -869,7 +858,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gh-enable-p
 
 [[options]]
 driver = "cl"
-id = 78
+id = 77
 spellings = ["/Gh"]
 syntax = "/Gh"
 argument_kind = "none"
@@ -880,7 +869,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gh-enable-p
 
 [[options]]
 driver = "cl"
-id = 79
+id = 78
 spellings = ["/Gr"]
 syntax = "/Gr"
 argument_kind = "none"
@@ -891,7 +880,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gd-gr-gv-gz
 
 [[options]]
 driver = "cl"
-id = 80
+id = 79
 spellings = ["/GT"]
 syntax = "/GT"
 argument_kind = "none"
@@ -902,7 +891,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gt-support-
 
 [[options]]
 driver = "cl"
-id = 81
+id = 80
 spellings = ["/Gu"]
 syntax = "/Gu[-]"
 argument_kind = "optional"
@@ -911,7 +900,7 @@ source_location = "docs/build/reference/compiler-options-listed-alphabetically.m
 
 [[options]]
 driver = "cl"
-id = 82
+id = 81
 spellings = ["/Gv"]
 syntax = "/Gv"
 argument_kind = "none"
@@ -922,7 +911,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gd-gr-gv-gz
 
 [[options]]
 driver = "cl"
-id = 83
+id = 82
 spellings = ["/GZ"]
 syntax = "/GZ"
 argument_kind = "none"
@@ -933,7 +922,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gz-enable-s
 
 [[options]]
 driver = "cl"
-id = 84
+id = 83
 spellings = ["/Gz"]
 syntax = "/Gz"
 argument_kind = "none"
@@ -944,7 +933,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/gd-gr-gv-gz
 
 [[options]]
 driver = "cl"
-id = 85
+id = 84
 spellings = ["/H"]
 syntax = "/H"
 argument_kind = "none"
@@ -955,7 +944,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/h-restrict-
 
 [[options]]
 driver = "cl"
-id = 86
+id = 85
 spellings = ["/headerName"]
 syntax = "/headerName"
 argument_kind = "none"
@@ -966,7 +955,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/headername?
 
 [[options]]
 driver = "cl"
-id = 87
+id = 86
 spellings = ["/headerUnit"]
 syntax = "/headerUnit"
 argument_kind = "none"
@@ -977,7 +966,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/headerunit?
 
 [[options]]
 driver = "cl"
-id = 88
+id = 87
 spellings = ["/HELP"]
 syntax = "/HELP"
 argument_kind = "none"
@@ -988,7 +977,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/help-compil
 
 [[options]]
 driver = "cl"
-id = 89
+id = 88
 spellings = ["/homeparams"]
 syntax = "/homeparams"
 argument_kind = "none"
@@ -999,7 +988,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/homeparams-
 
 [[options]]
 driver = "cl"
-id = 90
+id = 89
 spellings = ["/hotpatch"]
 syntax = "/hotpatch"
 argument_kind = "none"
@@ -1010,7 +999,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/hotpatch-cr
 
 [[options]]
 driver = "cl"
-id = 91
+id = 90
 spellings = ["/I"]
 syntax = "/I<dir>"
 argument_kind = "joined"
@@ -1021,7 +1010,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/i-additiona
 
 [[options]]
 driver = "cl"
-id = 92
+id = 91
 spellings = ["/ifcOutput"]
 syntax = "/ifcOutput"
 argument_kind = "none"
@@ -1032,7 +1021,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ifc-output?
 
 [[options]]
 driver = "cl"
-id = 93
+id = 92
 spellings = ["/interface"]
 syntax = "/interface"
 argument_kind = "none"
@@ -1043,7 +1032,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/interface?v
 
 [[options]]
 driver = "cl"
-id = 94
+id = 93
 spellings = ["/internalPartition"]
 syntax = "/internalPartition"
 argument_kind = "none"
@@ -1054,7 +1043,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/internal-pa
 
 [[options]]
 driver = "cl"
-id = 95
+id = 94
 spellings = ["/J"]
 syntax = "/J"
 argument_kind = "none"
@@ -1065,7 +1054,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/j-default-c
 
 [[options]]
 driver = "cl"
-id = 96
+id = 95
 spellings = ["/jumptablerdata"]
 syntax = "/jumptablerdata"
 argument_kind = "none"
@@ -1076,7 +1065,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/jump-table-
 
 [[options]]
 driver = "cl"
-id = 97
+id = 96
 spellings = ["/JMC"]
 syntax = "/JMC"
 argument_kind = "none"
@@ -1087,7 +1076,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/jmc?view=ms
 
 [[options]]
 driver = "cl"
-id = 98
+id = 97
 spellings = ["/kernel"]
 syntax = "/kernel"
 argument_kind = "none"
@@ -1098,7 +1087,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/kernel-crea
 
 [[options]]
 driver = "cl"
-id = 99
+id = 98
 spellings = ["/LD"]
 syntax = "/LD"
 argument_kind = "none"
@@ -1109,7 +1098,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 100
+id = 99
 spellings = ["/LDd"]
 syntax = "/LDd"
 argument_kind = "none"
@@ -1120,7 +1109,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 101
+id = 100
 spellings = ["/link"]
 syntax = "/link"
 argument_kind = "none"
@@ -1131,7 +1120,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/link-pass-o
 
 [[options]]
 driver = "cl"
-id = 102
+id = 101
 spellings = ["/LN"]
 syntax = "/LN"
 argument_kind = "none"
@@ -1142,7 +1131,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ln-create-m
 
 [[options]]
 driver = "cl"
-id = 103
+id = 102
 spellings = ["/MD"]
 syntax = "/MD"
 argument_kind = "none"
@@ -1153,7 +1142,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 104
+id = 103
 spellings = ["/MDd"]
 syntax = "/MDd"
 argument_kind = "none"
@@ -1164,7 +1153,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 105
+id = 104
 spellings = ["/MP"]
 syntax = "/MP"
 argument_kind = "none"
@@ -1175,7 +1164,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/mp-build-wi
 
 [[options]]
 driver = "cl"
-id = 106
+id = 105
 spellings = ["/MT"]
 syntax = "/MT"
 argument_kind = "none"
@@ -1186,7 +1175,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 107
+id = 106
 spellings = ["/MTd"]
 syntax = "/MTd"
 argument_kind = "none"
@@ -1197,7 +1186,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-us
 
 [[options]]
 driver = "cl"
-id = 108
+id = 107
 spellings = ["/nologo"]
 syntax = "/nologo"
 argument_kind = "none"
@@ -1208,7 +1197,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/nologo-supp
 
 [[options]]
 driver = "cl"
-id = 109
+id = 108
 spellings = ["/O1"]
 syntax = "/O1"
 argument_kind = "none"
@@ -1219,7 +1208,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/o1-o2-minim
 
 [[options]]
 driver = "cl"
-id = 110
+id = 109
 spellings = ["/O2"]
 syntax = "/O2"
 argument_kind = "none"
@@ -1230,7 +1219,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/o1-o2-minim
 
 [[options]]
 driver = "cl"
-id = 111
+id = 110
 spellings = ["/Ob"]
 syntax = "/Ob<n>"
 argument_kind = "joined"
@@ -1241,7 +1230,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ob-inline-f
 
 [[options]]
 driver = "cl"
-id = 112
+id = 111
 spellings = ["/Od"]
 syntax = "/Od"
 argument_kind = "none"
@@ -1252,7 +1241,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/od-disable-
 
 [[options]]
 driver = "cl"
-id = 113
+id = 112
 spellings = ["/Og"]
 syntax = "/Og"
 argument_kind = "none"
@@ -1263,7 +1252,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/og-global-o
 
 [[options]]
 driver = "cl"
-id = 114
+id = 113
 spellings = ["/openmp"]
 syntax = "/openmp"
 argument_kind = "none"
@@ -1274,7 +1263,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/openmp-enab
 
 [[options]]
 driver = "cl"
-id = 115
+id = 114
 spellings = ["/openmp:experimental"]
 syntax = "/openmp:experimental"
 argument_kind = "none"
@@ -1285,7 +1274,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/openmp-enab
 
 [[options]]
 driver = "cl"
-id = 116
+id = 115
 spellings = ["/openmp:llvm"]
 syntax = "/openmp:llvm"
 argument_kind = "none"
@@ -1296,7 +1285,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/openmp-enab
 
 [[options]]
 driver = "cl"
-id = 117
+id = 116
 spellings = ["/options:strict"]
 syntax = "/options:strict"
 argument_kind = "none"
@@ -1307,7 +1296,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/options-str
 
 [[options]]
 driver = "cl"
-id = 118
+id = 117
 spellings = ["/Os"]
 syntax = "/Os"
 argument_kind = "none"
@@ -1318,7 +1307,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/os-ot-favor
 
 [[options]]
 driver = "cl"
-id = 119
+id = 118
 spellings = ["/Ot"]
 syntax = "/Ot"
 argument_kind = "none"
@@ -1329,7 +1318,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/os-ot-favor
 
 [[options]]
 driver = "cl"
-id = 120
+id = 119
 spellings = ["/Ox"]
 syntax = "/Ox"
 argument_kind = "none"
@@ -1340,7 +1329,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ox-full-opt
 
 [[options]]
 driver = "cl"
-id = 121
+id = 120
 spellings = ["/Oy"]
 syntax = "/Oy"
 argument_kind = "none"
@@ -1351,7 +1340,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/oy-frame-po
 
 [[options]]
 driver = "cl"
-id = 122
+id = 121
 spellings = ["/P"]
 syntax = "/P"
 argument_kind = "none"
@@ -1362,7 +1351,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/p-preproces
 
 [[options]]
 driver = "cl"
-id = 123
+id = 122
 spellings = ["/PD"]
 syntax = "/PD"
 argument_kind = "none"
@@ -1371,7 +1360,7 @@ source_location = "docs/build/reference/compiler-options-listed-alphabetically.m
 
 [[options]]
 driver = "cl"
-id = 124
+id = 123
 spellings = ["/PH"]
 syntax = "/PH"
 argument_kind = "none"
@@ -1380,7 +1369,7 @@ source_location = "docs/build/reference/compiler-options-listed-alphabetically.m
 
 [[options]]
 driver = "cl"
-id = 125
+id = 124
 spellings = ["/presetPadding"]
 syntax = "/presetPadding"
 argument_kind = "none"
@@ -1389,7 +1378,7 @@ source_location = "docs/build/reference/compiler-options-listed-alphabetically.m
 
 [[options]]
 driver = "cl"
-id = 126
+id = 125
 spellings = ["/Qfast_transcendentals"]
 syntax = "/Qfast_transcendentals"
 argument_kind = "none"
@@ -1400,7 +1389,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qfast-trans
 
 [[options]]
 driver = "cl"
-id = 127
+id = 126
 spellings = ["/QIfist"]
 syntax = "/QIfist"
 argument_kind = "none"
@@ -1411,7 +1400,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qifist-supp
 
 [[options]]
 driver = "cl"
-id = 128
+id = 127
 spellings = ["/Qimprecise_fwaits"]
 syntax = "/Qimprecise_fwaits"
 argument_kind = "none"
@@ -1422,7 +1411,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qimprecise-
 
 [[options]]
 driver = "cl"
-id = 129
+id = 128
 spellings = ["/QIntel-jcc-erratum"]
 syntax = "/QIntel-jcc-erratum"
 argument_kind = "none"
@@ -1433,7 +1422,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qintel-jcc-
 
 [[options]]
 driver = "cl"
-id = 130
+id = 129
 spellings = ["/Qpar-report:"]
 syntax = "/Qpar-report:<n>"
 argument_kind = "joined"
@@ -1444,7 +1433,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qpar-report
 
 [[options]]
 driver = "cl"
-id = 131
+id = 130
 spellings = ["/Qpar"]
 syntax = "/Qpar"
 argument_kind = "none"
@@ -1455,7 +1444,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qpar-auto-p
 
 [[options]]
 driver = "cl"
-id = 132
+id = 131
 spellings = ["/Qsafe_fp_loads"]
 syntax = "/Qsafe_fp_loads"
 argument_kind = "none"
@@ -1466,7 +1455,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qsafe-fp-lo
 
 [[options]]
 driver = "cl"
-id = 133
+id = 132
 spellings = ["/Qspectre-load"]
 syntax = "/Qspectre-load"
 argument_kind = "none"
@@ -1477,7 +1466,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qspectre-lo
 
 [[options]]
 driver = "cl"
-id = 134
+id = 133
 spellings = ["/Qspectre-load-cf"]
 syntax = "/Qspectre-load-cf"
 argument_kind = "none"
@@ -1488,7 +1477,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qspectre-lo
 
 [[options]]
 driver = "cl"
-id = 135
+id = 134
 spellings = ["/Qvec-report:"]
 syntax = "/Qvec-report:<n>"
 argument_kind = "joined"
@@ -1499,7 +1488,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/qvec-report
 
 [[options]]
 driver = "cl"
-id = 136
+id = 135
 spellings = ["/reference"]
 syntax = "/reference"
 argument_kind = "none"
@@ -1510,7 +1499,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/module-refe
 
 [[options]]
 driver = "cl"
-id = 137
+id = 136
 spellings = ["/RTC1"]
 syntax = "/RTC1"
 argument_kind = "none"
@@ -1521,7 +1510,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/rtc-run-tim
 
 [[options]]
 driver = "cl"
-id = 138
+id = 137
 spellings = ["/RTCc"]
 syntax = "/RTCc"
 argument_kind = "none"
@@ -1532,7 +1521,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/rtc-run-tim
 
 [[options]]
 driver = "cl"
-id = 139
+id = 138
 spellings = ["/RTCs"]
 syntax = "/RTCs"
 argument_kind = "none"
@@ -1543,7 +1532,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/rtc-run-tim
 
 [[options]]
 driver = "cl"
-id = 140
+id = 139
 spellings = ["/RTCu"]
 syntax = "/RTCu"
 argument_kind = "none"
@@ -1554,7 +1543,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/rtc-run-tim
 
 [[options]]
 driver = "cl"
-id = 141
+id = 140
 spellings = ["/scanDependencies"]
 syntax = "/scanDependencies"
 argument_kind = "none"
@@ -1565,7 +1554,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/scandepende
 
 [[options]]
 driver = "cl"
-id = 142
+id = 141
 spellings = ["/sdl"]
 syntax = "/sdl"
 argument_kind = "none"
@@ -1576,7 +1565,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/sdl-enable-
 
 [[options]]
 driver = "cl"
-id = 143
+id = 142
 spellings = ["/showIncludes"]
 syntax = "/showIncludes"
 argument_kind = "none"
@@ -1587,7 +1576,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/showinclude
 
 [[options]]
 driver = "cl"
-id = 144
+id = 143
 spellings = ["/source-charset"]
 syntax = "/source-charset"
 argument_kind = "none"
@@ -1598,7 +1587,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/source-char
 
 [[options]]
 driver = "cl"
-id = 145
+id = 144
 spellings = ["/sourceDependencies"]
 syntax = "/sourceDependencies"
 argument_kind = "none"
@@ -1609,7 +1598,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/sourcedepen
 
 [[options]]
 driver = "cl"
-id = 146
+id = 145
 spellings = ["/sourceDependencies:directives"]
 syntax = "/sourceDependencies:directives"
 argument_kind = "none"
@@ -1620,7 +1609,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/sourcedepen
 
 [[options]]
 driver = "cl"
-id = 147
+id = 146
 spellings = ["/std:c++14"]
 syntax = "/std:c++14"
 argument_kind = "none"
@@ -1631,7 +1620,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 148
+id = 147
 spellings = ["/std:c++17"]
 syntax = "/std:c++17"
 argument_kind = "none"
@@ -1642,7 +1631,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 149
+id = 148
 spellings = ["/std:c++20"]
 syntax = "/std:c++20"
 argument_kind = "none"
@@ -1653,7 +1642,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 150
+id = 149
 spellings = ["/std:c++latest"]
 syntax = "/std:c++latest"
 argument_kind = "none"
@@ -1664,7 +1653,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 151
+id = 150
 spellings = ["/std:c11"]
 syntax = "/std:c11"
 argument_kind = "none"
@@ -1675,7 +1664,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 152
+id = 151
 spellings = ["/std:c17"]
 syntax = "/std:c17"
 argument_kind = "none"
@@ -1686,7 +1675,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 153
+id = 152
 spellings = ["/std:clatest"]
 syntax = "/std:clatest"
 argument_kind = "none"
@@ -1697,7 +1686,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/std-specify
 
 [[options]]
 driver = "cl"
-id = 154
+id = 153
 spellings = ["/TC"]
 syntax = "/TC"
 argument_kind = "none"
@@ -1708,7 +1697,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tc-tp-tc-tp
 
 [[options]]
 driver = "cl"
-id = 155
+id = 154
 spellings = ["/Tc"]
 syntax = "/Tc"
 argument_kind = "none"
@@ -1719,7 +1708,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tc-tp-tc-tp
 
 [[options]]
 driver = "cl"
-id = 156
+id = 155
 spellings = ["/TP"]
 syntax = "/TP"
 argument_kind = "none"
@@ -1730,7 +1719,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tc-tp-tc-tp
 
 [[options]]
 driver = "cl"
-id = 157
+id = 156
 spellings = ["/Tp"]
 syntax = "/Tp"
 argument_kind = "none"
@@ -1741,7 +1730,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tc-tp-tc-tp
 
 [[options]]
 driver = "cl"
-id = 158
+id = 157
 spellings = ["/translateInclude"]
 syntax = "/translateInclude"
 argument_kind = "none"
@@ -1752,7 +1741,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/translatein
 
 [[options]]
 driver = "cl"
-id = 159
+id = 158
 spellings = ["/U"]
 syntax = "/U<name>"
 argument_kind = "joined"
@@ -1763,7 +1752,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/u-u-undefin
 
 [[options]]
 driver = "cl"
-id = 160
+id = 159
 spellings = ["/u"]
 syntax = "/u"
 argument_kind = "none"
@@ -1774,7 +1763,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/u-u-undefin
 
 [[options]]
 driver = "cl"
-id = 161
+id = 160
 spellings = ["/utf-8"]
 syntax = "/utf-8"
 argument_kind = "none"
@@ -1785,7 +1774,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/utf-8-set-s
 
 [[options]]
 driver = "cl"
-id = 162
+id = 161
 spellings = ["/V"]
 syntax = "/V"
 argument_kind = "none"
@@ -1796,7 +1785,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/v-version-n
 
 [[options]]
 driver = "cl"
-id = 163
+id = 162
 spellings = ["/validate-charset"]
 syntax = "/validate-charset"
 argument_kind = "none"
@@ -1807,7 +1796,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/validate-ch
 
 [[options]]
 driver = "cl"
-id = 164
+id = 163
 spellings = ["/vd"]
 syntax = "/vd{0|1|2}"
 argument_kind = "joined"
@@ -1818,7 +1807,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vd-disable-
 
 [[options]]
 driver = "cl"
-id = 165
+id = 164
 spellings = ["/vlen"]
 syntax = "/vlen"
 argument_kind = "none"
@@ -1829,7 +1818,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vlen?view=m
 
 [[options]]
 driver = "cl"
-id = 166
+id = 165
 spellings = ["/vmb"]
 syntax = "/vmb"
 argument_kind = "none"
@@ -1840,7 +1829,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vmb-vmg-rep
 
 [[options]]
 driver = "cl"
-id = 167
+id = 166
 spellings = ["/vmg"]
 syntax = "/vmg"
 argument_kind = "none"
@@ -1851,7 +1840,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vmb-vmg-rep
 
 [[options]]
 driver = "cl"
-id = 168
+id = 167
 spellings = ["/vmm"]
 syntax = "/vmm"
 argument_kind = "none"
@@ -1862,7 +1851,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vmm-vms-vmv
 
 [[options]]
 driver = "cl"
-id = 169
+id = 168
 spellings = ["/vms"]
 syntax = "/vms"
 argument_kind = "none"
@@ -1873,7 +1862,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vmm-vms-vmv
 
 [[options]]
 driver = "cl"
-id = 170
+id = 169
 spellings = ["/vmv"]
 syntax = "/vmv"
 argument_kind = "none"
@@ -1884,7 +1873,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/vmm-vms-vmv
 
 [[options]]
 driver = "cl"
-id = 171
+id = 170
 spellings = ["/volatile:iso"]
 syntax = "/volatile:iso"
 argument_kind = "none"
@@ -1895,7 +1884,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/volatile-vo
 
 [[options]]
 driver = "cl"
-id = 172
+id = 171
 spellings = ["/volatile:ms"]
 syntax = "/volatile:ms"
 argument_kind = "none"
@@ -1906,7 +1895,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/volatile-vo
 
 [[options]]
 driver = "cl"
-id = 173
+id = 172
 spellings = ["/volatileMetadata"]
 syntax = "/volatileMetadata"
 argument_kind = "none"
@@ -1917,7 +1906,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/volatile?vi
 
 [[options]]
 driver = "cl"
-id = 174
+id = 173
 spellings = ["/w"]
 syntax = "/w"
 argument_kind = "none"
@@ -1928,8 +1917,8 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 175
-spellings = ["/W0"]
+id = 174
+spellings = ["/W0", "/W1", "/W2", "/W3", "/W4"]
 syntax = "/W0, /W1, /W2, /W3, /W4"
 argument_kind = "none"
 purpose = "Set output warning level."
@@ -1939,8 +1928,8 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 176
-spellings = ["/w1"]
+id = 175
+spellings = ["/w1", "/w2", "/w3", "/w4"]
 syntax = "/w1<n>, /w2<n>, /w3<n>, /w4<n>"
 argument_kind = "joined"
 purpose = "Set warning level for the specified warning."
@@ -1950,7 +1939,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 177
+id = 176
 spellings = ["/Wall"]
 syntax = "/Wall"
 argument_kind = "none"
@@ -1961,7 +1950,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 178
+id = 177
 spellings = ["/wd"]
 syntax = "/wd<n>"
 argument_kind = "joined"
@@ -1972,7 +1961,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 179
+id = 178
 spellings = ["/we"]
 syntax = "/we<n>"
 argument_kind = "joined"
@@ -1983,7 +1972,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 180
+id = 179
 spellings = ["/WL"]
 syntax = "/WL"
 argument_kind = "none"
@@ -1994,7 +1983,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/wl-enable-o
 
 [[options]]
 driver = "cl"
-id = 181
+id = 180
 spellings = ["/wo"]
 syntax = "/wo<n>"
 argument_kind = "joined"
@@ -2005,7 +1994,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 182
+id = 181
 spellings = ["/WX"]
 syntax = "/WX"
 argument_kind = "none"
@@ -2016,7 +2005,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 
 [[options]]
 driver = "cl"
-id = 183
+id = 182
 spellings = ["/X"]
 syntax = "/X"
 argument_kind = "none"
@@ -2027,7 +2016,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/x-ignore-st
 
 [[options]]
 driver = "cl"
-id = 184
+id = 183
 spellings = ["/Y-"]
 syntax = "/Y-"
 argument_kind = "none"
@@ -2038,7 +2027,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/y-ignore-pr
 
 [[options]]
 driver = "cl"
-id = 185
+id = 184
 spellings = ["/Yc"]
 syntax = "/Yc"
 argument_kind = "none"
@@ -2049,7 +2038,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/yc-create-p
 
 [[options]]
 driver = "cl"
-id = 186
+id = 185
 spellings = ["/Yd"]
 syntax = "/Yd"
 argument_kind = "none"
@@ -2060,7 +2049,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/yd-place-de
 
 [[options]]
 driver = "cl"
-id = 187
+id = 186
 spellings = ["/Yl"]
 syntax = "/Yl"
 argument_kind = "none"
@@ -2071,7 +2060,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/yl-inject-p
 
 [[options]]
 driver = "cl"
-id = 188
+id = 187
 spellings = ["/Yu"]
 syntax = "/Yu"
 argument_kind = "none"
@@ -2082,7 +2071,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/yu-use-prec
 
 [[options]]
 driver = "cl"
-id = 189
+id = 188
 spellings = ["/Z7"]
 syntax = "/Z7"
 argument_kind = "none"
@@ -2093,7 +2082,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/z7-zi-zi-de
 
 [[options]]
 driver = "cl"
-id = 190
+id = 189
 spellings = ["/Za"]
 syntax = "/Za"
 argument_kind = "none"
@@ -2104,7 +2093,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/za-ze-disab
 
 [[options]]
 driver = "cl"
-id = 191
+id = 190
 spellings = ["/Zc:__STDC__"]
 syntax = "/Zc:__STDC__"
 argument_kind = "none"
@@ -2115,7 +2104,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zc-stdc?vie
 
 [[options]]
 driver = "cl"
-id = 192
+id = 191
 spellings = ["/Zc:gotoScope"]
 syntax = "/Zc:gotoScope"
 argument_kind = "none"
@@ -2126,7 +2115,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zc-gotoscop
 
 [[options]]
 driver = "cl"
-id = 193
+id = 192
 spellings = ["/Zc:trigraphs"]
 syntax = "/Zc:trigraphs"
 argument_kind = "none"
@@ -2137,7 +2126,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zc-trigraph
 
 [[options]]
 driver = "cl"
-id = 194
+id = 193
 spellings = ["/Ze"]
 syntax = "/Ze"
 argument_kind = "none"
@@ -2148,7 +2137,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/za-ze-disab
 
 [[options]]
 driver = "cl"
-id = 195
+id = 194
 spellings = ["/Zf"]
 syntax = "/Zf"
 argument_kind = "none"
@@ -2159,7 +2148,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zf?view=msv
 
 [[options]]
 driver = "cl"
-id = 196
+id = 195
 spellings = ["/ZI"]
 syntax = "/ZI"
 argument_kind = "none"
@@ -2170,7 +2159,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/z7-zi-zi-de
 
 [[options]]
 driver = "cl"
-id = 197
+id = 196
 spellings = ["/Zi"]
 syntax = "/Zi"
 argument_kind = "none"
@@ -2181,7 +2170,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/z7-zi-zi-de
 
 [[options]]
 driver = "cl"
-id = 198
+id = 197
 spellings = ["/Zl"]
 syntax = "/Zl"
 argument_kind = "none"
@@ -2192,7 +2181,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zl-omit-def
 
 [[options]]
 driver = "cl"
-id = 199
+id = 198
 spellings = ["/Zm"]
 syntax = "/Zm"
 argument_kind = "none"
@@ -2203,7 +2192,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zm-specify-
 
 [[options]]
 driver = "cl"
-id = 200
+id = 199
 spellings = ["/Zs"]
 syntax = "/Zs"
 argument_kind = "none"
@@ -2214,7 +2203,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zs-syntax-c
 
 [[options]]
 driver = "cl"
-id = 201
+id = 200
 spellings = ["/ZW"]
 syntax = "/ZW"
 argument_kind = "none"
@@ -2225,7 +2214,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/zw-windows-
 
 [[options]]
 driver = "link"
-id = 202
+id = 201
 spellings = ["@"]
 syntax = "@"
 argument_kind = "none"
@@ -2236,7 +2225,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/at-specify-
 
 [[options]]
 driver = "link"
-id = 203
+id = 202
 spellings = ["/ALIGN"]
 syntax = "/ALIGN"
 argument_kind = "none"
@@ -2247,7 +2236,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/align-secti
 
 [[options]]
 driver = "link"
-id = 204
+id = 203
 spellings = ["/ALLOWBIND"]
 syntax = "/ALLOWBIND"
 argument_kind = "none"
@@ -2258,7 +2247,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/allowbind-p
 
 [[options]]
 driver = "link"
-id = 205
+id = 204
 spellings = ["/ALLOWISOLATION"]
 syntax = "/ALLOWISOLATION"
 argument_kind = "none"
@@ -2269,7 +2258,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/allowisolat
 
 [[options]]
 driver = "link"
-id = 206
+id = 205
 spellings = ["/APPCONTAINER"]
 syntax = "/APPCONTAINER"
 argument_kind = "none"
@@ -2280,18 +2269,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/appcontaine
 
 [[options]]
 driver = "link"
-id = 207
-spellings = ["/ARM64XFUNCTIONPADMINX64"]
-syntax = "/ARM64XFUNCTIONPADMINX64"
-argument_kind = "none"
-purpose = "Specifies the minimum number of bytes of padding between x64 functions in ARM64X images.<sup>17.8</sup>"
-source_location = "docs/build/reference/linker-options.md:32"
-details_path = "docs/build/reference/arm64-function-pad-min-x64.md"
-details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/arm64-function-pad-min-x64?view=msvc-140&preserve-view=true"
-
-[[options]]
-driver = "link"
-id = 208
+id = 206
 spellings = ["/ASSEMBLYDEBUG"]
 syntax = "/ASSEMBLYDEBUG"
 argument_kind = "none"
@@ -2302,7 +2280,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/assemblydeb
 
 [[options]]
 driver = "link"
-id = 209
+id = 207
 spellings = ["/ASSEMBLYLINKRESOURCE"]
 syntax = "/ASSEMBLYLINKRESOURCE"
 argument_kind = "none"
@@ -2313,7 +2291,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/assemblylin
 
 [[options]]
 driver = "link"
-id = 210
+id = 208
 spellings = ["/ASSEMBLYMODULE"]
 syntax = "/ASSEMBLYMODULE"
 argument_kind = "none"
@@ -2324,7 +2302,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/assemblymod
 
 [[options]]
 driver = "link"
-id = 211
+id = 209
 spellings = ["/ASSEMBLYRESOURCE"]
 syntax = "/ASSEMBLYRESOURCE"
 argument_kind = "none"
@@ -2335,7 +2313,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/assemblyres
 
 [[options]]
 driver = "link"
-id = 212
+id = 210
 spellings = ["/BASE"]
 syntax = "/BASE"
 argument_kind = "none"
@@ -2346,7 +2324,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/base-base-a
 
 [[options]]
 driver = "link"
-id = 213
+id = 211
 spellings = ["/CETCOMPAT"]
 syntax = "/CETCOMPAT"
 argument_kind = "none"
@@ -2357,7 +2335,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/cetcompat?v
 
 [[options]]
 driver = "link"
-id = 214
+id = 212
 spellings = ["/CGTHREADS"]
 syntax = "/CGTHREADS"
 argument_kind = "none"
@@ -2368,7 +2346,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/cgthreads-c
 
 [[options]]
 driver = "link"
-id = 215
+id = 213
 spellings = ["/CLRIMAGETYPE"]
 syntax = "/CLRIMAGETYPE"
 argument_kind = "none"
@@ -2379,7 +2357,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/clrimagetyp
 
 [[options]]
 driver = "link"
-id = 216
+id = 214
 spellings = ["/CLRSUPPORTLASTERROR"]
 syntax = "/CLRSUPPORTLASTERROR"
 argument_kind = "none"
@@ -2390,7 +2368,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/clrsupportl
 
 [[options]]
 driver = "link"
-id = 217
+id = 215
 spellings = ["/CLRTHREADATTRIBUTE"]
 syntax = "/CLRTHREADATTRIBUTE"
 argument_kind = "none"
@@ -2401,7 +2379,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/clrthreadat
 
 [[options]]
 driver = "link"
-id = 218
+id = 216
 spellings = ["/CLRUNMANAGEDCODECHECK"]
 syntax = "/CLRUNMANAGEDCODECHECK"
 argument_kind = "none"
@@ -2412,7 +2390,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/clrunmanage
 
 [[options]]
 driver = "link"
-id = 219
+id = 217
 spellings = ["/DEBUG"]
 syntax = "/DEBUG"
 argument_kind = "none"
@@ -2423,7 +2401,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/debug-gener
 
 [[options]]
 driver = "link"
-id = 220
+id = 218
 spellings = ["/DEBUGTYPE"]
 syntax = "/DEBUGTYPE"
 argument_kind = "none"
@@ -2434,7 +2412,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/debugtype-d
 
 [[options]]
 driver = "link"
-id = 221
+id = 219
 spellings = ["/DEF"]
 syntax = "/DEF"
 argument_kind = "none"
@@ -2445,7 +2423,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/def-specify
 
 [[options]]
 driver = "link"
-id = 222
+id = 220
 spellings = ["/DEFAULTLIB"]
 syntax = "/DEFAULTLIB"
 argument_kind = "none"
@@ -2456,7 +2434,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/defaultlib-
 
 [[options]]
 driver = "link"
-id = 223
+id = 221
 spellings = ["/DELAY"]
 syntax = "/DELAY"
 argument_kind = "none"
@@ -2467,7 +2445,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/delay-delay
 
 [[options]]
 driver = "link"
-id = 224
+id = 222
 spellings = ["/DELAYLOAD"]
 syntax = "/DELAYLOAD"
 argument_kind = "none"
@@ -2478,7 +2456,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/delayload-d
 
 [[options]]
 driver = "link"
-id = 225
+id = 223
 spellings = ["/DELAYSIGN"]
 syntax = "/DELAYSIGN"
 argument_kind = "none"
@@ -2489,7 +2467,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/delaysign-p
 
 [[options]]
 driver = "link"
-id = 226
+id = 224
 spellings = ["/DEPENDENTLOADFLAG"]
 syntax = "/DEPENDENTLOADFLAG"
 argument_kind = "none"
@@ -2500,7 +2478,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/dependentlo
 
 [[options]]
 driver = "link"
-id = 227
+id = 225
 spellings = ["/DLL"]
 syntax = "/DLL"
 argument_kind = "none"
@@ -2511,7 +2489,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/dll-build-a
 
 [[options]]
 driver = "link"
-id = 228
+id = 226
 spellings = ["/DRIVER"]
 syntax = "/DRIVER"
 argument_kind = "none"
@@ -2522,7 +2500,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/driver-wind
 
 [[options]]
 driver = "link"
-id = 229
+id = 227
 spellings = ["/DYNAMICBASE"]
 syntax = "/DYNAMICBASE"
 argument_kind = "none"
@@ -2533,7 +2511,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/dynamicbase
 
 [[options]]
 driver = "link"
-id = 230
+id = 228
 spellings = ["/DYNAMICDEOPT"]
 syntax = "/DYNAMICDEOPT"
 argument_kind = "none"
@@ -2544,7 +2522,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/dynamic-deo
 
 [[options]]
 driver = "link"
-id = 231
+id = 229
 spellings = ["/ENTRY"]
 syntax = "/ENTRY"
 argument_kind = "none"
@@ -2555,7 +2533,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/entry-entry
 
 [[options]]
 driver = "link"
-id = 232
+id = 230
 spellings = ["/ERRORREPORT"]
 syntax = "/ERRORREPORT"
 argument_kind = "none"
@@ -2566,7 +2544,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/errorreport
 
 [[options]]
 driver = "link"
-id = 233
+id = 231
 spellings = ["/EXPORT"]
 syntax = "/EXPORT"
 argument_kind = "none"
@@ -2577,7 +2555,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/export-expo
 
 [[options]]
 driver = "link"
-id = 234
+id = 232
 spellings = ["/FILEALIGN"]
 syntax = "/FILEALIGN"
 argument_kind = "none"
@@ -2588,7 +2566,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/filealign?v
 
 [[options]]
 driver = "link"
-id = 235
+id = 233
 spellings = ["/FIXED"]
 syntax = "/FIXED"
 argument_kind = "none"
@@ -2599,7 +2577,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fixed-fixed
 
 [[options]]
 driver = "link"
-id = 236
+id = 234
 spellings = ["/FORCE"]
 syntax = "/FORCE"
 argument_kind = "none"
@@ -2610,7 +2588,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/force-force
 
 [[options]]
 driver = "link"
-id = 237
+id = 235
 spellings = ["/FUNCTIONPADMIN"]
 syntax = "/FUNCTIONPADMIN"
 argument_kind = "none"
@@ -2621,8 +2599,8 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/functionpad
 
 [[options]]
 driver = "link"
-id = 238
-spellings = ["/GENPROFILE"]
+id = 236
+spellings = ["/GENPROFILE", "/FASTGENPROFILE"]
 syntax = "/GENPROFILE, /FASTGENPROFILE"
 argument_kind = "none"
 purpose = "Both of these options specify generation of a .pgd file by the linker to support profile-guided optimization (PGO). /GENPROFILE and /FASTGENPROFILE use different default parameters."
@@ -2632,7 +2610,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/genprofile-
 
 [[options]]
 driver = "link"
-id = 239
+id = 237
 spellings = ["/GUARD"]
 syntax = "/GUARD"
 argument_kind = "none"
@@ -2643,7 +2621,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/guard-enabl
 
 [[options]]
 driver = "link"
-id = 240
+id = 238
 spellings = ["/HEAP"]
 syntax = "/HEAP"
 argument_kind = "none"
@@ -2654,7 +2632,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/heap-set-he
 
 [[options]]
 driver = "link"
-id = 241
+id = 239
 spellings = ["/HIGHENTROPYVA"]
 syntax = "/HIGHENTROPYVA"
 argument_kind = "none"
@@ -2665,7 +2643,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/highentropy
 
 [[options]]
 driver = "link"
-id = 242
+id = 240
 spellings = ["/IDLOUT"]
 syntax = "/IDLOUT"
 argument_kind = "none"
@@ -2676,7 +2654,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/idlout-name
 
 [[options]]
 driver = "link"
-id = 243
+id = 241
 spellings = ["/IGNORE"]
 syntax = "/IGNORE"
 argument_kind = "none"
@@ -2687,7 +2665,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ignore-igno
 
 [[options]]
 driver = "link"
-id = 244
+id = 242
 spellings = ["/IGNOREIDL"]
 syntax = "/IGNOREIDL"
 argument_kind = "none"
@@ -2698,7 +2676,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ignoreidl-d
 
 [[options]]
 driver = "link"
-id = 245
+id = 243
 spellings = ["/ILK"]
 syntax = "/ILK"
 argument_kind = "none"
@@ -2709,7 +2687,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ilk-name-in
 
 [[options]]
 driver = "link"
-id = 246
+id = 244
 spellings = ["/IMPLIB"]
 syntax = "/IMPLIB"
 argument_kind = "none"
@@ -2720,7 +2698,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/implib-name
 
 [[options]]
 driver = "link"
-id = 247
+id = 245
 spellings = ["/INCLUDE"]
 syntax = "/INCLUDE"
 argument_kind = "none"
@@ -2731,7 +2709,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/include-for
 
 [[options]]
 driver = "link"
-id = 248
+id = 246
 spellings = ["/INCREMENTAL"]
 syntax = "/INCREMENTAL"
 argument_kind = "none"
@@ -2742,7 +2720,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/incremental
 
 [[options]]
 driver = "link"
-id = 249
+id = 247
 spellings = ["/INFERASANLIBS"]
 syntax = "/INFERASANLIBS"
 argument_kind = "none"
@@ -2753,7 +2731,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/inferasanli
 
 [[options]]
 driver = "link"
-id = 250
+id = 248
 spellings = ["/INTEGRITYCHECK"]
 syntax = "/INTEGRITYCHECK"
 argument_kind = "none"
@@ -2764,7 +2742,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/integritych
 
 [[options]]
 driver = "link"
-id = 251
+id = 249
 spellings = ["/KERNEL"]
 syntax = "/KERNEL"
 argument_kind = "none"
@@ -2775,7 +2753,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/link-code-f
 
 [[options]]
 driver = "link"
-id = 252
+id = 250
 spellings = ["/KEYCONTAINER"]
 syntax = "/KEYCONTAINER"
 argument_kind = "none"
@@ -2786,7 +2764,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/keycontaine
 
 [[options]]
 driver = "link"
-id = 253
+id = 251
 spellings = ["/KEYFILE"]
 syntax = "/KEYFILE"
 argument_kind = "none"
@@ -2797,7 +2775,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/keyfile-spe
 
 [[options]]
 driver = "link"
-id = 254
+id = 252
 spellings = ["/LARGEADDRESSAWARE"]
 syntax = "/LARGEADDRESSAWARE"
 argument_kind = "none"
@@ -2808,7 +2786,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/largeaddres
 
 [[options]]
 driver = "link"
-id = 255
+id = 253
 spellings = ["/LIBPATH"]
 syntax = "/LIBPATH"
 argument_kind = "none"
@@ -2819,7 +2797,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/libpath-add
 
 [[options]]
 driver = "link"
-id = 256
+id = 254
 spellings = ["/LINKREPRO"]
 syntax = "/LINKREPRO"
 argument_kind = "none"
@@ -2830,7 +2808,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/linkrepro?v
 
 [[options]]
 driver = "link"
-id = 257
+id = 255
 spellings = ["/LINKREPROFULLPATHRSP"]
 syntax = "/LINKREPROFULLPATHRSP"
 argument_kind = "none"
@@ -2841,18 +2819,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/link-repro-
 
 [[options]]
 driver = "link"
-id = 258
-spellings = ["/LINKREPROTARGET"]
-syntax = "/LINKREPROTARGET"
-argument_kind = "none"
-purpose = "Generates a link repro only when producing the specified target.<sup>16.1</sup>"
-source_location = "docs/build/reference/linker-options.md:83"
-details_path = "docs/build/reference/linkreprotarget.md"
-details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/linkreprotarget?view=msvc-140&preserve-view=true"
-
-[[options]]
-driver = "link"
-id = 259
+id = 256
 spellings = ["/LTCG"]
 syntax = "/LTCG"
 argument_kind = "none"
@@ -2863,7 +2830,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/ltcg-link-t
 
 [[options]]
 driver = "link"
-id = 260
+id = 257
 spellings = ["/MACHINE"]
 syntax = "/MACHINE"
 argument_kind = "none"
@@ -2874,7 +2841,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/machine-spe
 
 [[options]]
 driver = "link"
-id = 261
+id = 258
 spellings = ["/MANIFEST"]
 syntax = "/MANIFEST"
 argument_kind = "none"
@@ -2885,7 +2852,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/manifest-cr
 
 [[options]]
 driver = "link"
-id = 262
+id = 259
 spellings = ["/MANIFESTDEPENDENCY"]
 syntax = "/MANIFESTDEPENDENCY"
 argument_kind = "none"
@@ -2896,7 +2863,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/manifestdep
 
 [[options]]
 driver = "link"
-id = 263
+id = 260
 spellings = ["/MANIFESTFILE"]
 syntax = "/MANIFESTFILE"
 argument_kind = "none"
@@ -2907,7 +2874,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/manifestfil
 
 [[options]]
 driver = "link"
-id = 264
+id = 261
 spellings = ["/MANIFESTINPUT"]
 syntax = "/MANIFESTINPUT"
 argument_kind = "none"
@@ -2918,7 +2885,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/manifestinp
 
 [[options]]
 driver = "link"
-id = 265
+id = 262
 spellings = ["/MANIFESTUAC"]
 syntax = "/MANIFESTUAC"
 argument_kind = "none"
@@ -2929,7 +2896,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/manifestuac
 
 [[options]]
 driver = "link"
-id = 266
+id = 263
 spellings = ["/MAP"]
 syntax = "/MAP"
 argument_kind = "none"
@@ -2940,7 +2907,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/map-generat
 
 [[options]]
 driver = "link"
-id = 267
+id = 264
 spellings = ["/MAPINFO"]
 syntax = "/MAPINFO"
 argument_kind = "none"
@@ -2951,7 +2918,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/mapinfo-inc
 
 [[options]]
 driver = "link"
-id = 268
+id = 265
 spellings = ["/MERGE"]
 syntax = "/MERGE"
 argument_kind = "none"
@@ -2962,7 +2929,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/merge-combi
 
 [[options]]
 driver = "link"
-id = 269
+id = 266
 spellings = ["/MIDL"]
 syntax = "/MIDL"
 argument_kind = "none"
@@ -2973,7 +2940,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/midl-specif
 
 [[options]]
 driver = "link"
-id = 270
+id = 267
 spellings = ["/NATVIS"]
 syntax = "/NATVIS"
 argument_kind = "none"
@@ -2984,7 +2951,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/natvis-add-
 
 [[options]]
 driver = "link"
-id = 271
+id = 268
 spellings = ["/NOASSEMBLY"]
 syntax = "/NOASSEMBLY"
 argument_kind = "none"
@@ -2995,7 +2962,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/noassembly-
 
 [[options]]
 driver = "link"
-id = 272
+id = 269
 spellings = ["/NODEFAULTLIB"]
 syntax = "/NODEFAULTLIB"
 argument_kind = "none"
@@ -3006,7 +2973,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/nodefaultli
 
 [[options]]
 driver = "link"
-id = 273
+id = 270
 spellings = ["/NOENTRY"]
 syntax = "/NOENTRY"
 argument_kind = "none"
@@ -3017,18 +2984,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/noentry-no-
 
 [[options]]
 driver = "link"
-id = 274
-spellings = ["/NOFUNCTIONPADSECTION"]
-syntax = "/NOFUNCTIONPADSECTION"
-argument_kind = "none"
-purpose = "Disables function padding for functions in the specified section.<sup>17.8</sup>"
-source_location = "docs/build/reference/linker-options.md:99"
-details_path = "docs/build/reference/no-function-pad-section.md"
-details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/no-function-pad-section?view=msvc-140&preserve-view=true"
-
-[[options]]
-driver = "link"
-id = 275
+id = 271
 spellings = ["/NOLOGO"]
 syntax = "/NOLOGO"
 argument_kind = "none"
@@ -3039,7 +2995,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/nologo-supp
 
 [[options]]
 driver = "link"
-id = 276
+id = 272
 spellings = ["/NXCOMPAT"]
 syntax = "/NXCOMPAT"
 argument_kind = "none"
@@ -3050,7 +3006,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/nxcompat-co
 
 [[options]]
 driver = "link"
-id = 277
+id = 273
 spellings = ["/OPT"]
 syntax = "/OPT"
 argument_kind = "none"
@@ -3061,7 +3017,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/opt-optimiz
 
 [[options]]
 driver = "link"
-id = 278
+id = 274
 spellings = ["/ORDER"]
 syntax = "/ORDER"
 argument_kind = "none"
@@ -3072,7 +3028,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/order-put-f
 
 [[options]]
 driver = "link"
-id = 279
+id = 275
 spellings = ["/OUT"]
 syntax = "/OUT"
 argument_kind = "none"
@@ -3083,7 +3039,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/out-output-
 
 [[options]]
 driver = "link"
-id = 280
+id = 276
 spellings = ["/PDB"]
 syntax = "/PDB"
 argument_kind = "none"
@@ -3094,7 +3050,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/pdb-use-pro
 
 [[options]]
 driver = "link"
-id = 281
+id = 277
 spellings = ["/PDBALTPATH"]
 syntax = "/PDBALTPATH"
 argument_kind = "none"
@@ -3105,7 +3061,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/pdbaltpath-
 
 [[options]]
 driver = "link"
-id = 282
+id = 278
 spellings = ["/PDBSTRIPPED"]
 syntax = "/PDBSTRIPPED"
 argument_kind = "none"
@@ -3116,7 +3072,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/pdbstripped
 
 [[options]]
 driver = "link"
-id = 283
+id = 279
 spellings = ["/PGD"]
 syntax = "/PGD"
 argument_kind = "none"
@@ -3127,7 +3083,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/pgd-specify
 
 [[options]]
 driver = "link"
-id = 284
+id = 280
 spellings = ["/POGOSAFEMODE"]
 syntax = "/POGOSAFEMODE"
 argument_kind = "none"
@@ -3138,7 +3094,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/pogosafemod
 
 [[options]]
 driver = "link"
-id = 285
+id = 281
 spellings = ["/PROFILE"]
 syntax = "/PROFILE"
 argument_kind = "none"
@@ -3149,7 +3105,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/profile-per
 
 [[options]]
 driver = "link"
-id = 286
+id = 282
 spellings = ["/RELEASE"]
 syntax = "/RELEASE"
 argument_kind = "none"
@@ -3160,7 +3116,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/release-set
 
 [[options]]
 driver = "link"
-id = 287
+id = 283
 spellings = ["/SAFESEH"]
 syntax = "/SAFESEH"
 argument_kind = "none"
@@ -3171,7 +3127,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/safeseh-ima
 
 [[options]]
 driver = "link"
-id = 288
+id = 284
 spellings = ["/SECTION"]
 syntax = "/SECTION"
 argument_kind = "none"
@@ -3182,7 +3138,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/section-spe
 
 [[options]]
 driver = "link"
-id = 289
+id = 285
 spellings = ["/SOURCELINK"]
 syntax = "/SOURCELINK"
 argument_kind = "none"
@@ -3193,7 +3149,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/sourcelink?
 
 [[options]]
 driver = "link"
-id = 290
+id = 286
 spellings = ["/SPD"]
 syntax = "/SPD"
 argument_kind = "none"
@@ -3204,7 +3160,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/spd-specify
 
 [[options]]
 driver = "link"
-id = 291
+id = 287
 spellings = ["/SPDEMBED"]
 syntax = "/SPDEMBED"
 argument_kind = "none"
@@ -3215,7 +3171,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/spdembed-em
 
 [[options]]
 driver = "link"
-id = 292
+id = 288
 spellings = ["/SPDIN"]
 syntax = "/SPDIN"
 argument_kind = "none"
@@ -3226,7 +3182,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/spdin-use-s
 
 [[options]]
 driver = "link"
-id = 293
+id = 289
 spellings = ["/SPGO"]
 syntax = "/SPGO"
 argument_kind = "none"
@@ -3237,7 +3193,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/spgo-enable
 
 [[options]]
 driver = "link"
-id = 294
+id = 290
 spellings = ["/STACK"]
 syntax = "/STACK"
 argument_kind = "none"
@@ -3248,7 +3204,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/stack-stack
 
 [[options]]
 driver = "link"
-id = 295
+id = 291
 spellings = ["/STUB"]
 syntax = "/STUB"
 argument_kind = "none"
@@ -3259,7 +3215,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/stub-ms-dos
 
 [[options]]
 driver = "link"
-id = 296
+id = 292
 spellings = ["/SUBSYSTEM"]
 syntax = "/SUBSYSTEM"
 argument_kind = "none"
@@ -3270,7 +3226,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/subsystem-s
 
 [[options]]
 driver = "link"
-id = 297
+id = 293
 spellings = ["/SWAPRUN"]
 syntax = "/SWAPRUN"
 argument_kind = "none"
@@ -3281,7 +3237,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/swaprun-loa
 
 [[options]]
 driver = "link"
-id = 298
+id = 294
 spellings = ["/TIME"]
 syntax = "/TIME"
 argument_kind = "none"
@@ -3292,7 +3248,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/time-linker
 
 [[options]]
 driver = "link"
-id = 299
+id = 295
 spellings = ["/TLBID"]
 syntax = "/TLBID"
 argument_kind = "none"
@@ -3303,7 +3259,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tlbid-speci
 
 [[options]]
 driver = "link"
-id = 300
+id = 296
 spellings = ["/TLBOUT"]
 syntax = "/TLBOUT"
 argument_kind = "none"
@@ -3314,7 +3270,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tlbout-name
 
 [[options]]
 driver = "link"
-id = 301
+id = 297
 spellings = ["/TSAWARE"]
 syntax = "/TSAWARE"
 argument_kind = "none"
@@ -3325,7 +3281,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/tsaware-cre
 
 [[options]]
 driver = "link"
-id = 302
+id = 298
 spellings = ["/USEPROFILE"]
 syntax = "/USEPROFILE"
 argument_kind = "none"
@@ -3336,7 +3292,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/useprofile?
 
 [[options]]
 driver = "link"
-id = 303
+id = 299
 spellings = ["/VERBOSE"]
 syntax = "/VERBOSE"
 argument_kind = "none"
@@ -3347,7 +3303,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/verbose-pri
 
 [[options]]
 driver = "link"
-id = 304
+id = 300
 spellings = ["/VERSION"]
 syntax = "/VERSION"
 argument_kind = "none"
@@ -3358,7 +3314,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/version-ver
 
 [[options]]
 driver = "link"
-id = 305
+id = 301
 spellings = ["/WHOLEARCHIVE"]
 syntax = "/WHOLEARCHIVE"
 argument_kind = "none"
@@ -3369,7 +3325,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/wholearchiv
 
 [[options]]
 driver = "link"
-id = 306
+id = 302
 spellings = ["/WINMD"]
 syntax = "/WINMD"
 argument_kind = "none"
@@ -3380,7 +3336,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/winmd-gener
 
 [[options]]
 driver = "link"
-id = 307
+id = 303
 spellings = ["/WINMDFILE"]
 syntax = "/WINMDFILE"
 argument_kind = "none"
@@ -3391,7 +3347,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/winmdfile-s
 
 [[options]]
 driver = "link"
-id = 308
+id = 304
 spellings = ["/WINMDKEYFILE"]
 syntax = "/WINMDKEYFILE"
 argument_kind = "none"
@@ -3402,7 +3358,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/winmdkeyfil
 
 [[options]]
 driver = "link"
-id = 309
+id = 305
 spellings = ["/WINMDKEYCONTAINER"]
 syntax = "/WINMDKEYCONTAINER"
 argument_kind = "none"
@@ -3413,7 +3369,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/winmdkeycon
 
 [[options]]
 driver = "link"
-id = 310
+id = 306
 spellings = ["/WINMDDELAYSIGN"]
 syntax = "/WINMDDELAYSIGN"
 argument_kind = "none"
@@ -3424,7 +3380,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/winmddelays
 
 [[options]]
 driver = "link"
-id = 311
+id = 307
 spellings = ["/WX"]
 syntax = "/WX"
 argument_kind = "none"

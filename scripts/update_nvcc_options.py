@@ -22,6 +22,8 @@ DEFAULT_CACHE_DIR = ROOT / ".cache" / "nvcc-options"
 
 CUDA_ARCHIVE_URL = "https://docs.nvidia.com/cuda/archive/"
 NVCC_DOC_PATH = "cuda-compiler-driver-nvcc/index.html"
+SHA256_RE = re.compile(r"[0-9a-f]{64}")
+ALIAS_RE = re.compile(r"-[A-Za-z0-9][A-Za-z0-9_-]*")
 
 
 def version_key(version: str) -> tuple[int, ...]:
@@ -66,15 +68,28 @@ def doc_url(version_path: str) -> str:
     return f"{CUDA_ARCHIVE_URL}{version_path}/{NVCC_DOC_PATH}"
 
 
-def fetch_source(version: str, source_url: str, cache_dir: Path) -> tuple[bytes, str]:
+def validate_source_sha256(version: str, source_sha256: object) -> str:
+    if not isinstance(source_sha256, str) or SHA256_RE.fullmatch(source_sha256) is None:
+        raise ValueError(f"release {version} is missing a valid source_sha256")
+    return source_sha256
+
+
+def fetch_source(version: str, source_url: str, cache_dir: Path, expected_sha256: str) -> tuple[bytes, str]:
     cache_path = cache_dir / "sources" / version / "index.html"
     if cache_path.exists():
         data = cache_path.read_bytes()
-        return data, sha256_bytes(data)
+        source_sha = sha256_bytes(data)
+        if source_sha == expected_sha256:
+            return data, source_sha
     data = fetch_bytes(source_url)
+    source_sha = sha256_bytes(data)
+    if source_sha != expected_sha256:
+        raise ValueError(
+            f"source hash mismatch for {version}: expected {expected_sha256}, got {source_sha} from {source_url}"
+        )
     cache_path.parent.mkdir(parents=True, exist_ok=True)
     cache_path.write_bytes(data)
-    return data, sha256_bytes(data)
+    return data, source_sha
 
 
 def toml_string(value: str) -> str:
@@ -145,14 +160,18 @@ def refresh_manifest(path: Path) -> None:
         for match in re.findall(r'href="([0-9]+\.[0-9]+(?:\.[0-9]+)?)/index\.html"', data)
     }
     versions = sorted(version_paths, key=version_key)
-    releases = [
-        {
-            "version": version,
-            "source_url": doc_url(version_paths[version]),
-            "source_path": NVCC_DOC_PATH,
-        }
-        for version in versions
-    ]
+    releases = []
+    for version in versions:
+        source_url = doc_url(version_paths[version])
+        source_data = fetch_bytes(source_url)
+        releases.append(
+            {
+                "version": version,
+                "source_url": source_url,
+                "source_path": NVCC_DOC_PATH,
+                "source_sha256": sha256_bytes(source_data),
+            }
+        )
     write_manifest(path, releases)
 
 
@@ -163,7 +182,19 @@ def load_manifest(path: Path) -> tuple[dict[str, object], list[dict[str, str]]]:
     releases = data.get("releases", [])
     if not isinstance(metadata, dict) or not isinstance(releases, list):
         raise ValueError(f"invalid manifest shape: {path}")
+    for release in releases:
+        if not isinstance(release, dict):
+            raise ValueError(f"invalid release entry in manifest: {path}")
+        version = release.get("version")
+        source_url = release.get("source_url")
+        if not isinstance(version, str) or not isinstance(source_url, str):
+            raise ValueError(f"invalid release entry in manifest: {path}")
+        validate_source_sha256(version, release.get("source_sha256"))
     return metadata, releases
+
+
+def is_alias_spelling(value: str) -> bool:
+    return ALIAS_RE.fullmatch(value) is not None
 
 
 def parse_synopsis(text: str) -> dict[str, object] | None:
@@ -181,7 +212,7 @@ def parse_synopsis(text: str) -> dict[str, object] | None:
         aliases = [
             re.sub(r"\s+", " ", item).strip()
             for item in alias_match.group("aliases").split("|")
-            if item.strip()
+            if is_alias_spelling(re.sub(r"\s+", " ", item).strip())
         ]
     argument_text = synopsis[long_match.end() : alias_match.start() if alias_match else len(synopsis)].strip()
     return {
@@ -297,7 +328,8 @@ def generate_release(
 ) -> Path:
     version = release["version"]
     source_url = release["source_url"]
-    data, source_sha = fetch_source(version, source_url, cache_dir)
+    expected_source_sha = validate_source_sha256(version, release.get("source_sha256"))
+    data, source_sha = fetch_source(version, source_url, cache_dir, expected_source_sha)
     document = data.decode("utf-8", errors="replace")
     options = parse_nvcc_options(document)
     output = version_output_path(output_dir, version)

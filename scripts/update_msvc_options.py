@@ -56,6 +56,13 @@ def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
 
 
+def major_minor_key(version: str) -> tuple[int, int]:
+    parts = version_key(version)
+    major = parts[0] if parts else 0
+    minor = parts[1] if len(parts) > 1 else 0
+    return major, minor
+
+
 def major_version(version: str) -> str:
     return version.split(".", 1)[0]
 
@@ -263,6 +270,17 @@ def option_spelling(syntax: str) -> str:
     return token
 
 
+def option_spellings(syntax: str) -> list[str]:
+    spellings: list[str] = []
+    seen: set[str] = set()
+    for part in syntax.split(","):
+        spelling = option_spelling(part.strip())
+        if spelling and spelling not in seen:
+            spellings.append(spelling)
+            seen.add(spelling)
+    return spellings
+
+
 def argument_kind(syntax: str) -> str:
     if "<" in syntax or "{" in syntax:
         return "joined"
@@ -280,11 +298,26 @@ def details_url(details_path: str | None, moniker: str) -> str | None:
     return f"{LEARN_REFERENCE_URL}/{slug}?view={moniker}&preserve-view=true"
 
 
+VERSION_SUP_RE = re.compile(r"<sup>\s*(\d+(?:\.\d+){1,2})\s*</sup>", re.I)
+TRAILING_VERSION_SUP_RE = re.compile(r"(?:\s*<sup>\s*\d+(?:\.\d+){1,2}\s*</sup>)+\s*$", re.I)
+
+
+def extract_option_version_marker(purpose_cell: str) -> tuple[str, str | None]:
+    match = TRAILING_VERSION_SUP_RE.search(purpose_cell)
+    if match is None:
+        return purpose_cell, None
+    versions = VERSION_SUP_RE.findall(match.group(0))
+    if not versions:
+        return purpose_cell, None
+    return purpose_cell[: match.start()], max(versions, key=major_minor_key)
+
+
 def parse_options_from_markdown(
     *,
     driver: str,
     path: str,
     text: str,
+    release_version: str,
     moniker: str,
     start_id: int,
 ) -> list[dict[str, object]]:
@@ -295,18 +328,23 @@ def parse_options_from_markdown(
             continue
         option_cell, purpose_cell = row
         syntax, details_path = extract_option_cell(option_cell, path)
-        spelling = option_spelling(syntax)
-        if not spelling:
+        spellings = option_spellings(syntax)
+        if not spellings:
+            continue
+        purpose_cell, introduced_version = extract_option_version_marker(purpose_cell)
+        if introduced_version is not None and major_minor_key(release_version) < major_minor_key(introduced_version):
             continue
         option: dict[str, object] = {
             "driver": driver,
             "id": start_id + len(options),
-            "spellings": [spelling],
+            "spellings": spellings,
             "syntax": syntax,
             "argument_kind": argument_kind(syntax),
             "purpose": clean_markdown_inline(purpose_cell),
             "source_location": f"{path}:{line_no}",
         }
+        if introduced_version is not None:
+            option["visual_studio_version_min"] = introduced_version
         if details_path is not None:
             option["details_path"] = details_path
             url = details_url(details_path, moniker)
@@ -343,6 +381,7 @@ def generate_release(
                 driver=driver,
                 path=path,
                 text=data.decode("utf-8", errors="replace"),
+                release_version=version,
                 moniker=moniker,
                 start_id=len(options) + 1,
             )

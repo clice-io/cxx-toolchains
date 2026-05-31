@@ -1826,9 +1826,9 @@ help = "Do not preserve debug symbols in output. This option is ignored if used 
 
 [[options]]
 id = 160
-spellings = ["--variables-used", "-variables used"]
+spellings = ["--variables-used"]
 long = "--variables-used"
-aliases = ["-variables used"]
+aliases = []
 argument_kind = "none"
 synopsis = "--variables-used ( -variables used )"
 section = "4.2.9.2.19"

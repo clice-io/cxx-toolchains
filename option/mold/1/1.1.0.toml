@@ -812,7 +812,7 @@ source_location = "docs/mold.1:775"
 [[options]]
 id = 80
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm=[none | warning | error]"
 forms = ["-z Cm=[none | warning | error]"]
 argument_kind = "optional"
@@ -822,197 +822,197 @@ source_location = "docs/mold.1:784"
 [[options]]
 id = 81
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, functions referring other ELF modules are resolved by the dynamic linker when they are called for the first time. -z Cm now marks an executable or a shared library file so that all dynamic symbols are loaded when a file is loaded to memory. -z Cm lazy restores the default behavior."
 source_location = "docs/mold.1:815"
 
 [[options]]
 id = 82
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object requiring immediate.Dv $ORIGIN processing at runtime."
 source_location = "docs/mold.1:825"
 
 [[options]]
 id = 83
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Turn on.Li GNUPROPERTY_X86_FEATURE_1IBT bit in.Li.note.gnu.property section to indicate that the output uses IBT-enabled PLT. This option implies -z Cm ibtplt."
 source_location = "docs/mold.1:830"
 
 [[options]]
 id = 84
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Generate Intel Branch Tracking (IBT)-enabled PLT. IBT is part of Intel Control-flow Enforcement Technology (CET). IBT is a new x86 feature available since Tiger Lake which is released in 2020. If IBT is enabled, all indirect branch instructions have to branch to a so-called \"landing pad\" instruction. Landing pad itself is a no-op, but it works as a marker that branching to that instruction is expected. If there's no landing pad after branch, the CPU raises an exception. This mechanism makes ROP attacks difficult. Since PLT can be used as an indirect branch target, we need a different instruction sequence for IBT-enabled PLT. If.Sy -z Cm ibtplt is specified, mold generates PLT entries that start with a landing pad. The size of IBT-enabled PLT is 24 bytes as opposed to 16 bytes regular PLT."
 source_location = "docs/mold.1:838"
 
 [[options]]
 id = 85
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, the pages for the stack area (i.e. the pages where local variables reside) are not executable for security reasons. -z Cm execstack makes it executable. -z Cm noexecstack restores the default behavior."
 source_location = "docs/mold.1:857"
 
 [[options]]
 id = 86
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Keep.text.hot,.text.unknown,.text.unlikely,.text.startup and.text.exit as separate sections in the final binary."
 source_location = "docs/mold.1:866"
 
 [[options]]
 id = 87
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Some sections such as.dynamic have to be writable only during an executable or a shared library file is being loaded to memory. Once the dynamic linker finishes its job, such sections won't be mutated by anyone. As a security mitigation, it is preferred to make such segments read-only during program execution. -z Cm relro puts such sections into a special section called relro. The dynamic linker make a relro segment read-only after it finishes its job. By default, mold generates a.Sy relro segment. -z Cm norelro disables the feature."
 source_location = "docs/mold.1:877"
 
 [[options]]
 id = 88
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "If one memory page contains multiple segments, the page protection bits are set in such a way that needed attributes (writable or executable) are satisifed for all segments. This usually happens at a boundary of two segments with two different attributes..Cm separate-loadable-segments adds paddings between segments with different attributes so that they do not share the same page. This is the default..Cm separate-code adds paddings only between executable and non-executable segments..Cm noseparate-code does not add any paddings between segments."
 source_location = "docs/mold.1:901"
 
 [[options]]
 id = 89
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Report undefined symbols (even with --shared )."
 source_location = "docs/mold.1:921"
 
 [[options]]
 id = 90
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Enforce shadow stack by turning GNUPROPERTY_X86_FEATURE_1SHSTK bit in.Li.note.gnu.property output section. Shadow stack is part of Intel Control-flow Enforcement Technology (CET), which is available since Tiger Lake (2020)."
 source_location = "docs/mold.1:926"
 
 [[options]]
 id = 91
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm, -z Cm, -z Cm"
 forms = ["-z Cm", "-z Cm", "-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "mold by default reports an error if dynamic relocations are created in read-only sections. If -z Cm notext or -z Cm textoff are given, mold creates such dynamic relocations without reporting an error. -z Cm text restores the default behavior."
 source_location = "docs/mold.1:932"
 
 [[options]]
 id = 92
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Some CPU ISAs support multiple different memory page sizes. This option specifies the maximum page size that an output binary can run on. If you specify a large value, the output can run on both large and small page systems, but it wastes a bit of memory at page boundaries on systems with small pages. The default value is 4 KiB for i386, x86-64 and RISC-V, and 64 KiB for ARM64."
 source_location = "docs/mold.1:947"
 
 [[options]]
 id = 93
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Make the dynamic loader to ignore default search paths."
 source_location = "docs/mold.1:956"
 
 [[options]]
 id = 94
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO non-deletable at runtime."
 source_location = "docs/mold.1:959"
 
 [[options]]
 id = 95
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to.Xr dlopen 3."
 source_location = "docs/mold.1:962"
 
 [[options]]
 id = 96
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to.Xr dldump 3."
 source_location = "docs/mold.1:966"
 
 [[options]]
 id = 97
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Do not create copy relocations."
 source_location = "docs/mold.1:970"
 
 [[options]]
 id = 98
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO to be initialized first at runtime."
 source_location = "docs/mold.1:973"
 
 [[options]]
 id = 99
 section = "OPTIONS"
-spellings = ["-z Cm"]
+spellings = ["-z"]
 syntax = "-z Cm"
 forms = ["-z Cm"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object to interpose all DSOs but executable."
 source_location = "docs/mold.1:976"
 
 [[options]]
 id = 100
 section = "OPTIONS"
-spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--color-diagnostics", "--dc", "--disable-new-dtags", "--dp", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin", "--plugin-opt", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z combreloc", "-z common-page-size", "-z nocombreloc"]
+spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--color-diagnostics", "--dc", "--disable-new-dtags", "--dp", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin", "--plugin-opt", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z"]
 syntax = "-(, -), -EL, -O<number>, --allow-shlib-undefined, --color-diagnostics, --dc, --disable-new-dtags, --dp, --enable-new-dtags, --end-group, --fatal-warnings, --gdb-index, --no-add-needed, --no-allow-shlib-undefined, --no-copy-dt-needed-entries, --no-fatal-warnings, --no-undefined-version, --nostdlib, --plugin, --plugin-opt, --rpath-link=<dir>, --sort-common, --sort-section, --start-group, --warn-constructors, --warn-once, --fix-cortex-a53-835769, --fix-cortex-a53-843419, -z combreloc, -z common-page-size, -z nocombreloc"
 forms = ["-(", "-)", "-EL", "-O<number>", "--allow-shlib-undefined", "--color-diagnostics", "--dc", "--disable-new-dtags", "--dp", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin", "--plugin-opt", "--rpath-link=<dir>", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "--fix-cortex-a53-835769", "--fix-cortex-a53-843419", "-z combreloc", "-z common-page-size", "-z nocombreloc"]
 argument_kind = "required"

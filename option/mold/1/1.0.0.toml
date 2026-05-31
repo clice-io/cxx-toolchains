@@ -194,7 +194,7 @@ id = 18
 section = "OPTIONS"
 spellings = ["-m"]
 syntax = "-m [<elf<x86>64>,<elf_i386>]"
-forms = ["-m [<elf<x86>64>", "<elf_i386>]"]
+forms = ["-m [<elf<x86>64>,<elf_i386>]"]
 argument_kind = "optional"
 description = "Choose a target."
 source_location = "docs/mold.1:301"
@@ -324,7 +324,7 @@ id = 31
 section = "OPTIONS"
 spellings = ["--build-id", "--no-build-id"]
 syntax = "--build-id, --build-id=[<none>,<md5>,<sha1>,<sha256>,<uuid>,0x<hexstring>], --no-build-id"
-forms = ["--build-id", "--build-id=[<none>", "<md5>", "<sha1>", "<sha256>", "<uuid>", "0x<hexstring>]", "--no-build-id"]
+forms = ["--build-id", "--build-id=[<none>,<md5>,<sha1>,<sha256>,<uuid>,0x<hexstring>]", "--no-build-id"]
 argument_kind = "optional"
 description = "Create a.note.gnu.build-id section containing a byte string to uniquely identify an output file. --build-id and --build-id=sha256 compute a 256 bits cryptographic hash of an output file and set it to build-id. md5 and sha1 compute the same hash but truncate it to 128 and 160 bits, respectively, before setting it to build-id. uuid sets a random 128 bits UUID. 0x<hexstring> sets <hexstring>."
 source_location = "docs/mold.1:379"
@@ -344,7 +344,7 @@ id = 33
 section = "OPTIONS"
 spellings = ["--compress-debug-sections"]
 syntax = "--compress-debug-sections=[<none>,<zlib>,zlib-gabi,zlib-gnu]"
-forms = ["--compress-debug-sections=[<none>", "<zlib>", "zlib-gabi", "zlib-gnu]"]
+forms = ["--compress-debug-sections=[<none>,<zlib>,zlib-gabi,zlib-gnu]"]
 argument_kind = "optional"
 description = "Compress DWARF debug info (.debug_* sections) using the zlib compression algorithm."
 source_location = "docs/mold.1:395"
@@ -384,7 +384,7 @@ id = 37
 section = "OPTIONS"
 spellings = ["--exclude-libs"]
 syntax = "--exclude-libs=<lib,lib,..>"
-forms = ["--exclude-libs=<lib", "lib", "..>"]
+forms = ["--exclude-libs=<lib,lib,..>"]
 argument_kind = "required"
 description = "Mark all symbols in given libraries hidden."
 source_location = "docs/mold.1:414"
@@ -424,7 +424,7 @@ id = 41
 section = "OPTIONS"
 spellings = ["--hash-style"]
 syntax = "--hash-style=[<sysv>,<gnu>,<both>]"
-forms = ["--hash-style=[<sysv>", "<gnu>", "<both>]"]
+forms = ["--hash-style=[<sysv>,<gnu>,<both>]"]
 argument_kind = "optional"
 description = "Set hash style"
 source_location = "docs/mold.1:434"
@@ -704,7 +704,7 @@ id = 69
 section = "OPTIONS"
 spellings = ["--unresolved-symbols"]
 syntax = "--unresolved-symbols=[report-all,ignore-all,ignore-in-object-files,ignore-in-shared-libs]"
-forms = ["--unresolved-symbols=[report-all", "ignore-all", "ignore-in-object-files", "ignore-in-shared-libs]"]
+forms = ["--unresolved-symbols=[report-all,ignore-all,ignore-in-object-files,ignore-in-shared-libs]"]
 argument_kind = "optional"
 description = "How to handle undefined symbols."
 source_location = "docs/mold.1:550"
@@ -762,127 +762,127 @@ source_location = "docs/mold.1:585"
 [[options]]
 id = 75
 section = "OPTIONS"
-spellings = ["-z now", "-z lazy"]
+spellings = ["-z"]
 syntax = "-z now, -z lazy"
 forms = ["-z now", "-z lazy"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, functions referring other ELF modules are resolved by the dynamic linker when they are called for the first time. -z now marks an executable or a shared library file so that all dynamic symbols are loaded when a file is loaded to memory. -z lazy restores the default behavior."
 source_location = "docs/mold.1:590"
 
 [[options]]
 id = 76
 section = "OPTIONS"
-spellings = ["-z origin"]
+spellings = ["-z"]
 syntax = "-z origin"
 forms = ["-z origin"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object requiring immediate $ORIGIN processing at runtime."
 source_location = "docs/mold.1:600"
 
 [[options]]
 id = 77
 section = "OPTIONS"
-spellings = ["-z execstack", "-z noexecstack"]
+spellings = ["-z"]
 syntax = "-z execstack, -z noexecstack"
 forms = ["-z execstack", "-z noexecstack"]
-argument_kind = "none"
+argument_kind = "required"
 description = "By default, the pages for the stack area (i.e. the pages where local variables reside) are not executable for security reasons. -z execstack makes it executable. -z noexecstack restores the default behavior."
 source_location = "docs/mold.1:603"
 
 [[options]]
 id = 78
 section = "OPTIONS"
-spellings = ["-z keep-text-section-prefix", "-z nokeep-text-section-prefix"]
+spellings = ["-z"]
 syntax = "-z keep-text-section-prefix, -z nokeep-text-section-prefix"
 forms = ["-z keep-text-section-prefix", "-z nokeep-text-section-prefix"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Keep.text.hot,.text.unknown,.text.unlikely,.text.startup and.text.exit as separate sections in the final binary."
 source_location = "docs/mold.1:612"
 
 [[options]]
 id = 79
 section = "OPTIONS"
-spellings = ["-z relro", "-z norelro"]
+spellings = ["-z"]
 syntax = "-z relro, -z norelro"
 forms = ["-z relro", "-z norelro"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Some sections such as.dynamic have to be writable only during an executable or a shared library file is being loaded to memory. Once the dynamic linker finishes its job, such sections won't be mutated by anyone. As a security mitigation, it is preferred to make such segments read-only during program execution. -z relro puts such sections into a special section called <relro>. The dynamic linker make a relro segment read-only after it finishes its job. By default, mold generates a relro segment. -z norelro disables the feature."
 source_location = "docs/mold.1:619"
 
 [[options]]
 id = 80
 section = "OPTIONS"
-spellings = ["-z defs", "-z nodefs"]
+spellings = ["-z"]
 syntax = "-z defs, -z nodefs"
 forms = ["-z defs", "-z nodefs"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Report undefined symbols (even with --shared)"
 source_location = "docs/mold.1:636"
 
 [[options]]
 id = 81
 section = "OPTIONS"
-spellings = ["-z nocopyreloc"]
+spellings = ["-z"]
 syntax = "-z nocopyreloc"
 forms = ["-z nocopyreloc"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Do not create copy relocations"
 source_location = "docs/mold.1:641"
 
 [[options]]
 id = 82
 section = "OPTIONS"
-spellings = ["-z nodelete"]
+spellings = ["-z"]
 syntax = "-z nodelete"
 forms = ["-z nodelete"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO non-deletable at runtime"
 source_location = "docs/mold.1:643"
 
 [[options]]
 id = 83
 section = "OPTIONS"
-spellings = ["-z nodlopen"]
+spellings = ["-z"]
 syntax = "-z nodlopen"
 forms = ["-z nodlopen"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to dlopen"
 source_location = "docs/mold.1:645"
 
 [[options]]
 id = 84
 section = "OPTIONS"
-spellings = ["-z nodump"]
+spellings = ["-z"]
 syntax = "-z nodump"
 forms = ["-z nodump"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO not available to dldump"
 source_location = "docs/mold.1:647"
 
 [[options]]
 id = 85
 section = "OPTIONS"
-spellings = ["-z initfirst"]
+spellings = ["-z"]
 syntax = "-z initfirst"
 forms = ["-z initfirst"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark DSO to be initialized first at runtime"
 source_location = "docs/mold.1:649"
 
 [[options]]
 id = 86
 section = "OPTIONS"
-spellings = ["-z interpose"]
+spellings = ["-z"]
 syntax = "-z interpose"
 forms = ["-z interpose"]
-argument_kind = "none"
+argument_kind = "required"
 description = "Mark object to interpose all DSOs but executable"
 source_location = "docs/mold.1:651"
 
 [[options]]
 id = 87
 section = "OPTIONS"
-spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--color-diagnostics", "--disable-new-dtags", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin-opt", "--plugin", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "-z combreloc", "-z nocombreloc"]
+spellings = ["-(", "-)", "-EL", "-O", "--allow-shlib-undefined", "--color-diagnostics", "--disable-new-dtags", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin-opt", "--plugin", "--rpath-link", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "-z"]
 syntax = "-(, -), -EL, -O<number>, --allow-shlib-undefined, --color-diagnostics, --disable-new-dtags, --enable-new-dtags, --end-group, --fatal-warnings, --gdb-index, --no-add-needed, --no-allow-shlib-undefined, --no-copy-dt-needed-entries, --no-fatal-warnings, --no-undefined-version, --nostdlib, --plugin-opt, --plugin, --rpath-link=<dir>, --sort-common, --sort-section, --start-group, --warn-constructors, --warn-once, -z combreloc, -z nocombreloc"
 forms = ["-(", "-)", "-EL", "-O<number>", "--allow-shlib-undefined", "--color-diagnostics", "--disable-new-dtags", "--enable-new-dtags", "--end-group", "--fatal-warnings", "--gdb-index", "--no-add-needed", "--no-allow-shlib-undefined", "--no-copy-dt-needed-entries", "--no-fatal-warnings", "--no-undefined-version", "--nostdlib", "--plugin-opt", "--plugin", "--rpath-link=<dir>", "--sort-common", "--sort-section", "--start-group", "--warn-constructors", "--warn-once", "-z combreloc", "-z nocombreloc"]
 argument_kind = "required"

@@ -11,198 +11,238 @@ source_path = "cuda-compiler-driver-nvcc/index.html"
 version = "8.0.0"
 source_url = "https://docs.nvidia.com/cuda/archive/8.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "0518b0eee40029caa3790cd0a5cc921df18e991d8102f5a530bb01138d8c3083"
 
 [[releases]]
 version = "9.0.0"
 source_url = "https://docs.nvidia.com/cuda/archive/9.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "0bafcd8a9547290c9ce784dc5b94238f96bd281e64d9377c46401c6323d41022"
 
 [[releases]]
 version = "9.1.0"
 source_url = "https://docs.nvidia.com/cuda/archive/9.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "5e8ebf34fa2536c4b800ae1b50d329b2155ebfe00ab405b0132026f17c54695f"
 
 [[releases]]
 version = "9.2.0"
 source_url = "https://docs.nvidia.com/cuda/archive/9.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "24e07133810eb059c345a4431d2918e386e01fcda402ffaae1c1fbffbf8284c1"
 
 [[releases]]
 version = "10.0.0"
 source_url = "https://docs.nvidia.com/cuda/archive/10.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "d08cb3f9d5825d411c83ab8dbc0ec06c53939e205d26c8b28136ddfcc3043f06"
 
 [[releases]]
 version = "10.1.0"
 source_url = "https://docs.nvidia.com/cuda/archive/10.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "dc38ed34e37d301e846ccf437a37606d19f5f00e6ee79cc0c325edff0815c54e"
 
 [[releases]]
 version = "10.2.0"
 source_url = "https://docs.nvidia.com/cuda/archive/10.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "02d28ff23722fbe513b0282c933982466950f849493c0c20c9efc01b432a494c"
 
 [[releases]]
 version = "11.0.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "e96077d7d77512569d4f0602e0ada0e4ac3e3c21c1e6e1cada11332b0e6bc89a"
 
 [[releases]]
 version = "11.1.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.1.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "520879635c73c15fd149d077ed556da8521b78134563b14ad9a5801495c0cdc8"
 
 [[releases]]
 version = "11.1.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.1.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "53615c27b3de77ec17345ffba1aa7fb4dc0fa538cefa615b28354a9b4f465108"
 
 [[releases]]
 version = "11.2.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.2.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "89e818d71a205930408cfdce54fe245d35023cd044d2b4fa4635c129976538fc"
 
 [[releases]]
 version = "11.2.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.2.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "c9518ea0ec73b5d3485d34e378931756ee644eaa3324bf2abc9610c80e140ed6"
 
 [[releases]]
 version = "11.2.2"
 source_url = "https://docs.nvidia.com/cuda/archive/11.2.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "1c9be06f20e3d1481c395358556a348acbb549e57a6f18a49860b28db6606446"
 
 [[releases]]
 version = "11.3.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.3.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "f44c75757cd4ee9ff90e50f7ce8bc2e2a87752f95339b1ead7a0001c6b67e11d"
 
 [[releases]]
 version = "11.3.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.3.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "cb23a11d6047eb23248d51099d0b3393bedecf083fe749caa9b3079f8965dcdc"
 
 [[releases]]
 version = "11.4.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.4.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "964256d164522dc2e14bcfd5b70a0e92bb2db8abe54f00a892213a800b5baf69"
 
 [[releases]]
 version = "11.4.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.4.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "d9aa48fb9aa4dc1dbefa4848c0249388158943344ebbede8e41fba1c0d1fcbc5"
 
 [[releases]]
 version = "11.4.2"
 source_url = "https://docs.nvidia.com/cuda/archive/11.4.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "9c2a8554524a378232bd82ad7d2ce11c7c85b89b34a1527e9cb5a40b86be1f26"
 
 [[releases]]
 version = "11.4.3"
 source_url = "https://docs.nvidia.com/cuda/archive/11.4.3/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "b3802a22d28b5d80c1f6d0cf76cf9c266f851e645606920d685fd40c6aacc912"
 
 [[releases]]
 version = "11.4.4"
 source_url = "https://docs.nvidia.com/cuda/archive/11.4.4/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "0a770bd8328786782ceb947b67d3a66cec6cd546378f4a05203cca04e2e74ad3"
 
 [[releases]]
 version = "11.5.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.5.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "604ed653d0683556e626f9ef265a4d8fe82869517a9a52fe20c54381106089e9"
 
 [[releases]]
 version = "11.5.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.5.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "d7209ccba26fb047790dafa7e87735dff9a6ea9d8db64b58d0bed2d17b743727"
 
 [[releases]]
 version = "11.5.2"
 source_url = "https://docs.nvidia.com/cuda/archive/11.5.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "ae98c8826c63bd5fb9d96d057604d2c5451343d744db6cd9c54782380d4f6b8e"
 
 [[releases]]
 version = "11.6.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.6.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "a667fb0810cda6d41919e0d25e842507a4f825c84b898588c5a816f76b9a3406"
 
 [[releases]]
 version = "11.6.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.6.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "4421726d72ffc2a1fe845f6ef22cc055df62e2a5736cbfaa2f5b8b5c74059e4d"
 
 [[releases]]
 version = "11.7.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.7.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "29e0eeb1dc411774997b894204c1f79eb4d595933cc8f1172ec4f8fea300a1c0"
 
 [[releases]]
 version = "11.7.1"
 source_url = "https://docs.nvidia.com/cuda/archive/11.7.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "261ffa6ecab6c865e0118746b371491f398261c9b581dadc3a07029f2edc8e12"
 
 [[releases]]
 version = "11.8.0"
 source_url = "https://docs.nvidia.com/cuda/archive/11.8.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "068ca9ac29d14d19c1f376db56e5243fd313e1d56054741e057a4d29ef5d8620"
 
 [[releases]]
 version = "12.0.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.0.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "002cd79528cec1e53531be5256000cd183887028c727895720a81506aadc91bc"
 
 [[releases]]
 version = "12.0.1"
 source_url = "https://docs.nvidia.com/cuda/archive/12.0.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "bb34f2b9422b9ee61324d1f57354270070d3714e98b3732a8c2489fc31501042"
 
 [[releases]]
 version = "12.1.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.1.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "d136cd1aebcc18c367a2deae3275774214183d1ae3409e9e59cdb8cee550d149"
 
 [[releases]]
 version = "12.1.1"
 source_url = "https://docs.nvidia.com/cuda/archive/12.1.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "579a237f81a2dd94b7e8516d3ec8cd8ec0163df40dc5a94d922498eb42c0c9d2"
 
 [[releases]]
 version = "12.2.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.2.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "7ce0afd7b4d8cc688aa1a07ca4e2cee70819797a08ee9dc7c5966c2cfdab8df3"
 
 [[releases]]
 version = "12.2.1"
 source_url = "https://docs.nvidia.com/cuda/archive/12.2.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "872ed47cd15284baa60efac7188b9752632dc06134fb725ecd6c675b1860b31e"
 
 [[releases]]
 version = "12.3.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.3.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "8383f8cfca40c0432d0b85f7e781b717999946ff59a4b3d805e163f0d2f63795"
 
 [[releases]]
 version = "12.3.1"
 source_url = "https://docs.nvidia.com/cuda/archive/12.3.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "c21e4cb5b1d0d35fd6c2785c55688018ef7932f0379e95369dede2883118f5bc"
 
 [[releases]]
 version = "12.3.2"
 source_url = "https://docs.nvidia.com/cuda/archive/12.3.2/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "f6ae201c38f66bdd30f85a7ca2c5e72139a2134b9cb85e035570305c0dc85923"
 
 [[releases]]
 version = "12.4.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.4.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "c72d4adf5f0e86192980eaedf37aec1d907890eba88ee9757418d90c8e6c745e"
 
 [[releases]]
 version = "12.4.1"
 source_url = "https://docs.nvidia.com/cuda/archive/12.4.1/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "b64578ba1f2ace323688618f08362e9246151af60200ef46336e6b38b0cf7c8c"
 
 [[releases]]
 version = "12.5.0"
 source_url = "https://docs.nvidia.com/cuda/archive/12.5.0/cuda-compiler-driver-nvcc/index.html"
 source_path = "cuda-compiler-driver-nvcc/index.html"
+source_sha256 = "044f1bae9b801d45c881a22c94ca9d7b7540958bc8118b319545ed00d4cc8557"

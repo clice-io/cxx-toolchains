@@ -162,14 +162,45 @@ def clean_description(value: str) -> str:
 
 
 def split_forms(syntax: str) -> list[str]:
-    return [part.strip() for part in syntax.split(",") if part.strip()]
+    forms: list[str] = []
+    start = 0
+    square_depth = 0
+    paren_depth = 0
+    brace_depth = 0
+    angle_depth = 0
+    for index, char in enumerate(syntax):
+        is_paren_option = char in "()" and index > 0 and syntax[index - 1] == "-"
+        if char == "[":
+            square_depth += 1
+        elif char == "]":
+            square_depth = max(square_depth - 1, 0)
+        elif char == "(" and not is_paren_option:
+            paren_depth += 1
+        elif char == ")" and not is_paren_option:
+            paren_depth = max(paren_depth - 1, 0)
+        elif char == "{":
+            brace_depth += 1
+        elif char == "}":
+            brace_depth = max(brace_depth - 1, 0)
+        elif char == "<":
+            angle_depth += 1
+        elif char == ">":
+            angle_depth = max(angle_depth - 1, 0)
+        elif char == "," and not (square_depth or paren_depth or brace_depth or angle_depth):
+            form = syntax[start:index].strip()
+            if form:
+                forms.append(form)
+            start = index + 1
+    form = syntax[start:].strip()
+    if form:
+        forms.append(form)
+    return forms
 
 
 def spelling_from_form(form: str) -> str | None:
     form = form.strip()
     if form.startswith("-z "):
-        match = re.match(r"(-z\s+[A-Za-z0-9_.+-]+)", form)
-        return match.group(1) if match else "-z"
+        return "-z"
     if form.startswith("--"):
         match = re.match(r"(--[A-Za-z0-9][A-Za-z0-9_.+-]*)", form)
         return match.group(1) if match else None
@@ -188,6 +219,7 @@ def spelling_from_form(form: str) -> str | None:
 
 def argument_kind(forms: list[str]) -> str:
     has_required = False
+    forms_by_spelling: dict[str, set[str]] = {}
     for form in forms:
         if "[" in form:
             return "optional"
@@ -197,6 +229,11 @@ def argument_kind(forms: list[str]) -> str:
         tail = form[len(spelling) :].strip()
         if tail:
             has_required = True
+            forms_by_spelling.setdefault(spelling, set()).add("argument")
+        else:
+            forms_by_spelling.setdefault(spelling, set()).add("bare")
+    if any(kinds == {"bare", "argument"} for kinds in forms_by_spelling.values()):
+        return "optional"
     return "required" if has_required else "none"
 
 

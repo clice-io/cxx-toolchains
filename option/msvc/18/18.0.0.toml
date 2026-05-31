@@ -611,8 +611,9 @@ id = 54
 spellings = ["/forceInterlockedFunctions"]
 syntax = "/forceInterlockedFunctions"
 argument_kind = "none"
-purpose = "Dynamically selects between Armv8.0 load, store exclusive instructions or Armv8.1 LSE atomic instructions based on target CPU.<sup>17.14</sup>"
+purpose = "Dynamically selects between Armv8.0 load, store exclusive instructions or Armv8.1 LSE atomic instructions based on target CPU."
 source_location = "docs/build/reference/compiler-options-listed-alphabetically.md:71"
+visual_studio_version_min = "17.14"
 details_path = "docs/build/reference/force-interlocked-functions.md"
 details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/force-interlocked-functions?view=msvc-180&preserve-view=true"
 
@@ -740,7 +741,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/fpcvt?view=
 [[options]]
 driver = "cl"
 id = 66
-spellings = ["/FR"]
+spellings = ["/FR", "/Fr"]
 syntax = "/FR, /Fr"
 argument_kind = "none"
 purpose = "Name generated .sbr browser files. /Fr is deprecated."
@@ -1929,7 +1930,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 [[options]]
 driver = "cl"
 id = 175
-spellings = ["/W0"]
+spellings = ["/W0", "/W1", "/W2", "/W3", "/W4"]
 syntax = "/W0, /W1, /W2, /W3, /W4"
 argument_kind = "none"
 purpose = "Set output warning level."
@@ -1940,7 +1941,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/compiler-op
 [[options]]
 driver = "cl"
 id = 176
-spellings = ["/w1"]
+spellings = ["/w1", "/w2", "/w3", "/w4"]
 syntax = "/w1<n>, /w2<n>, /w3<n>, /w4<n>"
 argument_kind = "joined"
 purpose = "Set warning level for the specified warning."
@@ -2284,8 +2285,9 @@ id = 207
 spellings = ["/ARM64XFUNCTIONPADMINX64"]
 syntax = "/ARM64XFUNCTIONPADMINX64"
 argument_kind = "none"
-purpose = "Specifies the minimum number of bytes of padding between x64 functions in ARM64X images.<sup>17.8</sup>"
+purpose = "Specifies the minimum number of bytes of padding between x64 functions in ARM64X images."
 source_location = "docs/build/reference/linker-options.md:32"
+visual_studio_version_min = "17.8"
 details_path = "docs/build/reference/arm64-function-pad-min-x64.md"
 details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/arm64-function-pad-min-x64?view=msvc-180&preserve-view=true"
 
@@ -2622,7 +2624,7 @@ details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/functionpad
 [[options]]
 driver = "link"
 id = 238
-spellings = ["/GENPROFILE"]
+spellings = ["/GENPROFILE", "/FASTGENPROFILE"]
 syntax = "/GENPROFILE, /FASTGENPROFILE"
 argument_kind = "none"
 purpose = "Both of these options specify generation of a .pgd file by the linker to support profile-guided optimization (PGO). /GENPROFILE and /FASTGENPROFILE use different default parameters."
@@ -2845,8 +2847,9 @@ id = 258
 spellings = ["/LINKREPROTARGET"]
 syntax = "/LINKREPROTARGET"
 argument_kind = "none"
-purpose = "Generates a link repro only when producing the specified target.<sup>16.1</sup>"
+purpose = "Generates a link repro only when producing the specified target."
 source_location = "docs/build/reference/linker-options.md:83"
+visual_studio_version_min = "16.1"
 details_path = "docs/build/reference/linkreprotarget.md"
 details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/linkreprotarget?view=msvc-180&preserve-view=true"
 
@@ -3021,8 +3024,9 @@ id = 274
 spellings = ["/NOFUNCTIONPADSECTION"]
 syntax = "/NOFUNCTIONPADSECTION"
 argument_kind = "none"
-purpose = "Disables function padding for functions in the specified section.<sup>17.8</sup>"
+purpose = "Disables function padding for functions in the specified section."
 source_location = "docs/build/reference/linker-options.md:99"
+visual_studio_version_min = "17.8"
 details_path = "docs/build/reference/no-function-pad-section.md"
 details_url = "https://learn.microsoft.com/en-us/cpp/build/reference/no-function-pad-section?view=msvc-180&preserve-view=true"
 
